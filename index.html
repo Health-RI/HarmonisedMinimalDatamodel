@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
   <link href="https://hneikes.github.io/gdi/" rel="canonical">
-  <meta content="c0db647f4c4e2d373b0a4a05dbe09fd0d47ff0d3" name="revision">
+  <meta content="f09d7c78d70cd67c59ea3fedfc93331eb1f6b3ee" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1947,7 +1947,7 @@ Parts of this work may be from another specification document.  If so, those par
     <li>
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#scope-and-current-state-of-the-schema"><span class="secno">1.1</span> <span class="content">Scope and Current State of the Schema</span></a>
+      <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
       <li><a href="#overview-and-diagram"><span class="secno">1.2</span> <span class="content">Overview and Diagram</span></a>
       <li><a href="#uml-of-the-core-schema-version-2"><span class="secno">1.3</span> <span class="content">UML of the Core Schema (Version 2)</span></a>
       <li><a href="#usage-notes-on-schema-mapping"><span class="secno">1.4</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
@@ -1967,7 +1967,21 @@ Parts of this work may be from another specification document.  If so, those par
 Some info about GDI here.
 
 
-   <h3 class="heading settled" data-level="1.1" id="scope-and-current-state-of-the-schema"><span class="secno">1.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
+   <h3 class="heading settled" data-level="1.1" id="goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1. </span><span class="content">Goals and Scope of the Harmonized Minimal Data Model</span><a class="self-link" href="#goals-and-scope-of-the-harmonized-minimal-data-model"></a></h3>
+   <p>The <strong>Harmonized Minimal Data Model (HMDM)</strong> has multiple purposes, some of these are:</p>
+   <ol>
+    <li data-md>
+     <p>Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model</p>
+    <li data-md>
+     <p>Within the catalogue based on our model search options can be made available (filters/facets)</p>
+    <li data-md>
+     <p>The HMDM can/needs to be implemented in the Beacons (and/or other discovery tools).</p>
+   </ol>
+   <p>Next to the HMDM we provided a <strong>minimal metadata for submission schema</strong>.</p>
+   <p>Version 1 of metadata for submission model was released and can be seen <a href="https://drive.google.com/drive/u/0/folders/1oojXociy39DD_VzUZHfx1n4queVJD1RE">here</a>. This version was based on the version of HealthDCAT-AP from December 2024. Since the work on HealthDCAT-AP is still ongoing, there have been some changes since that time. This means our metadata for submission is not compliant to the <a href="https://healthdcat-ap.github.io/">current version of HealthDCAT-AP</a> anymore.
+We will update the metadata for submission to version 1.1, which will be, according to HealthDCAT-AP, provided in 3 variants, based on the access level of the dataset: <em>Open</em>, <em>Sensitive</em> and <em>Protected</em>, which differ in cardinalities of the properties. The metadata for submission model will include all the current mandatory fields from those HealthDCAT-AP vairants, as well as a custom class created specifically for the submission of metadata in GDI, called HMD Submission. 
+The name spaces for HMD Submission class and its properties were made available through <a href="https://github.com/fairgenomes/fairgenomes-semantic-model">FAIR Genomes repository</a>.
+There are also some mandatory fields that were already included in the GDI MS8 deliverable, which will stay mandatory for backwards compatibility. This update will be very minimal, so only extending the current model with new mandatory fields.</p>
    <h3 class="heading settled" data-level="1.2" id="overview-and-diagram"><span class="secno">1.2. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
    <h3 class="heading settled" data-level="1.3" id="uml-of-the-core-schema-version-2"><span class="secno">1.3. </span><span class="content">UML of the Core Schema (Version 2)</span><a class="self-link" href="#uml-of-the-core-schema-version-2"></a></h3>
    <h3 class="heading settled" data-level="1.4" id="usage-notes-on-schema-mapping"><span class="secno">1.4. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
