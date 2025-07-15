@@ -20,14 +20,14 @@ We started by adding different types of matches to all items and values in the m
         <tr>
             <th>Match Attribute</th>
             <th>Definition</th>
-            <th>comExamplement</th>
+            <th>Example</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch">skos:exactMatch</a></td>
             <td>Two concepts have the same meaning and can be used interchangeably in all contexts. This link is transitive, meaning if A is an exact match to B, and B is an exact match to C, then A is also an exact match to C.</td>
-            <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Date of birth</a> has an exact match to <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">EFO Date of birth</a>. Both refer to the same concept with no variation in meaning.</td>
+            <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Date of birth</a> has an exact match to <a href="http://www.ebi.ac.uk/efo/EFO_0004950">EFO Date of birth</a>. Both refer to the same concept with no variation in meaning.</td>
         </tr>
         <tr>
             <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#closeMatch">skos:closeMatch</a></td>
