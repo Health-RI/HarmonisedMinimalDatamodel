@@ -3,10 +3,10 @@ Title: GDI Harmonised Minimal Data Model
 Shortname: GDI HMD
 status: LD
 level: none
-URL: https://hneikes.github.io/gdi/ 
+URL: TBD
 Status Text: status text
-Editor: Hannah Neikes
 Editor: Ana Konrad
+Editor: Hannah Neikes
 Editor: Jeroen Beliën
 Editor: Joeri van der Velde
 Editor: Abhishek Nayak
