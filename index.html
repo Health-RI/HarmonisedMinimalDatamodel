@@ -1489,8 +1489,8 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
-  <link href="https://hneikes.github.io/gdi/" rel="canonical">
-  <meta content="83a3189f2395b507c99f97ae84c5cdbfbd4a43d9" name="revision">
+  <link href="TBD" rel="canonical">
+  <meta content="2d96c6b0453b77baf12431c83266f44ebb6a85b5" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1899,12 +1899,12 @@ dfn > a.self-link::before      { content: "#"; }
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://hneikes.github.io/gdi/">https://hneikes.github.io/gdi/</a>
+     <dd><a class="u-url" href="TBD">TBD</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/Health-RI/HarmonisedMinimalDatamodel/issues/">GitHub</a>
      <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Ana Konrad</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Jeroen Beliën</span>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Joeri van der Velde</span>
      <dd class="editor p-author h-card vcard"><span class="p-name fn">Abhishek Nayak</span>
@@ -2004,13 +2004,38 @@ To make things easier, we decided to focus on matches between terms from differe
    <p>This will make data both human and machine readable.</p>
    <h3 class="heading settled" data-level="2.1" id="how-to-use-matches"><span class="secno">2.1. </span><span class="content">How To Use Matches</span><a class="self-link" href="#how-to-use-matches"></a></h3>
    <p>We started by adding different types of matches to all items and values in the model. The types of matches (match attribute), their definitions and examples can be found in the table below.</p>
-   <p>| Match Attribute | Definition | Example |
-| --- | --- | --- |
-| <a href="https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch">skos:exactMatch</a> | Two concepts have the same meaning and can be used interchangeably in all contexts. This link is transitive, meaning if A is an exact match to B, and B is an exact match to C, then A is also an exact match to C. | <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Date of birth</a> has an exact match to <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">EFO Date of birth</a>. Both refer to the same concept with no variation in meaning. |
-| <a href="https://www.w3.org/2009/08/skos-reference/skos.html#relatedMatch">skos:closeMatch</a> | Two concepts are sufficiently similar that they can be used interchangeably in many applications and schemes, but they are not strictly identical. This link is not meant to be transitive. | <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116154003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Patient</a> has a close match to <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C142710">NCIT Study Participant</a>. <br> A patient is an individual receiving medical care, while a study participant is someone enrolled in a research study. In some cases, these terms can be used interchangeably (e.g., in clinical trials involving patients), but not all study participants are patients—some might be healthy controls. |
-| <a href="https://www.w3.org/2009/08/skos-reference/skos.html#relatedMatch">skos:relatedMatch</a> | Two concepts are associated but not similar enough to be considered exact or close matches. | The concept <a href="https://identifiers.org/hgnc:1100">HGNC BRCA1</a> and <a href="http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a> have a skos:relatedMatch relationship because they are strongly associated but not identical. BRCA1 is a gene mutation, while breast cancer is a disease that may develop as a result of certain BRCA1 mutations. However, not all BRCA1 mutations lead to breast cancer, and not all cases of breast cancer are caused by BRCA1 mutations, making them related but not broader/narrower concepts. |
-| <a href="https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch">skos:broadMatch</a> | The concept represented by the external entity is broader than the item. This is a reverse property of skos:narrowMatch. | The concept <a href="https://ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a> has a skos:broadMatch relationship to <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363346000&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Cancer</a>. This means that Cancer is the broader concept because it represents a general category that includes multiple types of cancer, one of which is Breast Cancer. |
-| <a href="https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch">skos:narrowMatch</a> | The concept represented by the external entity is narrower than the item. This is a reverse property of skos:broadMatch. | The concept <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363346000&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Cancer</a> has a skos:narrowMatch relationship to <a href="https://ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a>. This means that Breast Cancer is a specific subtype of Cancer. |</p>
+   <table>
+    <thead>
+     <tr>
+      <th>Match Attribute
+      <th>Definition
+      <th>comExamplement
+    <tbody>
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch">skos:exactMatch</a>
+      <td>Two concepts have the same meaning and can be used interchangeably in all contexts. This link is transitive, meaning if A is an exact match to B, and B is an exact match to C, then A is also an exact match to C.
+      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Date of birth</a> has an exact match to <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=184099003&amp;edition=MAIN&amp;release=&amp;languages=en">EFO Date of birth</a>. Both refer to the same concept with no variation in meaning.
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#closeMatch">skos:closeMatch</a>
+      <td>Two concepts are sufficiently similar that they can be used interchangeably in many applications and schemes, but they are not strictly identical. This link is not meant to be transitive.
+      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116154003&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Patient</a> has a close match to <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C142710">NCIT Study Participant</a>. <br> A patient is an individual receiving medical care, while a study participant is someone enrolled in a research study. In some cases, these terms can be used interchangeably (e.g., in clinical trials involving patients), but not all study participants are patients—some might be healthy controls.
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#relatedMatch">skos:relatedMatch</a>
+      <td>Two concepts are associated but not similar enough to be considered exact or close matches.
+      <td>   The concept <a href="https://identifiers.org/hgnc:1100">HGNC BRCA1</a> and 
+            <a href="http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a> 
+            have a skos:relatedMatch relationship because they are strongly associated but not identical. 
+            BRCA1 is a gene mutation, while breast cancer is a disease that may develop as a result of certain BRCA1 mutations. 
+            However, not all BRCA1 mutations lead to breast cancer, and not all cases of breast cancer are caused by BRCA1 mutations, making them related but not broader/narrower concepts.
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch">skos:broadMatch</a>
+      <td>The concept represented by the external entity is broader than the item. This is a reverse property of skos:narrowMatch.
+      <td>The concept <a href="https://ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a> has a skos:broadMatch relationship to <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363346000&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Cancer</a>. This means that Cancer is the broader concept because it represents a general category that includes multiple types of cancer, one of which is Breast Cancer.
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#narrowMatch">skos:narrowMatch</a>
+      <td>The concept represented by the external entity is narrower than the item. This is a reverse property of skos:broadMatch.
+      <td>The concept <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363346000&amp;edition=MAIN&amp;release=&amp;languages=en">SNOMED Cancer</a> has a skos:narrowMatch relationship to <a href="https://ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C4872">NCIT Breast Carcinoma</a>. This means that Breast Cancer is a specific subtype of Cancer.
+   </table>
    <p>Next to the matches, we also record what is the source of the match. If the mapping has already been done, for example SNOMED to ICD-10 in the SNOMED browser, or in the T-Rex browser, we include this information with the match in the spreadsheet.</p>
    <h3 class="heading settled" data-level="2.2" id="using-ssssom"><span class="secno">2.2. </span><span class="content">Using SSSSOM</span><a class="self-link" href="#using-ssssom"></a></h3>
    
