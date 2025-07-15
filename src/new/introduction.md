@@ -17,13 +17,3 @@ There are also some mandatory fields that were already included in the GDI MS8 d
 
 
 ## Overview and Diagram
-
-
-## UML of the Core Schema (Version 2)
-
-
-## Usage Notes on Schema / Mapping
-
-
-
-

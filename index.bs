@@ -23,3 +23,7 @@ Markup Shorthands: markdown yes, css no
 path: src/new/introduction.md
 </pre>
 
+<pre class=include>
+path: src/new/matches.md
+</pre>
+
