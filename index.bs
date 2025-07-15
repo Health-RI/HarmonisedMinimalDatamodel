@@ -1,0 +1,25 @@
+<pre class='metadata'>
+Title: GDI Harmonised Minimal Data Model
+Shortname: GDI HMD
+status: LD
+level: none
+URL: https://hneikes.github.io/gdi/ 
+Status Text: status text
+Editor: Hannah Neikes
+Editor: Ana Konrad
+Editor: Jeroen Beliën
+Editor: Joeri van der Velde
+Editor: Abhishek Nayak
+Editor: Aedin Culhane
+Warning: not ready
+
+Abstract: <img src="src/new/images/gdi-logo.svg" alt="" title=""> <br/> Some context about the GDI HMD.
+Markup Shorthands: markdown yes, css no
+</pre>
+
+
+
+<pre class=include>
+path: src/new/introduction.md
+</pre>
+
