@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
   <link href="TBD" rel="canonical">
-  <meta content="eef22a72e7620780bc5bb89536812a524c630ab4" name="revision">
+  <meta content="91f7933ca070092f68fc34113efb77a2f508f117" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1895,7 +1895,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2025-07-15">15 July 2025</time></span></h2>
+    <time class="dt-updated" datetime="2025-07-28">28 July 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1928,7 +1928,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 15 July 2025,
+In addition, as of 28 July 2025,
 the editors have made this specification available under the
 <a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
@@ -1955,6 +1955,22 @@ Parts of this work may be from another specification document.  If so, those par
      <ol class="toc">
       <li><a href="#how-to-use-matches"><span class="secno">2.1</span> <span class="content">How To Use Matches</span></a>
       <li><a href="#using-ssssom"><span class="secno">2.2</span> <span class="content">Using SSSSOM</span></a>
+     </ol>
+    <li>
+     <a href="#main-classes"><span class="secno">3</span> <span class="content">Main Classes</span></a>
+     <ol class="toc">
+      <li><a href="#subject"><span class="secno">3.1</span> <span class="content">Subject</span></a>
+      <li><a href="#sample"><span class="secno">3.2</span> <span class="content">Sample</span></a>
+      <li><a href="#sequence"><span class="secno">3.3</span> <span class="content">Sequence</span></a>
+      <li><a href="#sample-relation"><span class="secno">3.4</span> <span class="content">Sample Relation</span></a>
+      <li><a href="#diagnosis"><span class="secno">3.5</span> <span class="content">Diagnosis</span></a>
+      <li><a href="#treatment"><span class="secno">3.6</span> <span class="content">Treatment</span></a>
+      <li><a href="#environmental-exposure"><span class="secno">3.7</span> <span class="content">Environmental Exposure</span></a>
+      <li><a href="#biomarker"><span class="secno">3.8</span> <span class="content">Biomarker</span></a>
+      <li><a href="#tnm"><span class="secno">3.9</span> <span class="content">TNM</span></a>
+      <li><a href="#variant"><span class="secno">3.10</span> <span class="content">Variant</span></a>
+      <li><a href="#target-gene"><span class="secno">3.11</span> <span class="content">Target Gene</span></a>
+      <li><a href="#digital-resource"><span class="secno">3.12</span> <span class="content">Digital Resource</span></a>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
     Conformance</span></a>
@@ -2058,6 +2074,91 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
     <li data-md>
      <p>Support more countries and teams to join the GDI Catalogue without needing to change everything.</p>
    </ul>
+   <h2 class="heading settled" data-level="3" id="main-classes"><span class="secno">3. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
+   
+In the Harmonized Minimal Dataset, we defined 12 different classes.
+
+
+   <h3 class="heading settled" data-level="3.1" id="subject"><span class="secno">3.1. </span><span class="content">Subject</span><a class="self-link" href="#subject"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Birth Date
+      <td>The calendar date on which a person was born.
+      <td>Complete date, without time, following the ISO 8601. If only year or year-month is available, use that. xsd:date or xsd:gYearMonth or xsd:gYear
+      <td>1..1
+     <tr>
+      <td>Administrative Gender
+      <td>The gender of a person used for administrative purposes.
+      <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a>
+      <td>1..1
+     <tr>
+      <td>Biological Sex at Birth
+      <td>The sex of a person at birth as molecular proven.
+      <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a>
+      <td>0..1
+     <tr>
+      <td>Date of Last Follow-up
+      <td>Date of last follow-up, partial date with month and year.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+     <tr>
+      <td>Country of Origin
+      <td>A person’s descent or lineage, from a person or from a population.
+      <td>2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. If a country-subdivision then a value from the <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>
+      <td>0..1
+     <tr>
+      <td>Subject ID
+      <td>A sequence of characters used to identify, name, or characterize a trial or study subject.
+      <td>String
+      <td>1..1
+   </table>
+   <h3 class="heading settled" data-level="3.2" id="sample"><span class="secno">3.2. </span><span class="content">Sample</span><a class="self-link" href="#sample"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="sequence"><span class="secno">3.3. </span><span class="content">Sequence</span><a class="self-link" href="#sequence"></a></h3>
+   <h3 class="heading settled" data-level="3.4" id="sample-relation"><span class="secno">3.4. </span><span class="content">Sample Relation</span><a class="self-link" href="#sample-relation"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="diagnosis"><span class="secno">3.5. </span><span class="content">Diagnosis</span><a class="self-link" href="#diagnosis"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Date of Diagnosis
+      <td>Date at which diagnosis was made.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+     <tr>
+      <td>Administrative Gender
+      <td>The gender of a person used for administrative purposes.
+      <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a>
+      <td>1..1
+     <tr>
+      <td>Diagnosis
+      <td>The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64572001&amp;edition=MAIN/2024-10-01&amp;release=&amp;languages=en&amp;latestRedirect=false">Children of Disease (Disorder) in SNOMED</a>
+      <td>0..n
+     <tr>
+      <td>Provisional diagnosis / clinical diagnosis
+      <td>An initial diagnosis that is subject to change as new information becomes available.
+      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64572001&amp;edition=MAIN/2024-10-01&amp;release=&amp;languages=en&amp;latestRedirect=false">Children of Disease (Disorder) in SNOMED</a>
+      <td>0..n
+   </table>
+   <h3 class="heading settled" data-level="3.6" id="treatment"><span class="secno">3.6. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
+   <h3 class="heading settled" data-level="3.7" id="environmental-exposure"><span class="secno">3.7. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
+   <h3 class="heading settled" data-level="3.8" id="biomarker"><span class="secno">3.8. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h3>
+   <h3 class="heading settled" data-level="3.9" id="tnm"><span class="secno">3.9. </span><span class="content">TNM</span><a class="self-link" href="#tnm"></a></h3>
+   <h3 class="heading settled" data-level="3.10" id="variant"><span class="secno">3.10. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h3>
+   <h3 class="heading settled" data-level="3.11" id="target-gene"><span class="secno">3.11. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h3>
+   <h3 class="heading settled" data-level="3.12" id="digital-resource"><span class="secno">3.12. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h3>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
