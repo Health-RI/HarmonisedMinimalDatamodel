@@ -27,3 +27,6 @@ path: src/new/introduction.md
 path: src/new/matches.md
 </pre>
 
+<pre class=include>
+path: src/new/mainClasses.md
+</pre>
