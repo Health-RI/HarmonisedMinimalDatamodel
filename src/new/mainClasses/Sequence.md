@@ -13,7 +13,7 @@
         <tr>
             <td>Target</td>
             <td>Identification of the sequenced target.</td>
-            <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C198412&jump_to_nav=true">Multi-gene panel sequencing</a> array OTH </td>
+            <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C198412">Multi-gene panel sequencing</a> array OTH </td>
             <td>1..1</td>
         </tr>
     </tbody>

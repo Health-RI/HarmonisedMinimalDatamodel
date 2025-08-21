@@ -14,7 +14,7 @@
             <td>Purpose</td>
             <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).</td>
             <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201361">Diagnosis</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201363&jump_to_nav=true">Prognosis</a> <br>
+            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201363">Prognosis</a> <br>
             <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201364">Prediction</a> <br>
             <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201362">Monitoring</a></td>
             <td>0..1</td>
