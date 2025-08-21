@@ -227,10 +227,7 @@
         <tr>
             <td>Modality</td>
             <td>Indicates the method of radiation treatment or modality.</td>
-            <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15650&jump_to_nav=true">Electron</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15458&jump_to_nav=true">Heavy Ions</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C93337">Photon</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C66897&jump_to_nav=true">Proton</a></td>
+            <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15650&jump_to_nav=true">Electron</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15458&jump_to_nav=true">Heavy Ions</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C93337">Photon</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C66897&jump_to_nav=true">Proton</a></td>
             <td>0..n</td>
         </tr>
     </tbody>

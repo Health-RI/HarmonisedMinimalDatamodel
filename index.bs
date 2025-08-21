@@ -13,7 +13,7 @@ Editor: Abhishek Nayak
 Editor: Aedin Culhane
 Warning: not ready
 
-Abstract: <img src="src/new/images/gdi-logo.svg" alt="" title=""> <br/> Some context about the GDI HMD.
+Abstract: <img src="src/new/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo"> <br/> Some context about the GDI HMD.
 Markup Shorthands: markdown yes, css no
 </pre>
 
