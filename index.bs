@@ -24,9 +24,57 @@ path: src/new/introduction.md
 </pre>
 
 <pre class=include>
-path: src/new/matches.md
+path: src/new/mainClasses.md
 </pre>
 
 <pre class=include>
-path: src/new/mainClasses.md
+path: src/new/mainClasses/Subject.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Diagnosis.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Sample.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/TNM.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/SampleRelation.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Sequence.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/DigitalResource.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Variant.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/TargetGene.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Treatment.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/Biomarker.md
+</pre>
+
+<pre class=include>
+path: src/new/mainClasses/EnvironmentalExposure.md
+</pre>
+
+<pre class=include>
+path: src/new/matches.md
 </pre>

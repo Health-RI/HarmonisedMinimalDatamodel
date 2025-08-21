@@ -58,7 +58,7 @@ We started by adding different types of matches to all items and values in the m
 
 Next to the matches, we also record what is the source of the match. If the mapping has already been done, for example SNOMED to ICD-10 in the SNOMED browser, or in the T-Rex browser, we include this information with the match in the spreadsheet.
 
-## Using SSSSOM
+## Using SSSOM
 From now on, we decided to follow the [SSSOM (Simple Standard for Sharing Ontological Mappings)](https://mapping-commons.github.io/sssom/) method. This is a standard format for describing matches between terms. We will:
 - Add all required [SSSOM elements](https://mapping-commons.github.io/sssom/linkml-index/).
 - Include recommended and optional elements if they are useful.
