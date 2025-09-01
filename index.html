@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="TBD" rel="canonical">
-  <meta content="690ac1f02606a81faed6f50a56a931f119bb319c" name="revision">
+  <meta content="3a70bd681ca17249aae29b4339b0afc1cbd9bd5c" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1895,7 +1895,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2025-08-21">21 August 2025</time></span></h2>
+    <time class="dt-updated" datetime="2025-09-01">1 September 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1928,7 +1928,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 21 August 2025,
+In addition, as of 1 September 2025,
 the editors have made this specification available under the
 <a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
@@ -2493,10 +2493,76 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>
-      <td>
-      <td>
-      <td>
+      <td>Variant_Type
+      <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Variant_Origin
+      <td>A quality inhering in a variant by virtue of its origin.
+      <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Variant_representation
+      <td>The representation of the variant using HGVS nomenclature.
+      <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>
+      <td>1..1
+    <tbody>
+     <tr>
+      <td>Clinical_Variant_Interpretation_criteria
+      <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation
+      <td>List of versions of ACMG, ESMO-ESCAT, others??
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Clinical_Variant_Interpretation_result
+      <td>Indicates result of clinical variant interpretation.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Clinical_expert_panel_decision
+      <td>Decision by clinical expert panel concerning the variant interpretation
+      <td>String
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Applied_Criteria_of_Evidence
+      <td>A category which fits with categories provided by Expert panels or tools accepted in Clincial Practice. If such recommendations are not available the weighted categories provided by freely available tools would be acceptable.
+      <td>As listed in tables 3 and 4 in <a href="https://doi.org/10.1038/gim.2015.30">Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology</a>
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Clinical_Interpretation_Tool
+      <td>Identification of the tool used for clinical interpretation
+      <td>--> Digital Resource class
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Variant_calling_software_deviation
+      <td>Identification of the software used for variant calling, if different from software stated in Sequence class.
+      <td>--> Digital Resource class
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Variant_Annotation_tools_deviation
+      <td>Identification of the software used for variant annotation, if different from software stated in Sequence class. 
+      <td>--> Digital Resource class
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Variant_Annotation_database_deviation
+      <td>Database and version used for variant annotation, if different from software stated in Sequence class.
+      <td>--> Digital Resource class
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Reported_to_patient
+      <td>Indication if the variant has been reported back to the patient, if different from software stated in Sequence class.
+      <td>Boolean
+      <td>0..1
    </table>
    <h4 class="heading settled" data-level="2.4.3" id="target-gene"><span class="secno">2.4.3. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h4>
    <table>
@@ -2508,10 +2574,22 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>
-      <td>
-      <td>
-      <td>
+      <td>URI
+      <td>URI identifying the targeted gene.
+      <td>URI to either <a href="https://www.genenames.org/">HGNC</a> <a href="https://www.ncbi.nlm.nih.gov/gene">NCBI gene</a>, <a href="https://www.omim.org/">OMIM</a>, <a href="https://hpo.jax.org/">HPO</a> or <a href="https://hgvs-nomenclature.org/stable/">HGVS</a> for variants.
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Label
+      <td>Label of the target gene, if no URI can be provided.
+      <td>String
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Description
+      <td>Description of target gene.
+      <td>String
+      <td>0..1
    </table>
    <h3 class="heading settled" data-level="2.5" id="treatment"><span class="secno">2.5. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
    <table>
@@ -2814,10 +2892,103 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>
-      <td>
-      <td>
-      <td>
+      <td>Tobacco Use Status
+      <td>The status of the patient’s tobacco use.
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/449868002">SCTID:449868002</a> | Smokes tobacco daily
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428041000124106">SCTID:428041000124106</a> | Occasional tobacco smoker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/43381005">SCTID:43381005</a> | Passive smoker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/8517006">SCTID:8517006</a> | Ex-smoker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405746006">SCTID:405746006</a> | Current non smoker but past smoking history unknown
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266919005">SCTID:266919005</a> | Never smoked tobacco
+            <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Type Of Tobacco Used
+      <td>Type of tobacco the patient uses.
+      <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">tobacco product</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">vaporizer</a>, or
+            <br> <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
+      <td>1..n (conditional)
+    <tbody>
+     <tr>
+      <td>Smoking amount
+      <td>The number of cigarettes, cigars or grams of rolling tobacco consumed per day, week, month or year.
+      <td>amount/day | amount/week | amount/month | amount/year
+      <td>1..1 (conditional)
+    <tbody>
+     <tr>
+      <td>Pack years
+      <td>The unit indicating the smoker’s total exposure to tobacco smoke. For cigarettes, this is calculated using the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. For other forms of tobacco, this is usually converted to an equivalent cigarette consumption. Often, only the number of pack years is estimated.
+      <td>Integer 
+      <td>1..1 (conditional)
+    <tbody>
+     <tr>
+      <td>Alcohol use status
+      <td>The status of the patient’s alcohol use.
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/219006">SCTID:219006</a> | Current drinker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/105542008">SCTID:105542008</a> | Non - drinker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/82581004">SCTID:82581004</a> | Ex-drinker
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/783261004">SCTID:783261004</a> | Lifetime non-drinker of alcohol
+            <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Alcohol amount
+      <td>The extent of the patient’s alcohol use in units of alcohol per time period (day/week/year).
+      <td>AU per (day/week/year). 1 A.U.= 
+            <br>125 ml of wine, 
+            <br>330 ml of beer, 
+            <br>80 ml of drink, 
+            <br>40 ml liquor
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Other Type of Exposure
+      <td>Indicates other exposures other than tabacco/smoking and alcohol use, for example asbestos. This exposure can include direct physical contact, inhalation, ingestion, or residing in close proximity to the source.
+      <td>- Inadequate water (quantity and quality), sanitation and solid waste disposal, improper hygein (handwashing)
+            <br>- Improper water resource managment, uncluding poor drainage,
+            <br>- Crowded housing and poor ventialtion of smoke
+            <br>- Exposures to vehicular and industrial air pollution
+            <br>- Population movement and encroachment and construction, which affect feeding and breeding grounds of vectors, such as mosquitoes,
+            <br>- Exposure to naturally ocurring toxic substances
+            <br>- Natural resources degradation (for example, landslides, poor drainage, erosion)
+            <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry
+            <br>- Ozone depletion from industrial and commercial actvitiy
+            <br><b>Biological hazard</b> (Bacteria, Fungi, Parasitic worms, Protozoa, Viruses, Prions)
+            <br><b>Chemical hazards</b> (Air pollutant, Heavy metal (Arsenice, Mercury, Lead), Pesticides, Other ( Formaldehyde, Asbestos, PFAS, PCBs, BPA, Phthalates, Radon, DDT)
+            <br><b>Physical environmental hazard</b> (Radiation, Natural disaster (narrow matches: exposure to earthquake, exposure to flooding, exposure to tsunami etc.), Extreme weather, Human activities (eg. traffic accident))
+            <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Other_Other Type of Exposure
+      <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field.
+      <td>String
+      <td>1..1 (conditional)
+    <tbody>
+     <tr>
+      <td>Travel History
+      <td>Description of any travel within 4 weeks before the diagnosis.
+      <td>String
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Travel History_start_date
+      <td>Start date of relevant travel history.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Travel History_end_date
+      <td>End date of relevant travel history.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..n
+    <tbody>
+     <tr>
+      <td>Residential area at risk
+      <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides.
+      <td>String
+      <td>0..n
    </table>
    <h2 class="heading settled" data-level="3" id="matches"><span class="secno">3. </span><span class="content">Matches</span><a class="self-link" href="#matches"></a></h2>
    <p>Different countries use different standards or vocabularies for their data. For example, in the harmonized minimal data model we mostly use terms from SNOMED CT and NCIT, but some countries only use ICD-10, and it’s difficult for them to convert everything to SNOMED.
