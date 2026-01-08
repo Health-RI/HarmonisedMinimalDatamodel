@@ -3,7 +3,7 @@ Title: GDI Harmonised Minimal Data Model
 Shortname: GDI HMD
 status: LD
 level: none
-URL: TBD
+URL: https://health-ri.github.io/HarmonisedMinimalDatamodel/
 Status Text: status text
 Editor: Ana Konrad
 Editor: Hannah Neikes
@@ -21,6 +21,7 @@ Markup Shorthands: markdown yes, css no
 
 <pre class=include>
 path: src/new/introduction.md
+<img src="src/new/images/HMD_v1.1_UML.png" alt="UML diagram" width="600">
 </pre>
 
 <pre class=include>
