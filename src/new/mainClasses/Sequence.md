@@ -13,7 +13,7 @@
         <tr>
             <td>Target</td>
             <td>Identification of the sequenced target.</td>
-            <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&lang=en&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C198412">Multi-gene panel sequencing</a> array OTH </td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198412">Multi-gene panel sequencing</a> <br>array <br> OTH </td>
             <td>1..1</td>
         </tr>
     </tbody>
@@ -43,7 +43,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td> <b>WIP</b>  Protocol</td>
+            <td> <b>WIP</b>  <br> Wet lab protocol</td>
             <td></td>
             <td>String or <a href="https://www.protocols.io">https://www.protocols.io</a> URL</td>
             <td></td>
@@ -69,7 +69,7 @@
         <tr>
             <td>Sequencing Platform</td>
             <td>The used sequencing platform (i.e. brand, name of a company that produces sequencer equipment).</td>
-            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="https://bioportal.bioontology.org/ontologies/EFO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0400103">EFO</a> list</td>
+            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="http://purl.obolibrary.org/obo/OBI_0400103">EFO</a> list</td>
             <td>1..n</td>
         </tr>
     </tbody>
@@ -101,7 +101,7 @@
         <tr>
             <td>Initial_input_file_format</td>
             <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).</td>
-            <td><a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Fformat_1921?lang=en">EDAM's file types and formats</a></td>
+            <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
         </tr>
     </tbody>
@@ -109,7 +109,7 @@
         <tr>
             <td>Final_output_file_format</td>
             <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).</td>
-            <td><a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Fformat_1921?lang=en">EDAM's file types and formats</a></td>
+            <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
         </tr>
     </tbody>

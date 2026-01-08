@@ -23,13 +23,13 @@
             <td>1..1</td>
         </tr>
         <tr>
-            <td>Biological Sex at Birth</td>
+            <td>biological sex at birth</td>
             <td>The sex of a person at birth as molecular proven.</td>
             <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a></td>
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Date of Last Follow-up</td>
+            <td>Date_of_Last_Follow_up</td>
             <td>Date of last follow-up, partial date with month and year.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>

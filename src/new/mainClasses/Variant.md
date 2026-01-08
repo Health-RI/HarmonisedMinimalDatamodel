@@ -46,7 +46,7 @@
             <td>Clinical_Variant_Interpretation_result</td>
             <td>Indicates result of clinical variant interpretation.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.</td>
-            <td>0..1</td>
+            <td>0..n</td>
         </tr>
     </tbody>
     <tbody>

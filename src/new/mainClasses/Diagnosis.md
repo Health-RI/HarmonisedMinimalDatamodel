@@ -19,13 +19,13 @@
         <tr>
             <td>Diagnosis</td>
             <td>The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.</td>
-            <td><a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=64572001&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false">Children of Disease (Disorder) in SNOMED</a></td>
+            <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a></td>
             <td>0..n</td>
         </tr>
         <tr>
             <td>Provisional diagnosis / clinical diagnosis</td>
             <td>An initial diagnosis that is subject to change as new information becomes available.</td>
-            <td><a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=64572001&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false">Children of Disease (Disorder) in SNOMED</a></td>
+            <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a></td>
             <td>0..n</td>
         </tr>
     </tbody>
