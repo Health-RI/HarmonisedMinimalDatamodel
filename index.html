@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
+  <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
   <link href="TBD" rel="canonical">
-  <meta content="3a70bd681ca17249aae29b4339b0afc1cbd9bd5c" name="revision">
+  <meta content="40daf9c29bcc27b8afda16b751411f32b6b5e4b0" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1802,7 +1802,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
+    content: "Invalid Example " counter(example);
 }
 
 figcaption {
@@ -1893,9 +1893,9 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2025-09-01">1 September 2025</time></span></h2>
+   <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
+   <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
+    <time class="dt-updated" datetime="2026-01-08">8 January 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1903,12 +1903,12 @@ dfn > a.self-link::before      { content: "#"; }
      <dt>Issue Tracking:
      <dd><a href="https://github.com/Health-RI/HarmonisedMinimalDatamodel/issues/">GitHub</a>
      <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Ana Konrad</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Jeroen Beliën</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Joeri van der Velde</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Abhishek Nayak</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Aedin Culhane</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Ana Konrad</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Hannah Neikes</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Jeroen Beliën</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Joeri van der Velde</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Abhishek Nayak</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Aedin Culhane</span>
     </dl>
    </div>
    <div data-fill-with="warning">
@@ -1928,7 +1928,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 1 September 2025,
+In addition, as of 8 January 2026,
 the editors have made this specification available under the
 <a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
@@ -1937,13 +1937,13 @@ Parts of this work may be from another specification document.  If so, those par
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
    <p><img alt="GDI-logo" src="src/new/images/gdi-logo.svg" title="GDI-logo"> <br> Some context about the GDI HMD.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
-   <ol class="toc" role="directory">
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
+   <ol class="toc">
     <li>
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
@@ -2016,6 +2016,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
 
 
 
+
    <h3 class="heading settled" data-level="2.1" id="subject"><span class="secno">2.1. </span><span class="content">Subject</span><a class="self-link" href="#subject"></a></h3>
    <table>
     <thead>
@@ -2036,12 +2037,12 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a>
       <td>1..1
      <tr>
-      <td>Biological Sex at Birth
+      <td>biological sex at birth
       <td>The sex of a person at birth as molecular proven.
       <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a>
       <td>0..1
      <tr>
-      <td>Date of Last Follow-up
+      <td>Date_of_Last_Follow_up
       <td>Date of last follow-up, partial date with month and year.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
@@ -2073,12 +2074,12 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Diagnosis
       <td>The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
-      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64572001&amp;edition=MAIN/2024-10-01&amp;release=&amp;languages=en&amp;latestRedirect=false">Children of Disease (Disorder) in SNOMED</a>
+      <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
       <td>0..n
      <tr>
       <td>Provisional diagnosis / clinical diagnosis
       <td>An initial diagnosis that is subject to change as new information becomes available.
-      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64572001&amp;edition=MAIN/2024-10-01&amp;release=&amp;languages=en&amp;latestRedirect=false">Children of Disease (Disorder) in SNOMED</a>
+      <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
       <td>0..n
    </table>
    <h3 class="heading settled" data-level="2.3" id="sample"><span class="secno">2.3. </span><span class="content">Sample</span><a class="self-link" href="#sample"></a></h3>
@@ -2093,12 +2094,12 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Anatomical sample location
       <td>Anatomic site from which the sample was taken.
-      <td><a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">ICD-11 Anatomy and topography</a>
+      <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a>
       <td>1..1
      <tr>
       <td>Pathological state
       <td>The pathological condition of the sample.
-      <td><a href="https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C162623">Tissue Normal</a>, Germline Normal, <a href="https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=24.03d&amp;ns=ncit&amp;code=C8509">Primary Tumor</a>, <a href="https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=24.03d&amp;ns=ncit&amp;code=C3261">Tumor Metastasis</a>, <a href="https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C4798">Recurrent Tumor</a>, <a href="http://purl.obolibrary.org/obo/NCIT_C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
       <td>1..1
      <tr>
       <td>Date
@@ -2113,7 +2114,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Organism
       <td>A living entity.
-      <td>Children of <a href="https://purl.bioontology.org/ontology/NCIT?conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C14250">NCIT Organism</a>
+      <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">NCIT Organism</a>
       <td>1..1
      <tr>
       <td>Biospecimen_Type
@@ -2152,17 +2153,17 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Extraction_Technique
       <td>The technique of extraction of the sample.
-      <td>Values within <a href="https://bioportal.bioontology.org/ontologies/MESH/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FMESH%2FD013048">MESH Specimen Handling</a>
+      <td>Values within <a href="http://purl.bioontology.org/ontology/MESH/D013048">MESH Specimen Handling</a>
       <td>0..1
      <tr>
       <td>Storage_Conditions
       <td>Storage conditions of the sample.
-      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a> or <a href="https://cdn.ymaws.com/www.isber.org/resource/resmgr/isber_2019/pdf/standard_preanalytical_code_.pdf"> SPREC Codes v3.0</a>
+      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a>
       <td>0..n
      <tr>
       <td>Assayed_Biological_Macromolecule
       <td>Macromolecule derived from the sample.
-      <td>Children of <a href="https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0004446">EFO biological macromolecule</a>
+      <td>Children of <a href="http://www.ebi.ac.uk/efo/EFO_0004446">EFO biological macromolecule</a>
       <td>0..1
      <tr>
       <td>Sampling_Intent
@@ -2194,13 +2195,13 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Lymph_Node_Status
       <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.
-      <td>Children of <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1279504008&amp;edition=MAIN/2024-11-01&amp;release=&amp;languages=en&amp;latestRedirect=false">1279504008 | American Joint Committee on Cancer ycN category allowable value (qualifier value)</a>
+      <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)
       <td>0..1
     <tbody>
      <tr>
       <td>Metastases
       <td>Indicates presence or absence of metastasis according to the international TNM classification for solid tumors.
-      <td>Children of <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1222587001&amp;edition=MAIN&amp;release=&amp;languages=en">American Joint Committee on Cancer pathological M category allowable value (qualifier value)</a> <br> or <br> Children of <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1222591006&amp;edition=MAIN&amp;release=&amp;languages=en"> American Joint Committee on Cancer clinical M category allowable value (qualifier value)</a>  <br> and HL7 NULL flavor in case not determined.
+      <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222587001">SCTID: 1222587001 </a> | American Joint Committee on Cancer pathological M category allowable value (qualifier value), <br> or <br> Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222591006">SCTID: 1222591006 </a> | American Joint Committee on Cancer clinical M category allowable value (qualifier value), <br> or HL7 NULL flavor in case not determined.
       <td>0..1
     <tbody>
      <tr>
@@ -2212,10 +2213,11 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Stage
       <td>The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.
-      <td><a href></a> <br> or <br>
-            <a href></a> <br> or
-            <br> <a href></a> <br> or
-            <br> <a href></a>
+      <td>Children of
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222592004">SCTID: 1222592004</a> |  American Joint Committee on Cancer clinical stage group allowable value (qualifier value), <br> or <br>
+            <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222593009">SCTID: 1222593009</a> | American Joint Committee on Cancer pathological stage group allowable value (qualifier value),<br> or
+            <br> <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222594003">SCTID: 1222594003</a> |  American Joint Committee on Cancer yp stage group allowable value (qualifier value),<br> or
+            <br> UICC values (to be added to SNOMED in 2025) 
       <td>0..1
     <tbody>
      <tr>
@@ -2279,7 +2281,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Target
       <td>Identification of the sequenced target.
-      <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;lang=en&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C198412">Multi-gene panel sequencing</a> array OTH 
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198412">Multi-gene panel sequencing</a> <br>array <br> OTH 
       <td>1..1
     <tbody>
      <tr>
@@ -2301,7 +2303,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <td>0..1
     <tbody>
      <tr>
-      <td> <b>WIP</b>  Protocol
+      <td> <b>WIP</b>  <br> Wet lab protocol
       <td>
       <td>String or <a href="https://www.protocols.io">https://www.protocols.io</a> URL
       <td>
@@ -2321,7 +2323,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Sequencing Platform
       <td>The used sequencing platform (i.e. brand, name of a company that produces sequencer equipment).
-      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="https://bioportal.bioontology.org/ontologies/EFO/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0400103">EFO</a> list
+      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="http://purl.obolibrary.org/obo/OBI_0400103">EFO</a> list
       <td>1..n
     <tbody>
      <tr>
@@ -2345,13 +2347,13 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Initial_input_file_format
       <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).
-      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Fformat_1921?lang=en">EDAM’s file types and formats</a>
+      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
       <td>1..1
     <tbody>
      <tr>
       <td>Final_output_file_format
       <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).
-      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Fformat_1921?lang=en">EDAM’s file types and formats</a>
+      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
       <td>1..1
     <tbody>
      <tr>
@@ -2520,7 +2522,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <td>Clinical_Variant_Interpretation_result
       <td>Indicates result of clinical variant interpretation.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
-      <td>0..1
+      <td>0..n
     <tbody>
      <tr>
       <td>Clinical_expert_panel_decision
@@ -2603,45 +2605,45 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Intention_to_Treat
       <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.
-      <td>373808002 | Curative - procedure intent
-            <br>373847000 | Neoadjuvant intent
-            <br>373846009 | Adjuvant - intent
-            <br>363676003 | Palliative - procedure intent
-            <br>360271000 | Prophylaxis - procedure intent
-            <br>243114000 | Support (regime/therapy)
-            <br>129304002 | Excision - action 
-            <br>261004008 | Diagnostic intent
-            <br>129428001 | Preventive - intent
-            <br>429892002 | Guidance intent
-            <br>360156006 | Screening - procedure intent
-            <br>447295008 | Forensic intent
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373846009">SCTID: 373846009</a> | Adjuvant - intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/363676003">SCTID: 363676003</a> | Palliative - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360271000">SCTID: 360271000</a> | Prophylaxis - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243114000">SCTID: 243114000</a> | Support (regime/therapy)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129304002">SCTID: 129304002</a> | Excision - action 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/261004008">SCTID: 261004008</a> | Diagnostic intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129428001">SCTID: 129428001</a> | Preventive - intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/429892002">SCTID: 429892002</a> | Guidance intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360156006">SCTID: 360156006</a> | Screening - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/447295008">SCTID: 447295008</a> | Forensic intent
             <br>Other - HL7 NULL flavor (OTH, UNK, NI, NA)
       <td>0..1
     <tbody>
      <tr>
       <td>Setting
       <td>Indicate the treatment setting, which describes the treatment’s purpose in relation to the primary treatment (Reference: NCIT C124308)
-      <td><a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15675">Adjuvant</a> <br> <a href="https://w3id.org/fair-genomes/resource/FG_0000760">Advanced/Metastatic</a><br> <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15665">Neoadjuvant</a><br> <a href="https://terminology.hl7.org/5.1.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">Not applicable</a>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15675">Adjuvant</a> <br> <a href="https://w3id.org/fair-genomes/resource/FG_0000760">Advanced/Metastatic</a><br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15665">Neoadjuvant</a><br> <a href="https://terminology.hl7.org/5.1.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">Not applicable</a>
       <td>0..1
     <tbody>
      <tr>
       <td>Type
       <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
-      <td>23719005 | Bone marrow transplant
-            <br>367336001 | Chemotherapy
-            <br>18629005 | Medication
-            <br>423827005 | Endoscopic therapy
-            <br>169413002 | Hormonal therapy
-            <br>76334006 | Immunotherapy
-            <br>257891001 | Photodynamic therapy
-            <br>1287742003 | Radiation therapy
-            <br>56305001 | Radionucleotide therapy
-            <br>1269349006 | Stem cell transplant
-            <br>387713003 | Surgery
-            <br>394613000 | Gene therapy
-            <br>310341009 or 373818007 | Watchful waiting
-            <br>424313000 | Active follow-up
-            <br>703423002 | Chemoradiotherapy
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/23719005">SCTID: 23719005</a> | Bone marrow transplant
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/367336001">SCTID: 367336001</a> | Chemotherapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/18629005">SCTID: 18629005</a> | Medication
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/423827005">SCTID: 423827005</a> | Endoscopic therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/169413002">SCTID: 169413002</a> | Hormonal therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/76334006">SCTID: 76334006</a> | Immunotherapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/257891001">SCTID: 257891001</a> | Photodynamic therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1287742003">SCTID: 1287742003</a> | Radiation therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/56305001">SCTID: 56305001</a> | Radionucleotide therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1269349006">SCTID: 1269349006</a> | Stem cell transplant
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/387713003">SCTID: 387713003</a> | Surgery
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/394613000">SCTID: 394613000</a> | Gene therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/310341009">SCTID: 310341009</a> or 373818007 | Watchful waiting
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/424313000">SCTID: 424313000</a> | Active follow-up
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/703423002">SCTID: 703423002</a> | Chemoradiotherapy
             <br>HL7 NULL flavor (NI, NA, OTH) | Other
       <td>1..1
     <tbody>
@@ -2658,7 +2660,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <td>0..1
     <tbody>
      <tr>
-      <td>Treatment Code
+      <td>treatmentCode
       <td>A drug product that contains one or more active and/or inactive ingredients used by the patient intended to treat, prevent or alleviate the symptoms of disease. Any hormone therapies, gender-related or otherwise, should also be recorded here.
       <td><a href="https://raw.githubusercontent.com/fairgenomes/fairgenomes-semantic-model/main/lookups/Drugs.txt">ATC codes</a>, IDMP when available. <br> In case of Cancer: <a href="https://hemonc.org/wiki/Main_Page">HEMONC</a>, <a href="https://mor.nlm.nih.gov/RxClass/">RxNorm</a>
       <td>1..n
@@ -2702,7 +2704,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>routeOfAdministration
       <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.
-      <td>Subclass of <a href="http://purl.obolibrary.org/obo/NCIT_C13442">Anatomy qualifier</a>
+      <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a>
       <td>0..n
     <tbody>
      <tr>
@@ -2714,36 +2716,36 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Procedures
       <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
-      <td><a href="http://snomed.info/id/71388002">SNOMED Procedures</a>
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a>
       <td>0..1
     <tbody>
      <tr>
       <td>Surgical resection quality
       <td>Evaluation of the surgical resection quality based on coded values.
-      <td>1222638005 |American Joint Committee on Cancer R0 (qualifier value)
-            <br>1222639002 | American Joint Committee on Cancer R1 (qualifier value)
-            <br>1222640000 | American Joint Committee on Cancer R2 (qualifier value)
-            <br>1222641001 | American Joint Committee on Cancer RX (qualifier value)
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222638005">SCTID: 1222638005</a> |American Joint Committee on Cancer R0 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222639002">SCTID: 1222639002</a> | American Joint Committee on Cancer R1 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222640000">SCTID: 1222640000</a> | American Joint Committee on Cancer R2 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222641001">SCTID: 1222641001</a> | American Joint Committee on Cancer RX (qualifier value)
       <td>0..1
     <tbody>
      <tr>
       <td>Treatment_Status
       <td>Indicates the patient’s outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).
-      <td>182992009 | Treatment completed (situation)
-            <br>445528004 | Treatment changed (situation)
-            <br>405613005 | Planned procedure (situation)
-            <br>416406003 | Procedure discontinued (situation)
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405613005">SCTID: 405613005</a> | Planned procedure (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)
       <td>0..1
     <tbody>
      <tr>
       <td>Reason_for_incomplete_Treatment
       <td>Reason for discontinuation of the treatment.
-      <td>419099009 | Dead (finding)
-            <br>1296859006 | Procedure declined (situation)   
-            <br>713247000 | Procedure discontinued by patient (situation)
-            <br>713246009 | Procedure discontinued by healthcare professional (situation) 
-            <br>266721009 | Absent response to treatment (situation)       
-            <br>407563006 | Treatment not tolerated (situation) 
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/419099009">SCTID: 419099009</a> | Dead (finding)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1296859006">SCTID: 1296859006</a> | Procedure declined (situation)   
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713247000">SCTID: 713247000</a> | Procedure discontinued by patient (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713246009">SCTID: 713246009</a> | Procedure discontinued by healthcare professional (situation) 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266721009">SCTID: 266721009</a> | Absent response to treatment (situation)       
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/407563006">SCTID: 407563006</a> | Treatment not tolerated (situation) 
             <br>technical or organizational problems | to be added, or use OTH 
             <br>Other | HL7 null flavour OTH      
             <br>Not applicable | HL7 null flavour, NA
@@ -2769,13 +2771,13 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Toxicity_Type
       <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.
-      <td>Children of <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C27990">Toxicity (NCIT)</a>
+      <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a>
       <td>0..1
     <tbody>
      <tr>
       <td>Modality
       <td>Indicates the method of radiation treatment or modality.
-      <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;lang=en&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15650">Electron</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;lang=en&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C15458">Heavy Ions</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C93337">Photon</a> <br> <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;lang=en&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C66897">Proton</a>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15650">Electron</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15458">Heavy Ions</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93337">Photon</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66897">Proton</a>
       <td>0..n
     <tbody>
      <tr>
@@ -2787,7 +2789,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Site
       <td>Indicates the body region where radiation therapy was administered.
-      <td>Children concepts of <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=91723000&amp;edition=MAIN&amp;release=&amp;languages=en">Anatomical Structure (body structure)</a>
+      <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
       <td>0..n
    </table>
    <h3 class="heading settled" data-level="2.6" id="biomarker"><span class="secno">2.6. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h3>
@@ -2802,10 +2804,10 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Purpose
       <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).
-      <td><a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201361">Diagnosis</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;lang=en&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201363">Prognosis</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201364">Prediction</a> <br>
-            <a href="https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C201362">Monitoring</a>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201361">Diagnosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201363">Prognosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
       <td>0..1
     <tbody>
      <tr>
@@ -3063,7 +3065,7 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
    </ul>
   </main>
   <div data-fill-with="conformance">
-   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
+   <h2 class="heading no-num no-ref settled" id="conformance"><span class="content">
     Conformance</span><a class="self-link" href="#conformance"></a></h2>
    <p>
             Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
@@ -3224,8 +3226,8 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
 
 })();
 </script>
-  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
