@@ -152,7 +152,7 @@
         <tr>
             <td>Procedures</td>
             <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".</td>
-            <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a></td>
+            <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a></td>
             <td>0..1</td>
         </tr>
     </tbody>
