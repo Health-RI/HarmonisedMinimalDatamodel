@@ -18,4 +18,4 @@ There are also some mandatory fields that were already included in the GDI MS8 d
 
 ## Overview and Diagram
 
-<img src="src\new\images\GDI_diagram-v1.1 UML Diagram 1+MG GDI v1.1.drawio.svg" alt="diagram" width=800 height=1100 title="diagram">
+<img src="src/new/images/GDI_diagram-v1.1 UML Diagram 1+MG GDI v1.1.drawio.svg" alt="diagram" width=800 height=1100 title="diagram">
