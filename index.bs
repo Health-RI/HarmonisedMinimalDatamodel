@@ -23,8 +23,6 @@ Markup Shorthands: markdown yes, css no
 path: src/new/introduction.md
 </pre>
 
-<img src="src/new/images/HMD_v1.1_UML.png" alt="diagram" title="diagram">
-
 <pre class=include>
 path: src/new/mainClasses.md
 </pre>

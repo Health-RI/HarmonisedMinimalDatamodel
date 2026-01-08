@@ -17,3 +17,5 @@ There are also some mandatory fields that were already included in the GDI MS8 d
 
 
 ## Overview and Diagram
+
+![diagram](images/HMD_v1.1_UML.png "diagram")
