@@ -18,4 +18,4 @@ There are also some mandatory fields that were already included in the GDI MS8 d
 
 ## Overview and Diagram
 
-<img src="https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/main/src/new/images/HMD_v1.1_UML.png" alt="UML diagram" width="600">
+<img src="https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/main/src/new/images/HMD_v1.1_UML.png" alt="UML diagram">
