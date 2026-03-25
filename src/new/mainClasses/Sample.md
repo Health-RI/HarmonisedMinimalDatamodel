@@ -19,7 +19,7 @@
         <tr>
             <td>Pathological state</td>
             <td>The pathological condition of the sample.</td>
-            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a></td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94480">Germline Normal</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a></td>
             <td>1..1</td>
         </tr>
         <tr>
@@ -78,7 +78,7 @@
         <tr>
             <td>Extraction_Technique</td>
             <td>The technique of extraction of the sample.</td>
-            <td>Values within <a href="http://purl.bioontology.org/ontology/MESH/D013048">MESH Specimen Handling</a></td>
+            <td>--> Protocol class</a></td>
             <td>0..1</td>
         </tr>
         <tr>
@@ -98,6 +98,54 @@
             <td>Describes the purpose for taking the sample.</td>
             <td>String</td>
             <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Sampling place</td>
+            <td>Defines the geographic location of sampling.</td>
+            <td>--> GeoLocation class</td>
+            <td>0..1</td>
+        </tr>
+        <tr>
+            <td>sample diagnosis</td>
+            <td>Diagnosis established based on the sample.</td>
+            <td>--> Diagnosis class</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Sample relation</td>
+            <td>Establishes the relation with another sample.</td>
+            <td>--> Sample Realtion class</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Sample TNM</td>
+            <td>TNM classification of the sample.</td>
+            <td>--> TNM class</td>
+            <td>0..2</td>
+        </tr>
+        <tr>
+            <td>Sample genotyping</td>
+            <td>Established the relation with Genotyping class.</td>
+            <td>--> Genotyping class</td>
+            <td>1..n</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Established the relation with Test class.</td>
+            <td>--> Test class</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>Established the relation with the subject.</td>
+            <td>--> Subject class</td>
+            <td>1..1</td>
+        </tr>
+        <tr>
+            <td>Sample provenance</td>
+            <td>Established the relation with provenance class.</td>
+            <td>--> Provenance class</td>
+            <td>0..1</td>
         </tr>
     </tbody>
 </table>
