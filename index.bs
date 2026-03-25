@@ -18,7 +18,7 @@ Markup Shorthands: markdown yes, css no
 </pre>
 
 <pre class=include>
-path: src/new/table/style-tables-general.md
+path: src/new/style_tables_general.md
 </pre>
 
 <pre class=include>
