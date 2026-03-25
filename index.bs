@@ -17,7 +17,9 @@ Abstract: <img src="src/new/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo"
 Markup Shorthands: markdown yes, css no
 </pre>
 
-
+<pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
 
 <pre class=include>
 path: src/new/introduction.md
