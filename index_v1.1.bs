@@ -18,65 +18,65 @@ Markup Shorthands: markdown yes, css no
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/style_tables_general.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/style_tables_general.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/introduction.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/introduction.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Subject.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Subject.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Diagnosis.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Diagnosis.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Sample.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Sample.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/TNM.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/TNM.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/SampleRelation.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/SampleRelation.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Sequence.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Sequence.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/DigitalResource.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/DigitalResource.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Variant.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Variant.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/TargetGene.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/TargetGene.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Treatment.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Treatment.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Biomarker.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/Biomarker.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/EnvironmentalExposure.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/mainClasses/EnvironmentalExposure.md
 </pre>
 
 <pre class=include>
-path: https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/matches.md
+path: https://github.com/Health-RI/HarmonisedMinimalDatamodel/blob/v1.1/src/new/matches.md
 </pre>
