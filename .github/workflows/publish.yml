@@ -14,9 +14,19 @@ jobs:
     name: Build, Validate and Deploy
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BRANCH: gh-pages
-          VALIDATE_LINKS: false
-          VALIDATE_MARKUP: false
+          SOURCE: index.bs
+          DESTINATION: index.html
+      - uses: w3c/spec-prod@v2
+        with:
+          GH_PAGES_BRANCH: gh-pages
+          SOURCE: index_v1.1.bs
+          DESTINATION: v1.1/index.html
+      - uses: w3c/spec-prod@v2
+        with:
+          GH_PAGES_BRANCH: gh-pages
+          SOURCE: index_v2.0.bs
+          DESTINATION: v2.0/index.html
