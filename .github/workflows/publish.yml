@@ -25,7 +25,6 @@ jobs:
           GH_PAGES_BRANCH: gh-pages
           SOURCE: index_v1.1.bs
           DESTINATION: v1.1/index.html
-          BIKESHED_ARGS: "--allow=raw.githubusercontent.com"
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BRANCH: gh-pages
