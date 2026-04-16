@@ -23,10 +23,5 @@ jobs:
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BRANCH: gh-pages
-          SOURCE: index_v1.1.bs
+          SOURCE: index.bs
           DESTINATION: v1.1/index.html
-      - uses: w3c/spec-prod@v2
-        with:
-          GH_PAGES_BRANCH: gh-pages
-          SOURCE: index_v2.0.bs
-          DESTINATION: v2.0/index.html
