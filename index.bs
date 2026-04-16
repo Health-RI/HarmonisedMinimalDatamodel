@@ -12,7 +12,6 @@ Editor: Jeroen Beliën
 Editor: Joeri van der Velde
 Editor: Abhishek Nayak
 Editor: Aedin Culhane
-Warning: not ready
 
 Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300"> <br/> Some context about the GDI HMD.
 Markup Shorthands: markdown yes, css no
