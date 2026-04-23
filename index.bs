@@ -34,6 +34,10 @@ path: src/mainClasses/Subject.md
 </pre>
 
 <pre class=include>
+path: src/mainClasses/Consent.md
+</pre>
+
+<pre class=include>
 path: src/mainClasses/Diagnosis.md
 </pre>
 
@@ -50,7 +54,11 @@ path: src/mainClasses/SampleRelation.md
 </pre>
 
 <pre class=include>
-path: src/mainClasses/Sequence.md
+path: src/mainClasses/Test.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Genotyping.md
 </pre>
 
 <pre class=include>
@@ -63,6 +71,14 @@ path: src/mainClasses/Variant.md
 
 <pre class=include>
 path: src/mainClasses/TargetGene.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Identifier.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Protocol.md
 </pre>
 
 <pre class=include>

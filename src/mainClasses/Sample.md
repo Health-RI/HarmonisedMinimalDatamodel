@@ -78,13 +78,13 @@
         <tr>
             <td>Extraction_Technique</td>
             <td>The technique of extraction of the sample.</td>
-            <td>Values within <a href="http://purl.bioontology.org/ontology/MESH/D013048">MESH Specimen Handling</a></td>
+            <td>Protocol class</td>
             <td>0..1</td>
         </tr>
         <tr>
             <td>Storage_Conditions</td>
             <td>Storage conditions of the sample.</td>
-            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a></td>
+            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a> or SPREC codes</td>
             <td>0..n</td>
         </tr>
         <tr>

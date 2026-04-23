@@ -100,9 +100,15 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Date</td>
-            <td>The date of the biomarker being obtained.</td>
-            <td>Date (YYYY-MM-DD), ISO 8601 format</td>
+            <td>Measured value of biomarker</td>
+            <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)</td>
+            <td>integer/float or string</td>
+            <td>0..1</td>
+        </tr>
+        <tr>
+            <td>Unit of measured biomarker</td>
+            <td>Unit associated with the measured value of the biomarker (if applicable).</td>
+            <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A</td>
             <td>0..1</td>
         </tr>
     </tbody>        

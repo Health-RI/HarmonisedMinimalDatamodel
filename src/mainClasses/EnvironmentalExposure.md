@@ -11,6 +11,95 @@
     </thead>
     <tbody>
         <tr>
+            <td>Type of Exposure</td>
+            <td>Indicates the nature of the exposure hazard. This exposure can include direct physical contact, inhalation, ingestion, or residing in close proximity to the source.</td>
+            <td>- Inadequate water (quantity and quality), sanitation and solid waste disposal, improper hygein (handwashing) --> <a href="http://purl.obolibrary.org/obo/ENVO_02500039">water pollution</a>, <a href="http://snomed.info/id/424466003">Water supply insufficient</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=160707003&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Inadequate sanitation</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=248056001&edition=MAIN&release=&languages=en"> Neglect of personal hygiene</a>,
+            <br>- Improper water resource managment, including poor drainage,
+            <br>- Crowded housing and poor ventialtion of smoke --> <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=423859003&edition=MAIN/2025-07-01&release=&languages=en"> Crowded living space</a>, <a href="https://loinc.org/46688-8/"> Fumes, odors, dusts, gases, poor ventilation, etc </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=1290134008&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Household polluted air </a>,
+            <br>- Exposures to vehicular and industrial air pollution --> <a href="http://purl.obolibrary.org/obo/ECTO_8000036"> Exposure to air pollution </a>,
+            <br>- Population movement and encroachment and construction, which affect feeding and breeding grounds of vectors, such as mosquitoes,
+            <br>- Exposure to naturally ocurring toxic substances --> <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=420239005&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Exposure to toxin </a>,
+            <br>- Natural resources degradation (for example, landslides, poor drainage, erosion) --> <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=1290214003&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Soil degradation </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=1290129009&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Land degradation </a>,
+            <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry --> <a href="http://purl.obolibrary.org/obo/ENVO_01000629"> Climate change </a>,
+            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>,
+            <br><b>Biological hazard</b> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=37017009&edition=MAIN/2025-07-01&release=&languages=en">Parasitic worms </a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=84676004&edition=MAIN/2025-07-01&release=&languages=en">Prions</a>)
+            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">Chemical hazards</a></b> (<a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), <a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, <br>Tobacco/Nicotine, <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)
+            <br><b>Physical environmental hazard</b> (<a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, Human activities (eg. traffic accident))
+            <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a></td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Type of Contact</td>
+            <td>For exposure to virus, the level of contact can be stated.</td>
+            <td><a href="http://purl.obolibrary.org/obo/TRANS_0000001">TRANS:0000001</a> | Direct (human-to-human contact)
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100246">GENEPIO:0100246</a> | Indirect contact
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100247">GENEPIO:0100247</a> | Close contact (face-to-face contact)
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100248">GENEPIO:0100248</a> | Casual contact 
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001619">GENEPIO:0001619</a> | Not Applicable
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001620">GENEPIO:0001620</a> | Not Collected
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001668">GENEPIO:0001668</a> | Not Provided
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001618">GENEPIO:0001618</a> | Missing
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001810">GENEPIO:0001810</a> | Restricted Access</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Exposure Route</td>
+            <td>The means through which an agent enters a target organism after contact (e.g. by ingestion, inhalation, or dermal absorption)</td>
+            <td>string; e.g. inhalation, sexual transmission, eating, licking, handshake, …</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Other Type of Exposure</td>
+            <td>Description of any travel within 4 weeks before the diagnosis</td>
+            <td>String</td>
+            <td>1..1 (conditional)</td>
+        </tr>
+        <tr>
+            <td>Travel History</td>
+            <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field</td>
+            <td>String</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Travel History_start_date</td>
+            <td>Start date of relevant travel history</td>
+            <td>Date (YYYY-MM-DD), ISO 8601</td>
+            <td>0..n</td>
+        </tr>
+       <tr>
+            <td>Travel History_end_date</td>
+            <td>End date of relevant travel history</td>
+            <td>Date (YYYY-MM-DD), ISO 8601</td>
+            <td>0..n</td>
+        </tr>
+      <tr>
+            <td>Residential area at risk</td>
+            <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides</td>
+            <td>String</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Type of Nicotine product used</td>
+            <td>Type of nicotine product used by the subject.</td>
+            <td>Cigarettes 65568007 <br>
+                Cigar 59978006 <br>
+                Pipe 82302008 <br>
+                Shag 160619003 <br>
+                e-cigarette 722499006 <br>
+                chewing tobacco 81703003 <br>
+                waterpipe 698289004 <br>
+                snuff 228494002 <br>
+                NULL flavors (e.g. not asked, unknown, nothing)</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Other type of Nicotine product used</td>
+            <td>Other type of nicotine product used by the subject.</td>
+            <td>Children of https://addictovocab.org/ADDICTO_0000311 combined with childred of https://addictovocab.org/ADDICTO_0000316 or <br>
+                HL7 NULL flavors</td>
+            <td>0..n</td>
+        </tr>
+        <tr>
             <td>Tobacco Use Status</td>
             <td>The status of the patient’s tobacco use.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/449868002">SCTID:449868002</a> | Smokes tobacco daily
@@ -22,33 +111,12 @@
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> </td>
             <td>0..1</td>
         </tr>
-    </tbody>
-    <tbody>
         <tr>
-            <td>Type Of Tobacco Used</td>
-            <td>Type of tobacco the patient uses.</td>
-            <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">tobacco product</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">vaporizer</a>, or
-            <br> <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a></td>
-            <td>1..n (conditional)</td>
+            <td>Nicotine use amount</td>
+            <td>Describe the amount of nicotine or tobacco consumed.</td>
+            <td>String</td>
+            <td>0..1</td>
         </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Smoking amount</td>
-            <td>The number of cigarettes, cigars or grams of rolling tobacco consumed per day, week, month or year.</td>
-            <td>amount/day | amount/week | amount/month | amount/year</td>
-            <td>1..1 (conditional)</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Pack years</td>
-            <td>The unit indicating the smoker’s total exposure to tobacco smoke. For cigarettes, this is calculated using the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. For other forms of tobacco, this is usually converted to an equivalent cigarette consumption. Often, only the number of pack years is estimated.</td>
-            <td>Integer </td>
-            <td>1..1 (conditional)</td>
-        </tr>
-    </tbody>
-    <tbody>
         <tr>
             <td>Alcohol use status</td>
             <td>The status of the patient’s alcohol use.</td>
@@ -59,8 +127,6 @@
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> </td>
             <td>0..1</td>
         </tr>
-    </tbody>
-    <tbody>
         <tr>
             <td>Alcohol amount</td>
             <td>The extent of the patient’s alcohol use in units of alcohol per time period (day/week/year).</td>
@@ -69,66 +135,6 @@
             <br>330 ml of beer, 
             <br>80 ml of drink, 
             <br>40 ml liquor</td>
-            <td>0..n</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Other Type of Exposure</td>
-            <td>Indicates other exposures other than tabacco/smoking and alcohol use, for example asbestos. This exposure can include direct physical contact, inhalation, ingestion, or residing in close proximity to the source.</td>
-            <td>- Inadequate water (quantity and quality), sanitation and solid waste disposal, improper hygein (handwashing)
-            <br>- Improper water resource managment, uncluding poor drainage,
-            <br>- Crowded housing and poor ventialtion of smoke
-            <br>- Exposures to vehicular and industrial air pollution
-            <br>- Population movement and encroachment and construction, which affect feeding and breeding grounds of vectors, such as mosquitoes,
-            <br>- Exposure to naturally ocurring toxic substances
-            <br>- Natural resources degradation (for example, landslides, poor drainage, erosion)
-            <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry
-            <br>- Ozone depletion from industrial and commercial actvitiy
-            <br><b>Biological hazard</b> (Bacteria, Fungi, Parasitic worms, Protozoa, Viruses, Prions)
-            <br><b>Chemical hazards</b> (Air pollutant, Heavy metal (Arsenice, Mercury, Lead), Pesticides, Other ( Formaldehyde, Asbestos, PFAS, PCBs, BPA, Phthalates, Radon, DDT)
-            <br><b>Physical environmental hazard</b> (Radiation, Natural disaster (narrow matches: exposure to earthquake, exposure to flooding, exposure to tsunami etc.), Extreme weather, Human activities (eg. traffic accident))
-            <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a></td>
-            <td>0..n</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Other_Other Type of Exposure</td>
-            <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field.</td>
-            <td>String</td>
-            <td>1..1 (conditional)</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Travel History</td>
-            <td>Description of any travel within 4 weeks before the diagnosis.</td>
-            <td>String</td>
-            <td>0..n</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Travel History_start_date</td>
-            <td>Start date of relevant travel history.</td>
-            <td>Date (YYYY-MM-DD), ISO 8601 format</td>
-            <td>0..n</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Travel History_end_date</td>
-            <td>End date of relevant travel history.</td>
-            <td>Date (YYYY-MM-DD), ISO 8601 format</td>
-            <td>0..n</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <td>Residential area at risk</td>
-            <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides.</td>
-            <td>String</td>
             <td>0..n</td>
         </tr>
     </tbody>
