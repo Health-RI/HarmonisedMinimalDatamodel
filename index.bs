@@ -12,6 +12,7 @@ Editor: Jeroen Beliën
 Editor: Joeri van der Velde
 Editor: Abhishek Nayak
 Editor: Aedin Culhane
+Boilerplate: copyright no, conformance off, references off
 
 Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300"> <br/> Some context about the GDI HMD.
 Markup Shorthands: markdown yes, css no
