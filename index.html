@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="6f2f2c30ffc6424e0904bf323530a65116338029" name="revision">
+  <meta content="611667198455940547a6f479d9174bcedc05b101" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1896,7 +1896,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-04-23">23 April 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-05-27">27 May 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1915,15 +1915,6 @@ dfn > a.self-link::before      { content: "#"; }
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
-To the extent possible under law, the editors have waived all copyright
-and related or neighboring rights to this work.
-In addition, as of 23 April 2026,
-the editors have made this specification available under the
-<a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
-which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
-Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document.
-</p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -1937,8 +1928,10 @@ Parts of this work may be from another specification document.  If so, those par
     <li>
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
-      <li><a href="#overview-and-diagram"><span class="secno">1.2</span> <span class="content">Overview and Diagram</span></a>
+      <li><a href="#about-gdi"><span class="secno">1.1</span> <span class="content">About GDI</span></a>
+      <li><a href="#about-the-harmonized-minmal-data-model-for-gdi"><span class="secno">1.2</span> <span class="content">About the Harmonized Minmal Data Model for GDI</span></a>
+      <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.3</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
+      <li><a href="#overview-and-diagram"><span class="secno">1.4</span> <span class="content">Overview and Diagram</span></a>
      </ol>
     <li>
      <a href="#main-classes"><span class="secno">2</span> <span class="content">Main Classes</span></a>
@@ -1968,6 +1961,8 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#treatment"><span class="secno">2.6</span> <span class="content">Treatment</span></a>
       <li><a href="#biomarker"><span class="secno">2.7</span> <span class="content">Biomarker</span></a>
       <li><a href="#environmental-exposure"><span class="secno">2.8</span> <span class="content">Environmental Exposure</span></a>
+      <li><a href="#geolocation"><span class="secno">2.9</span> <span class="content">GeoLocation</span></a>
+      <li><a href="#data-provenance"><span class="secno">2.10</span> <span class="content">Data Provenance</span></a>
      </ol>
     <li>
      <a href="#matches"><span class="secno">3</span> <span class="content">Matches</span></a>
@@ -1975,41 +1970,40 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#how-to-use-matches"><span class="secno">3.1</span> <span class="content">How To Use Matches</span></a>
       <li><a href="#using-sssom"><span class="secno">3.2</span> <span class="content">Using SSSOM</span></a>
      </ol>
-    <li><a href="#conformance"><span class="secno"></span> <span class="content">
-    Conformance</span></a>
-    <li>
-     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
-     <ol class="toc">
-      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
-     </ol>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="1.1" id="about-gdi"><span class="secno">1.1. </span><span class="content">About GDI</span><a class="self-link" href="#about-gdi"></a></h3>
+   <p>The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
+Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
+You can visit https://gdi.onemilliongenomes.eu/ for more information about the project.</p>
+   <h3 class="heading settled" data-level="1.2" id="about-the-harmonized-minmal-data-model-for-gdi"><span class="secno">1.2. </span><span class="content">About the Harmonized Minmal Data Model for GDI</span><a class="self-link" href="#about-the-harmonized-minmal-data-model-for-gdi"></a></h3>
    
-Some info about GDI here.
+Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.
+This page outlines the content of the Harmonized minimal data model for GDI.
 
 
-   <h3 class="heading settled" data-level="1.1" id="goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1. </span><span class="content">Goals and Scope of the Harmonized Minimal Data Model</span><a class="self-link" href="#goals-and-scope-of-the-harmonized-minimal-data-model"></a></h3>
-   <p>The <strong>Harmonized Minimal Data Model (HMDM)</strong> has multiple purposes, some of these are:</p>
+   <h3 class="heading settled" data-level="1.3" id="goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.3. </span><span class="content">Goals and Scope of the Harmonized Minimal Data Model</span><a class="self-link" href="#goals-and-scope-of-the-harmonized-minimal-data-model"></a></h3>
+   <p>The <strong>Harmonized Minimal Data Model (HMD)</strong> has multiple purposes, some of these are:</p>
    <ol>
     <li data-md>
      <p>Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model</p>
     <li data-md>
      <p>Within the catalogue based on our model search options can be made available (filters/facets)</p>
     <li data-md>
-     <p>The HMDM can/needs to be implemented in the Beacons (and/or other discovery tools).</p>
+     <p>The HMD can/needs to be implemented in the Beacons (and/or other discovery tools).</p>
    </ol>
-   <p>Next to the HMDM we provided a <strong>minimal metadata for submission schema</strong>.</p>
-   <p>Version 1 of metadata for submission model was released and can be seen <a href="https://drive.google.com/drive/u/0/folders/1oojXociy39DD_VzUZHfx1n4queVJD1RE">here</a>. This version was based on the version of HealthDCAT-AP from December 2024. Since the work on HealthDCAT-AP is still ongoing, there have been some changes since that time. This means our metadata for submission is not compliant to the <a href="https://healthdcat-ap.github.io/">current version of HealthDCAT-AP</a> anymore.
-We will update the metadata for submission to version 1.1, which will be, according to HealthDCAT-AP, provided in 3 variants, based on the access level of the dataset: <em>Open</em>, <em>Sensitive</em> and <em>Protected</em>, which differ in cardinalities of the properties. The metadata for submission model will include all the current mandatory fields from those HealthDCAT-AP vairants, as well as a custom class created specifically for the submission of metadata in GDI, called HMD Submission. 
-The name spaces for HMD Submission class and its properties were made available through <a href="https://github.com/fairgenomes/fairgenomes-semantic-model">FAIR Genomes repository</a>.
-There are also some mandatory fields that were already included in the GDI MS8 deliverable, which will stay mandatory for backwards compatibility. This update will be very minimal, so only extending the current model with new mandatory fields.</p>
-   <h3 class="heading settled" data-level="1.2" id="overview-and-diagram"><span class="secno">1.2. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
-   <p><img alt="UML diagram" src="https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/main/src/new/images/HMD_v1.1_UML.png" width="1200"></p>
+   <h3 class="heading settled" data-level="1.4" id="overview-and-diagram"><span class="secno">1.4. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
+   <p>In the diagram below, you can view the complete HMD.
+Each box within the diagram comprises one of the classes of the model. Within each box, you find all concepts of the respective class.
+Red boxes represent mandatory classes. The remaining classes (green boxes) are optional and usage of these classes depends on each case.
+For example, for data of healthy subjects, the diagnosis class will not be used, but there always needs to be information about the Subject, Sample, Genotyping and Consent.</p>
+   <p>The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.</p>
+   <p><img alt="UML diagram" src="src/images/GDI_diagram-v2.0 UML Diagram 1+MG GDI.drawio.png" width="1200"></p>
    <h2 class="heading settled" data-level="2" id="main-classes"><span class="secno">2. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
    
-In the Harmonized Minimal Dataset, we defined 12 different classes.
+In the Harmonized Minimal Datamodel, we defined separate classes.
 
 
 
@@ -2034,8 +2028,8 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a>
       <td>1..1
      <tr>
-      <td>biological sex at birth
-      <td>The sex of a person at birth as molecular proven.
+      <td>Genetic determined sex
+      <td>The sex of a person at birth as genetically proven.
       <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a>
       <td>0..1
      <tr>
@@ -2149,12 +2143,12 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
      <tr>
       <td>Diagnosis_InfectiousDisease
       <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Diagnosis_InfectiousDisease item may be used.
-      <td>Genepio <a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Diagnosis</a>
+      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
       <td>0..1
      <tr>
       <td>Provisional/clinical Diagnosis_InfectiousDisease
       <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Provisional/clinical Diagnosis_InfectiousDisease item may be used.
-      <td>Genepio <a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Diagnosis</a>
+      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
       <td>0..1
      <tr>
       <td>Date of hospitalization
@@ -2237,7 +2231,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
       <td>1..1
      <tr>
-      <td>Date
+      <td>Date of Sampling
       <td>Defines the date of sampling.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
@@ -2245,7 +2239,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td>ID
       <td>Unique identifier for a collected specimen assigned by data provider.
       <td>String
-      <td>0..1
+      <td>1..1
      <tr>
       <td>Organism
       <td>A living entity.
@@ -2293,7 +2287,7 @@ Finding site (attribute) [SCTID: 363698007]
      <tr>
       <td>Storage_Conditions
       <td>Storage conditions of the sample.
-      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a> or SPREC codes
+      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a>
       <td>0..n
      <tr>
       <td>Assayed_Biological_Macromolecule
@@ -2380,7 +2374,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Related_Sample
       <td>Points to a related sample.
       <td>Sample ID
-      <td>1..n
+      <td>1..1
     <tbody>
      <tr>
       <td>Relation_Type
@@ -2444,6 +2438,8 @@ Finding site (attribute) [SCTID: 363698007]
       <td>0..n
    </table>
    <h3 class="heading settled" data-level="2.5" id="genotyping"><span class="secno">2.5. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h3>
+   <p>The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
+The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.</p>
    <table>
     <thead>
      <tr>
@@ -2514,7 +2510,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td>0..n
      <tr>
       <td>Target Other
-      <td>Any other targeted genomic region.
+      <td>Any other targeted genomic region, like non-coding regulatory elements, promotors/enhancers.
       <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors
       <td>0..n
      <tr>
@@ -2658,12 +2654,12 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Variant_Type
       <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).
-      <td>0..n
+      <td>0..1
      <tr>
       <td>Variant_Origin
       <td>A quality inhering in a variant by virtue of its origin.
       <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.
-      <td>0..1
+      <td>0..n
      <tr>
       <td>Variant_representation
       <td>The representation of the variant using HGVS nomenclature.
@@ -2678,12 +2674,12 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Clinical_Variant_Interpretation_result
       <td>Indicates result of clinical variant interpretation.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
-      <td>0..n
+      <td>0..1
      <tr>
       <td>Clinical_expert_panel_decision
       <td>Decision by clinical expert panel concerning the variant interpretation
       <td>String
-      <td>0..n
+      <td>0..1
      <tr>
       <td>Applied_Criteria_of_Evidence
       <td>A category which fits with categories provided by Expert panels or tools accepted in Clincial Practice. If such recommendations are not available the weighted categories provided by freely available tools would be acceptable.
@@ -2855,6 +2851,17 @@ Finding site (attribute) [SCTID: 363698007]
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/424313000">SCTID: 424313000</a> | Active follow-up
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/703423002">SCTID: 703423002</a> | Chemoradiotherapy
             <br>HL7 NULL flavor (NI, NA, OTH) | Other
+            <br><strong>MDID Treatment types:</strong>
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/33879002">SCTID: 33879002</a> | Vaccination
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428311008">SCTID: 428311008</a> | Non-invasive ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1258985005">SCTID: 1258985005</a> | Invasive mechanical ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/233573008">SCTID: 233573008</a> | Extracorporeal membrane oxygenation 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/281789004">SCTID: 281789004</a> | Antibiotic Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/718526003">SCTID: 718526003</a> | Antifungal Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/427314002">SCTID: 427314002</a> | Antiviral Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243127001">SCTID: 243127001</a> | Glucocorticoids hormone therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243196004">SCTID: 243196004</a> | Immunoglobulin desensitization therapy (regime/therapy)
+            
       <td>1..1
     <tbody>
      <tr>
@@ -2945,6 +2952,11 @@ Finding site (attribute) [SCTID: 363698007]
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405613005">SCTID: 405613005</a> | Planned procedure (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)
+            <br><strong>If treatment == Vaccination:</strong>
+            <br>Fully vaccinated
+            <br>Partially vaccinated
+            <br>Not vaccinated
+            <br>Unknown/not reported
       <td>0..1
     <tbody>
      <tr>
@@ -3003,6 +3015,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td>0..n
    </table>
    <h3 class="heading settled" data-level="2.7" id="biomarker"><span class="secno">2.7. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h3>
+   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
    <table>
     <thead>
      <tr>
@@ -3145,24 +3158,24 @@ Finding site (attribute) [SCTID: 363698007]
       <td>0..n
      <tr>
       <td>Other Type of Exposure
-      <td>Description of any travel within 4 weeks before the diagnosis
+      <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field
       <td>String
       <td>1..1 (conditional)
      <tr>
       <td>Travel History
-      <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field
+      <td>Description of any travel within 4 weeks before the diagnosis
       <td>String
       <td>0..n
      <tr>
       <td>Travel History_start_date
       <td>Start date of relevant travel history
       <td>Date (YYYY-MM-DD), ISO 8601
-      <td>0..n
+      <td>0..n (conditional)
      <tr>
       <td>Travel History_end_date
       <td>End date of relevant travel history
       <td>Date (YYYY-MM-DD), ISO 8601
-      <td>0..n
+      <td>0..n (conditional)
      <tr>
       <td>Residential area at risk
       <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides
@@ -3171,22 +3184,22 @@ Finding site (attribute) [SCTID: 363698007]
      <tr>
       <td>Type of Nicotine product used
       <td>Type of nicotine product used by the subject.
-      <td>Cigarettes 65568007 <br>
-                Cigar 59978006 <br>
-                Pipe 82302008 <br>
-                Shag 160619003 <br>
-                e-cigarette 722499006 <br>
-                chewing tobacco 81703003 <br>
-                waterpipe 698289004 <br>
-                snuff 228494002 <br>
-                NULL flavors (e.g. not asked, unknown, nothing)
-      <td>0..n
+      <td><br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/65568007">SCTID:65568007</a> | Cigarettes
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/59978006">SCTID:59978006</a> | Cigar 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/82302008">SCTID:82302008</a> | Pipe 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/160619003">SCTID:160619003</a> | Shag 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/722499006">SCTID:722499006</a> | e-cigarette 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/81703003">SCTID:81703003</a> | chewing tobacco 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/698289004">SCTID:698289004</a> | waterpipe
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/228494002">SCTID:228494002</a> | snuff 
+            <br>NULL flavors (e.g. not asked, unknown, nothing)
+      <td>0..n (conditional)
      <tr>
       <td>Other type of Nicotine product used
       <td>Other type of nicotine product used by the subject.
-      <td>Children of https://addictovocab.org/ADDICTO_0000311 combined with childred of https://addictovocab.org/ADDICTO_0000316 or <br>
+      <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">https://addictovocab.org/ADDICTO_0000311</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">https://addictovocab.org/ADDICTO_0000316</a> or <br>
                 HL7 NULL flavors
-      <td>0..n
+      <td>0..n (conditional)
      <tr>
       <td>Tobacco Use Status
       <td>The status of the patient’s tobacco use.
@@ -3197,12 +3210,12 @@ Finding site (attribute) [SCTID: 363698007]
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405746006">SCTID:405746006</a> | Current non smoker but past smoking history unknown
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266919005">SCTID:266919005</a> | Never smoked tobacco
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Nicotine use amount
       <td>Describe the amount of nicotine or tobacco consumed.
       <td>String
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Alcohol use status
       <td>The status of the patient’s alcohol use.
@@ -3211,7 +3224,7 @@ Finding site (attribute) [SCTID: 363698007]
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/82581004">SCTID:82581004</a> | Ex-drinker
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/783261004">SCTID:783261004</a> | Lifetime non-drinker of alcohol
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Alcohol amount
       <td>The extent of the patient’s alcohol use in units of alcohol per time period (day/week/year).
@@ -3220,6 +3233,126 @@ Finding site (attribute) [SCTID: 363698007]
             <br>330 ml of beer, 
             <br>80 ml of drink, 
             <br>40 ml liquor
+      <td>0..n (conditional)
+   </table>
+   <h3 class="heading settled" data-level="2.9" id="geolocation"><span class="secno">2.9. </span><span class="content">GeoLocation</span><a class="self-link" href="#geolocation"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>locationName
+      <td>human readable name of the location
+      <td>String or <a href="geonames.org">Geonames.org</a> Ontology IRI (https://sws.geonames.org/xyz)
+      <td>1..1
+     <tr>
+      <td>locationType
+      <td>type of location (e.g. residence, infection site, event, facility, hospital)
+      <td>valuelist (still to be made)
+      <td>1..1
+     <tr>
+      <td>geometry
+      <td>Geospatial shape (point, polygon, etc.)
+      <td>GeoJSON or WKT (Well Known Text)
+      <td>0..n
+     <tr>
+      <td>country
+      <td>Country code
+      <td>2- or 3-lettercode from ISO 3166-1
+      <td>0..1 (conditional)
+     <tr>
+      <td>region
+      <td>Administrative region
+      <td><a href="geonames.org">Geonames.org</a>
+      <td>0..1
+     <tr>
+      <td>city
+      <td>city or municipality
+      <td>rdfs:Literal (xsd:anyURI or xsd:string) where URI is from <a href="geonames.org">Geonames.org</a> (e.g https://www.geonames.org/2759794 is Amsterdam)
+      <td>0..1
+     <tr>
+      <td>source
+      <td>Source of the location data (e.g. self-reported, registry, sensor).
+      <td>rdfs:Literal (xsd:anyURI or xsd:string)
+      <td>0..n
+     <tr>
+      <td>validFrom
+      <td>temporal validity of location (when applicable)
+      <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
+      <td>0..1
+     <tr>
+      <td>ValidTo
+      <td>temporal validity of location (when applicable)
+      <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
+      <td>0..1
+   </table>
+   <h3 class="heading settled" data-level="2.10" id="data-provenance"><span class="secno">2.10. </span><span class="content">Data Provenance</span><a class="self-link" href="#data-provenance"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Data Submitter
+      <td>Full name of the person responsible for submitting the data into the dataset. A string with the name can be provided, but a ORCID can be submitted as well (as a string).
+      <td>String
+      <td>1..1
+     <tr>
+      <td>Data Submitter Email
+      <td>Email where the person responsible for the data submission can be reached at.
+      <td>String
+      <td>1..1
+     <tr>
+      <td>Data Submitter Role
+      <td>Role of the Submitter (e.g. oncologist in charge of the patient, research project PI)
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Department of data submitter
+      <td>Refers to the Department of the Submitter
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Submitter Institution
+      <td>Identifies the Institution of the data submitter. A string with the name can be provided, but a ROR can be submitted as well (as a string).
+      <td>String
+      <td>0..1
+     <tr>
+      <td>Country
+      <td>Country of Submission.
+      <td>GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from ISO 3166-1)
+      <td>1..1
+     <tr>
+      <td>Data Collector
+      <td>Identifies the person responsible for Data Collection
+      <td>String
+      <td>1..1
+     <tr>
+      <td>Data Production Department
+      <td>Refers to the Department in charge of Data Production
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Data Analysis Department
+      <td>Refers to the Department in charge of Data Analysis
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Projects/Trial/cohort/surveillance study
+      <td>Identifies projects which data are part of
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Research Consortia
+      <td>Identifies Research Consortia involved
+      <td>String
       <td>0..n
    </table>
    <h2 class="heading settled" data-level="3" id="matches"><span class="secno">3. </span><span class="content">Matches</span><a class="self-link" href="#matches"></a></h2>
@@ -3294,39 +3427,6 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
      <p>Support more countries and teams to join the GDI Catalogue without needing to change everything.</p>
    </ul>
   </main>
-  <div data-fill-with="conformance">
-   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
-    Conformance</span><a class="self-link" href="#conformance"></a></h2>
-   <p>
-            Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
-            The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
-            in the normative parts of this document
-            are to be interpreted as described in RFC 2119.
-            However, for readability,
-            these words do not appear in all uppercase letters in this specification.
-
-        </p>
-   <p>
-            All of the text of this specification is normative
-            except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a>
-
-        </p>
-   <p>
-            Examples in this specification are introduced with the words “for example”
-            or are set apart from the normative text with <code>class="example"</code>, like this:
-
-        </p>
-   <div class="example" id="example-example"><a class="self-link" href="#example-example"></a>
-            This is an example of an informative example.
-        </div>
-   <p>
-            Informative notes begin with the word “Note”
-            and are set apart from the normative text with <code>class="note"</code>, like this:
-
-        </p>
-   <p class="note" role="note">
-            Note, this is an informative note.</p>
-  </div>
 <script>
 (function() {
   "use strict";
@@ -3456,9 +3556,3 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
 
 })();
 </script>
-  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
-  <dl>
-   <dt id="biblio-rfc2119">[RFC2119]
-   <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
-  </dl>

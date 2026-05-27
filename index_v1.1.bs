@@ -12,7 +12,7 @@ Editor: Joeri van der Velde
 Editor: Abhishek Nayak
 Editor: Aedin Culhane
 
-Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300"> <br/> Some context about the GDI HMD.
+Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300"> <br/>
 Markup Shorthands: markdown yes, css no
 </pre>
 

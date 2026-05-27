@@ -23,7 +23,7 @@
             <td>1..1</td>
         </tr>
         <tr>
-            <td>Date</td>
+            <td>Date of Sampling</td>
             <td>Defines the date of sampling.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -32,7 +32,7 @@
             <td>ID</td>
             <td>Unique identifier for a collected specimen assigned by data provider.</td>
             <td>String</td>
-            <td>0..1</td>
+            <td>1..1</td>
         </tr>
         <tr>
             <td>Organism</td>
@@ -84,7 +84,7 @@
         <tr>
             <td>Storage_Conditions</td>
             <td>Storage conditions of the sample.</td>
-            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a> or SPREC codes</td>
+            <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a></td>
             <td>0..n</td>
         </tr>
         <tr>

@@ -14,13 +14,13 @@
             <td>Variant_Type</td>
             <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).</td>
-            <td>0..n</td>
+            <td>0..1</td>
         </tr>
         <tr>
             <td>Variant_Origin</td>
             <td>A quality inhering in a variant by virtue of its origin.</td>
             <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.</td>
-            <td>0..1</td>
+            <td>0..n</td>
         </tr>
         <tr>
             <td>Variant_representation</td>
@@ -38,13 +38,13 @@
             <td>Clinical_Variant_Interpretation_result</td>
             <td>Indicates result of clinical variant interpretation.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.</td>
-            <td>0..n</td>
+            <td>0..1</td>
         </tr>
         <tr>
             <td>Clinical_expert_panel_decision</td>
             <td>Decision by clinical expert panel concerning the variant interpretation</td>
             <td>String</td>
-            <td>0..n</td>
+            <td>0..1</td>
         </tr>
         <tr>
             <td>Applied_Criteria_of_Evidence</td>

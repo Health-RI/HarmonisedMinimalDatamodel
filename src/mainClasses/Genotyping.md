@@ -79,7 +79,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
         </tr>
         <tr>
             <td>Target Other</td>
-            <td>Any other targeted genomic region.</td>
+            <td>Any other targeted genomic region, like non-coding regulatory elements, promotors/enhancers.</td>
             <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors</td>
             <td>0..n</td>
         </tr>

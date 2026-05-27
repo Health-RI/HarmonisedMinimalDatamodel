@@ -37,13 +37,13 @@
         <tr>
             <td>Diagnosis_InfectiousDisease</td>
             <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Diagnosis_InfectiousDisease item may be used.</td>
-            <td>Genepio <a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Diagnosis</a></td>
+            <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a></td>
             <td>0..1</td>
         </tr>
         <tr>
             <td>Provisional/clinical Diagnosis_InfectiousDisease</td>
             <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Provisional/clinical Diagnosis_InfectiousDisease item may be used.</td>
-            <td>Genepio <a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Diagnosis</a></td>
+            <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a></td>
             <td>0..1</td>
         </tr>
         <tr>

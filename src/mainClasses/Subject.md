@@ -23,8 +23,8 @@
             <td>1..1</td>
         </tr>
         <tr>
-            <td>biological sex at birth</td>
-            <td>The sex of a person at birth as molecular proven.</td>
+            <td>Genetic determined sex</td>
+            <td>The sex of a person at birth as genetically proven.</td>
             <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a></td>
             <td>0..1</td>
         </tr>

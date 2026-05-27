@@ -56,7 +56,18 @@
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/310341009">SCTID: 310341009</a> or 373818007 | Watchful waiting
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/424313000">SCTID: 424313000</a> | Active follow-up
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/703423002">SCTID: 703423002</a> | Chemoradiotherapy
-            <br>HL7 NULL flavor (NI, NA, OTH) | Other</td>
+            <br>HL7 NULL flavor (NI, NA, OTH) | Other
+            <br>**MDID Treatment types:**
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/33879002">SCTID: 33879002</a> | Vaccination
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428311008">SCTID: 428311008</a> | Non-invasive ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1258985005">SCTID: 1258985005</a> | Invasive mechanical ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/233573008">SCTID: 233573008</a> | Extracorporeal membrane oxygenation 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/281789004">SCTID: 281789004</a> | Antibiotic Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/718526003">SCTID: 718526003</a> | Antifungal Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/427314002">SCTID: 427314002</a> | Antiviral Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243127001">SCTID: 243127001</a> | Glucocorticoids hormone therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243196004">SCTID: 243196004</a> | Immunoglobulin desensitization therapy (regime/therapy)
+            </td>
             <td>1..1</td>
         </tr>
     </tbody>
@@ -174,7 +185,12 @@
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405613005">SCTID: 405613005</a> | Planned procedure (situation)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)</td>
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)
+            <br>**If treatment == Vaccination:**
+            <br>Fully vaccinated
+            <br>Partially vaccinated
+            <br>Not vaccinated
+            <br>Unknown/not reported</td>
             <td>0..1</td>
         </tr>
     </tbody>

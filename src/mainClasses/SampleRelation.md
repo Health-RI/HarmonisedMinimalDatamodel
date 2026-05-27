@@ -14,7 +14,7 @@
             <td>Related_Sample</td>
             <td>Points to a related sample.</td>
             <td>Sample ID</td>
-            <td>1..n</td>
+            <td>1..1</td>
         </tr>
     <tbody>
         <tr>
