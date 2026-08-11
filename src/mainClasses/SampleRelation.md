@@ -16,7 +16,6 @@
             <td>Sample ID</td>
             <td>1..1</td>
         </tr>
-    <tbody>
         <tr>
             <td>Relation_Type</td>
             <td>Describes the relationship type between the two connected samples.</td>
@@ -33,7 +32,6 @@
             <br>Spatial</td>
             <td>1..1</td>
         </tr>
-    <tbody>
         <tr>
             <td>Relation_Description</td>
             <td>Free text describing the Relation Type of two samples.</td>

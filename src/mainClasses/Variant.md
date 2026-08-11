@@ -1,4 +1,4 @@
-### Variant
+#### Variant
 
 <table>
     <thead>
@@ -25,13 +25,13 @@
         <tr>
             <td>Variant_representation</td>
             <td>The representation of the variant using HGVS nomenclature.</td>
-            <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a></td>
+            <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>. If HGVS cannot be followed, a string form another source can be provided. In this case, the source should also be provided in the string.</td>
             <td>1..1</td>
         </tr>
         <tr>
             <td>Clinical_Variant_Interpretation_criteria</td>
             <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation, gene specific interpretation is essential (gene specific databases are expert panel cured databases)</td>
-            <td>List of versions of ACMG, ESMO-ESCAT, others??</td>
+            <td>List of versions of ACMG, ESMO-ESCAT</td>
             <td>0..n</td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>Clinical_expert_panel_decision</td>
-            <td>Decision by clinical expert panel concerning the variant interpretation</td>
+            <td>Decision by clinical expert panel (e.g., molecular tumor board or other board) concerning the variant interpretation.</td>
             <td>String</td>
             <td>0..1</td>
         </tr>
@@ -59,26 +59,14 @@
             <td>0..n</td>
         </tr>
         <tr>
-            <td>Variant_calling_software_deviation</td>
-            <td>Identification of the software used for variant calling, if different from software stated in Sequence class.</td>
-            <td>--> Digital Resource class</td>
-            <td>0..n</td>
-        </tr>
-        <tr>
-            <td>Variant_Annotation_tools_deviation</td>
-            <td>Identification of the software used for variant annotation, if different from software stated in Sequence class. </td>
-            <td>--> Digital Resource class</td>
-            <td>0..n</td>
-        </tr>
-        <tr>
-            <td>Variant_Annotation_database_deviation</td>
-            <td>Database and version used for variant annotation, if different from software stated in Sequence class.</td>
-            <td>--> Digital Resource class</td>
+            <td>Variant_calling_deviation</td>
+            <td>Identification of the software used for variant calling, if different from software stated in Genotyping class.</td>
+            <td>--> Variant Calling class</td>
             <td>0..n</td>
         </tr>
         <tr>
             <td>Reported_to_patient</td>
-            <td>Indication if the variant has been reported back to the patient, if different from software stated in Sequence class.</td>
+            <td>Indication if the variant has been reported back to the patient.</td>
             <td>Boolean</td>
             <td>0..1</td>
         </tr>

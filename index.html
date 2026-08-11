@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="611667198455940547a6f479d9174bcedc05b101" name="revision">
+  <meta content="a57a394051f4e1b161a6523d5e5ea611bad33a83" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1896,7 +1896,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-05-27">27 May 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-05-28">28 May 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1929,7 +1929,7 @@ dfn > a.self-link::before      { content: "#"; }
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
       <li><a href="#about-gdi"><span class="secno">1.1</span> <span class="content">About GDI</span></a>
-      <li><a href="#about-the-harmonized-minmal-data-model-for-gdi"><span class="secno">1.2</span> <span class="content">About the Harmonized Minmal Data Model for GDI</span></a>
+      <li><a href="#about-the-harmonized-minimal-data-model-for-gdi"><span class="secno">1.2</span> <span class="content">About the Harmonized Minimal Data Model for GDI</span></a>
       <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.3</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
       <li><a href="#overview-and-diagram"><span class="secno">1.4</span> <span class="content">Overview and Diagram</span></a>
      </ol>
@@ -1948,21 +1948,24 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#tnm"><span class="secno">2.3.1</span> <span class="content">TNM</span></a>
         <li><a href="#sample-relation"><span class="secno">2.3.2</span> <span class="content">Sample Relation</span></a>
        </ol>
-      <li><a href="#test"><span class="secno">2.4</span> <span class="content">Test</span></a>
       <li>
-       <a href="#genotyping"><span class="secno">2.5</span> <span class="content">Genotyping</span></a>
+       <a href="#test"><span class="secno">2.4</span> <span class="content">Test</span></a>
        <ol class="toc">
-        <li><a href="#digital-resource"><span class="secno">2.5.1</span> <span class="content">Digital Resource</span></a>
-        <li><a href="#variant"><span class="secno">2.5.2</span> <span class="content">Variant</span></a>
-        <li><a href="#target-gene"><span class="secno">2.5.3</span> <span class="content">Target Gene</span></a>
-        <li><a href="#identifier"><span class="secno">2.5.4</span> <span class="content">Identifier</span></a>
-        <li><a href="#protocol"><span class="secno">2.5.5</span> <span class="content">Protocol</span></a>
+        <li><a href="#biomarker"><span class="secno">2.4.1</span> <span class="content">Biomarker</span></a>
+        <li>
+         <a href="#genotyping"><span class="secno">2.4.2</span> <span class="content">Genotyping</span></a>
+         <ol class="toc">
+          <li><a href="#digital-resource"><span class="secno">2.4.2.1</span> <span class="content">Digital Resource</span></a>
+          <li><a href="#variant"><span class="secno">2.4.2.2</span> <span class="content">Variant</span></a>
+          <li><a href="#target-gene"><span class="secno">2.4.2.3</span> <span class="content">Target Gene</span></a>
+          <li><a href="#identifier"><span class="secno">2.4.2.4</span> <span class="content">Identifier</span></a>
+          <li><a href="#protocol"><span class="secno">2.4.2.5</span> <span class="content">Protocol</span></a>
+         </ol>
        </ol>
-      <li><a href="#treatment"><span class="secno">2.6</span> <span class="content">Treatment</span></a>
-      <li><a href="#biomarker"><span class="secno">2.7</span> <span class="content">Biomarker</span></a>
-      <li><a href="#environmental-exposure"><span class="secno">2.8</span> <span class="content">Environmental Exposure</span></a>
-      <li><a href="#geolocation"><span class="secno">2.9</span> <span class="content">GeoLocation</span></a>
-      <li><a href="#data-provenance"><span class="secno">2.10</span> <span class="content">Data Provenance</span></a>
+      <li><a href="#treatment"><span class="secno">2.5</span> <span class="content">Treatment</span></a>
+      <li><a href="#environmental-exposure"><span class="secno">2.6</span> <span class="content">Environmental Exposure</span></a>
+      <li><a href="#geolocation"><span class="secno">2.7</span> <span class="content">GeoLocation</span></a>
+      <li><a href="#data-provenance"><span class="secno">2.8</span> <span class="content">Data Provenance</span></a>
      </ol>
     <li>
      <a href="#matches"><span class="secno">3</span> <span class="content">Matches</span></a>
@@ -1978,7 +1981,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p>The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
 Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
 You can visit https://gdi.onemilliongenomes.eu/ for more information about the project.</p>
-   <h3 class="heading settled" data-level="1.2" id="about-the-harmonized-minmal-data-model-for-gdi"><span class="secno">1.2. </span><span class="content">About the Harmonized Minmal Data Model for GDI</span><a class="self-link" href="#about-the-harmonized-minmal-data-model-for-gdi"></a></h3>
+   <h3 class="heading settled" data-level="1.2" id="about-the-harmonized-minimal-data-model-for-gdi"><span class="secno">1.2. </span><span class="content">About the Harmonized Minimal Data Model for GDI</span><a class="self-link" href="#about-the-harmonized-minimal-data-model-for-gdi"></a></h3>
    
 Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.
 This page outlines the content of the Harmonized minimal data model for GDI.
@@ -2437,7 +2440,105 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Class Protocol
       <td>0..n
    </table>
-   <h3 class="heading settled" data-level="2.5" id="genotyping"><span class="secno">2.5. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h3>
+   <h4 class="heading settled" data-level="2.4.1" id="biomarker"><span class="secno">2.4.1. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h4>
+   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Purpose
+      <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201361">Diagnosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201363">Prognosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Type
+      <td>What type is the biomarker classified as.
+      <td>Molecular
+            <br>Imaging
+            <br>Anthropometric
+            <br>Cellular
+            <br>Physiological
+      <td>1..1
+    <tbody>
+     <tr>
+      <td>Subtype
+      <td>Subtype of the biomarker as classified in the type.
+      <td>If Type ==
+            <br>- <b>Molecular</b>: Genetics/Genomics,
+            Epigenetics/Epigenomics,
+            Transcription/Transcriptomics,
+            Metabolites/Metabolomics,
+            Proteins/Proteomics,
+            Microbiomics/Microbiology,
+            Biochemistry (biochemical),
+            Other molecular biomarker,
+            N/P
+            <br>- <b>Imaging</b>: X-Rays,
+            Ultrasound (echography, etc),
+            CT Scan,
+            PET/SPECT,
+            Spectrometry,
+            MRI,
+            Scintigraphy (Gamma),
+            Mammography,
+            Other image biomarker,
+            N/P
+            <br>- <b>Anthropometric</b>: BMI,
+            Body perimeters (circumference),
+            Other anthropometric biomarker,
+            N/P
+            <br>- <b>Cellular</b>: Histology (tissue abnormalities),
+            Cytology (cell types),
+            Other cellular biomarker,
+            N/P
+            <br>- <b>Physiological</b>: Blood Pressure,
+            Ankle-brachial Index,
+            ECG,
+            EEG,
+            Electromyography,
+            Other physiological biomarker,
+            N/P
+      <td>1..1
+    <tbody>
+     <tr>
+      <td>Name
+      <td>Biomarker name.
+      <td>String
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Code
+      <td>Code of the biomarker.
+      <td>String
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Code System
+      <td>Code System of the Biomarker Code.
+      <td>String or URI
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Measured value of biomarker
+      <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)
+      <td>integer/float or string
+      <td>0..1
+     <tr>
+      <td>Unit of measured biomarker
+      <td>Unit associated with the measured value of the biomarker (if applicable).
+      <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
+      <td>0..1
+   </table>
+   <h4 class="heading settled" data-level="2.4.2" id="genotyping"><span class="secno">2.4.2. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h4>
    <p>The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
 The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.</p>
    <table>
@@ -2596,7 +2697,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>--> Digital Resource class
       <td>0..n
    </table>
-   <h4 class="heading settled" data-level="2.5.1" id="digital-resource"><span class="secno">2.5.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h4>
+   <h5 class="heading settled" data-level="2.4.2.1" id="digital-resource"><span class="secno">2.4.2.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2641,7 +2742,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>String
       <td>0..n
    </table>
-   <h4 class="heading settled" data-level="2.5.2" id="variant"><span class="secno">2.5.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h4>
+   <h5 class="heading settled" data-level="2.4.2.2" id="variant"><span class="secno">2.4.2.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2711,7 +2812,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Boolean
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="2.5.3" id="target-gene"><span class="secno">2.5.3. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h4>
+   <h5 class="heading settled" data-level="2.4.2.3" id="target-gene"><span class="secno">2.4.2.3. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2738,7 +2839,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>String
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="2.5.4" id="identifier"><span class="secno">2.5.4. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h4>
+   <h5 class="heading settled" data-level="2.4.2.4" id="identifier"><span class="secno">2.4.2.4. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2763,7 +2864,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>String (with#anyURI) of either <a href="http://www.wikidata.org/entity/Q1646383">HGNC</a>, <a href="http://www.wikidata.org/entity/Q20641742">NCBI gene</a>, <a href="http://www.wikidata.org/entity/Q905695">UniProtID</a>, <a href="http://www.wikidata.org/entity/Q241953">OMIM</a>, <a href="http://www.wikidata.org/entity/Q17027854">HPO</a> or <a href="http://semanticscience.org/resource/SIO_001389">HGVS</a> for variants 
       <td>1..1
    </table>
-   <h4 class="heading settled" data-level="2.5.5" id="protocol"><span class="secno">2.5.5. </span><span class="content">Protocol</span><a class="self-link" href="#protocol"></a></h4>
+   <h5 class="heading settled" data-level="2.4.2.5" id="protocol"><span class="secno">2.4.2.5. </span><span class="content">Protocol</span><a class="self-link" href="#protocol"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2799,7 +2900,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
                 Include as well if PT is for a specific test or analysis)
       <td>0..n
    </table>
-   <h3 class="heading settled" data-level="2.6" id="treatment"><span class="secno">2.6. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
+   <h3 class="heading settled" data-level="2.5" id="treatment"><span class="secno">2.5. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
    <table>
     <thead>
      <tr>
@@ -3014,105 +3115,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
       <td>0..n
    </table>
-   <h3 class="heading settled" data-level="2.7" id="biomarker"><span class="secno">2.7. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h3>
-   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td>Purpose
-      <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201361">Diagnosis</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201363">Prognosis</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Type
-      <td>What type is the biomarker classified as.
-      <td>Molecular
-            <br>Imaging
-            <br>Anthropometric
-            <br>Cellular
-            <br>Physiological
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Subtype
-      <td>Subtype of the biomarker as classified in the type.
-      <td>If Type ==
-            <br>- <b>Molecular</b>: Genetics/Genomics,
-            Epigenetics/Epigenomics,
-            Transcription/Transcriptomics,
-            Metabolites/Metabolomics,
-            Proteins/Proteomics,
-            Microbiomics/Microbiology,
-            Biochemistry (biochemical),
-            Other molecular biomarker,
-            N/P
-            <br>- <b>Imaging</b>: X-Rays,
-            Ultrasound (echography, etc),
-            CT Scan,
-            PET/SPECT,
-            Spectrometry,
-            MRI,
-            Scintigraphy (Gamma),
-            Mammography,
-            Other image biomarker,
-            N/P
-            <br>- <b>Anthropometric</b>: BMI,
-            Body perimeters (circumference),
-            Other anthropometric biomarker,
-            N/P
-            <br>- <b>Cellular</b>: Histology (tissue abnormalities),
-            Cytology (cell types),
-            Other cellular biomarker,
-            N/P
-            <br>- <b>Physiological</b>: Blood Pressure,
-            Ankle-brachial Index,
-            ECG,
-            EEG,
-            Electromyography,
-            Other physiological biomarker,
-            N/P
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Name
-      <td>Biomarker name.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Code
-      <td>Code of the biomarker.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Code System
-      <td>Code System of the Biomarker Code.
-      <td>String or URI
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Measured value of biomarker
-      <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)
-      <td>integer/float or string
-      <td>0..1
-     <tr>
-      <td>Unit of measured biomarker
-      <td>Unit associated with the measured value of the biomarker (if applicable).
-      <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
-      <td>0..1
-   </table>
-   <h3 class="heading settled" data-level="2.8" id="environmental-exposure"><span class="secno">2.8. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
+   <h3 class="heading settled" data-level="2.6" id="environmental-exposure"><span class="secno">2.6. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
    <table>
     <thead>
      <tr>
@@ -3132,10 +3135,22 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <br>- Exposure to naturally ocurring toxic substances --> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=420239005&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Exposure to toxin </a>,
             <br>- Natural resources degradation (for example, landslides, poor drainage, erosion) --> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1290214003&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Soil degradation </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1290129009&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Land degradation </a>,
             <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry --> <a href="http://purl.obolibrary.org/obo/ENVO_01000629"> Climate change </a>,
-            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>,
-            <br><b>Biological hazard</b> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=37017009&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Parasitic worms </a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=84676004&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Prions</a>)
-            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">Chemical hazards</a></b> (<a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), <a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, <br>Tobacco/Nicotine, <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)
-            <br><b>Physical environmental hazard</b> (<a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, Human activities (eg. traffic accident))
+            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>, <br>
+            <br><b>- Biological hazard:</b> 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=37017009&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Parasitic worms </a>, 
+            <br><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=84676004&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Prions</a> <br>
+            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">- Chemical hazards:</a></b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <br><a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), 
+            <br><a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, 
+            <br>Tobacco/Nicotine, 
+            <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)<br>
+            <br><b>- Physical environmental hazard</b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, <br>Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), 
+            <br>Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, <br>Human activities (eg. traffic accident)
             <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
       <td>0..n
      <tr>
@@ -3235,7 +3250,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <br>40 ml liquor
       <td>0..n (conditional)
    </table>
-   <h3 class="heading settled" data-level="2.9" id="geolocation"><span class="secno">2.9. </span><span class="content">GeoLocation</span><a class="self-link" href="#geolocation"></a></h3>
+   <h3 class="heading settled" data-level="2.7" id="geolocation"><span class="secno">2.7. </span><span class="content">GeoLocation</span><a class="self-link" href="#geolocation"></a></h3>
    <table>
     <thead>
      <tr>
@@ -3290,7 +3305,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
       <td>0..1
    </table>
-   <h3 class="heading settled" data-level="2.10" id="data-provenance"><span class="secno">2.10. </span><span class="content">Data Provenance</span><a class="self-link" href="#data-provenance"></a></h3>
+   <h3 class="heading settled" data-level="2.8" id="data-provenance"><span class="secno">2.8. </span><span class="content">Data Provenance</span><a class="self-link" href="#data-provenance"></a></h3>
    <table>
     <thead>
      <tr>

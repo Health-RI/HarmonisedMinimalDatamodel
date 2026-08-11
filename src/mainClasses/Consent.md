@@ -38,7 +38,7 @@
             <td>Consent date</td>
             <td>Date on which consent was given.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
-            <td>0..1</td>
+            <td>1..1 (conditional)</td>
         </tr>
     </tbody>
 </table>

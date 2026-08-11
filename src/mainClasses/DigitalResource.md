@@ -1,4 +1,4 @@
-### Digital Resource
+#### Digital Resource
 
 <table>
     <thead>
@@ -31,7 +31,7 @@
         <tr>
             <td>Version</td>
             <td>The version of the tool/software/database used.</td>
-            <td>string</td>
+            <td>String</td>
             <td>1..1</td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@
             <td>Parameters</td>
             <td>Description of parameters used with the specified software. Copy the complete command line (all lines executed) used.</td>
             <td>String</td>
-            <td>0..n</td>
+            <td>1..n (conditional)</td>
         </tr>
     </tbody>
 </table>

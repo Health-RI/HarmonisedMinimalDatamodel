@@ -19,7 +19,7 @@
         <tr>
             <td>locationType</td>
             <td>type of location (e.g. residence, infection site, event, facility, hospital)</td>
-            <td>valuelist (still to be made)</td>
+            <td>Children of <a href="https://snomedbrowser.org/?perspective=full&conceptId1=276339004&edition=MAIN/2026-08-01&release=&languages=en">SNOMED 276339004 | Environment (environment)</a></td>
             <td>1..1</td>
         </tr>
         <tr>

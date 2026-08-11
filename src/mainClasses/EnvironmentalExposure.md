@@ -21,10 +21,22 @@
             <br>- Exposure to naturally ocurring toxic substances --> <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=420239005&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Exposure to toxin </a>,
             <br>- Natural resources degradation (for example, landslides, poor drainage, erosion) --> <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=1290214003&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Soil degradation </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=1290129009&edition=MAIN/2025-07-01&release=&languages=en&latestRedirect=false"> Land degradation </a>,
             <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry --> <a href="http://purl.obolibrary.org/obo/ENVO_01000629"> Climate change </a>,
-            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>,
-            <br><b>Biological hazard</b> (<a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=37017009&edition=MAIN/2025-07-01&release=&languages=en">Parasitic worms </a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, <a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=84676004&edition=MAIN/2025-07-01&release=&languages=en">Prions</a>)
-            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">Chemical hazards</a></b> (<a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), <a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, <br>Tobacco/Nicotine, <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)
-            <br><b>Physical environmental hazard</b> (<a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, Human activities (eg. traffic accident))
+            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>, <br>
+            <br><b>- Biological hazard:</b> 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=37017009&edition=MAIN/2025-07-01&release=&languages=en">Parasitic worms </a>, 
+            <br><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=84676004&edition=MAIN/2025-07-01&release=&languages=en">Prions</a> <br>
+            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">- Chemical hazards:</a></b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <br><a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), 
+            <br><a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, 
+            <br>Tobacco/Nicotine, 
+            <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)<br>
+            <br><b>- Physical environmental hazard</b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, <br>Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), 
+            <br>Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, <br>Human activities (eg. traffic accident)
             <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a></td>
             <td>0..n</td>
         </tr>
@@ -46,7 +58,7 @@
             <td>Exposure Route</td>
             <td>The means through which an agent enters a target organism after contact (e.g. by ingestion, inhalation, or dermal absorption)</td>
             <td>string; e.g. inhalation, sexual transmission, eating, licking, handshake, …</td>
-            <td>0..n</td>
+            <td>0..n (conditional)</td>
         </tr>
         <tr>
             <td>Other Type of Exposure</td>

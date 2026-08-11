@@ -1,4 +1,4 @@
-## Biomarker
+### Biomarker
 
 The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.
 
@@ -31,7 +31,7 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
             <br>Anthropometric
             <br>Cellular
             <br>Physiological</td>
-            <td>1..1</td>
+            <td>1..1 (conditional)</td>
         </tr>
     </tbody>
     <tbody>
@@ -73,7 +73,7 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
             Electromyography,
             Other physiological biomarker,
             N/P</td>
-            <td>1..1</td>
+            <td>1..1 (conditional)</td>
         </tr>
     </tbody>
     <tbody>

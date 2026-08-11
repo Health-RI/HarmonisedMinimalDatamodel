@@ -1,4 +1,4 @@
-## Genotyping
+### Genotyping
 
 The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
 The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.
@@ -84,18 +84,6 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>0..n</td>
         </tr>
         <tr>
-            <td>Panel_of_Normals_Included</td>
-            <td>Indicate whether a panel of normals is included during variant calling.</td>
-            <td>Boolean</td>
-            <td>0..1</td>
-        </tr>
-        <tr>
-            <td>Panel_of_Normals_Description</td>
-            <td>Free text description of panel of normals, if applicable.</td>
-            <td>String</td>
-            <td>0..1</td>
-        </tr>
-        <tr>
             <td>Average depth of coverage</td>
             <td>Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted sequencing (eg 60x, average number of times each target base has been ‘read’ by sequencer). (Observed)</td>
             <td>Float</td>
@@ -109,6 +97,18 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>Float</td>
             <td>0..1</td>
         </tr>
+        <tr>
+            <td>Average Read Length</td>
+            <td>The average length for nucleic acid sequencing reads.</td>
+            <td>String</td>
+            <td>0..1</td>
+        </tr>       
+        <tr>
+            <td>Amount of reads sequenced</td>
+            <td>Number of sequencing reads produced.</td>
+            <td>Integer</td>
+            <td>0..1</td>
+        </tr>    
         <tr>
             <td>Additional NGS quality control metrics</td>
             <td>Statement of any additional NGS quality control metrics.</td>
@@ -153,32 +153,14 @@ The Biomarker class is another subclass from the Test class. Any reference from 
         </tr>
         <tr>
             <td>Variant</td>
-            <td>A detected and reported variant.</td>
+            <td>A reported variant.</td>
             <td>--> Variant class</td>
             <td>0..n</td>
         </tr>
         <tr>
             <td>Variant_calling</td>
-            <td>Identification of the software used for variant calling.</td>
-            <td>--> Digital Resource class</td>
-            <td>0..n</td>
-        </tr>
-        <tr>
-            <td>Variant_calling_date</td>
-            <td>Defines the date of variant calling.</td>
-            <td>Date (YYYY-MM-DD), ISO 8601 format</td>
-            <td>0..1</td>
-        </tr>
-        <tr>
-            <td>Variant_Annotation</td>
-            <td>Identification of the software used for variant annotation.</td>
-            <td>--> Digital Resource class</td>
-            <td>0..n</td>
-        </tr>
-        <tr>
-            <td>Variant_Annotation_database</td>
-            <td>Database and version used for variant annotation.</td>
-            <td>--> Digital Resource class</td>
+            <td>Description of the procedure for variant calling</td>
+            <td>--> Variant Calling class</td>
             <td>0..n</td>
         </tr>
     </tbody>

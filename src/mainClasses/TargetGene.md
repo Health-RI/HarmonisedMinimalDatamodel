@@ -1,4 +1,4 @@
-### Target Gene
+#### Target Gene
 
 <table>
     <thead>
@@ -14,7 +14,7 @@
             <td>Identifier</td>
             <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier</td>
             <td>Identifier class</td>
-            <td>0..1</td>
+            <td>1..1 (conditional)</td>
         </tr>
     </tbody>
     <tbody>
@@ -22,7 +22,7 @@
             <td>Label</td>
             <td>Label of the target gene, if no URI can be provided.</td>
             <td>String</td>
-            <td>0..1</td>
+            <td>1..1 (conditional)</td>
         </tr>
     </tbody>
     <tbody>
