@@ -34,6 +34,77 @@ path: src/mainClasses.md
 path: src/mainClasses/Subject.md
 </pre>
 
+<pre class=include>
+path: src/mainClasses/Consent.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Diagnosis.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Sample.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/TNM.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/SampleRelation.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Test.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Genotyping.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/DigitalResource.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Variant.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/VariantCalling.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/TargetGene.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Identifier.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Protocol.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Treatment.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/Biomarker.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/EnvironmentalExposure.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/GeoLocation.md
+</pre>
+
+<pre class=include>
+path: src/mainClasses/DataProvenance.md
+</pre>
 
 <pre class=include>
 path: src/matches.md

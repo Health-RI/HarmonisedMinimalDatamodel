@@ -62,7 +62,7 @@
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C158417">Tissue (Frozen)</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C172265">Tissue (FFPE)</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C189126">Urine</a>
-            <br><a href="https://terminology.hl7.org/en/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTHOther">Other</td>
+            <br><a href="https://terminology.hl7.org/en/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTHOther">Other</a></td>
             <td>1..1 (conditional)</td>
         </tr>
         <tr>

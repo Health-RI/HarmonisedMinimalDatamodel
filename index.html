@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
+  <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="a57a394051f4e1b161a6523d5e5ea611bad33a83" name="revision">
+  <meta content="7b62bcc16a7e805ab6bc534282c4de92fce2f16a" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1786,7 +1786,7 @@ pre .property::before, pre .property::after {
 </style>
 <style>/* Boilerplate: style-counters */
 body {
-    counter-reset: example figure issue;
+    counter-reset: example figure issue table;
 }
 .issue {
     counter-increment: issue;
@@ -1803,7 +1803,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
+    content: "Invalid Example " counter(example);
 }
 
 figcaption {
@@ -1811,6 +1811,13 @@ figcaption {
 }
 figcaption:not(.no-marker)::before {
     content: "Figure " counter(figure) " ";
+}
+
+figure.table figcaption {
+    counter-increment: table;
+}
+figure.table figcaption:not(.no-marker)::before {
+    content: "Table " counter(table) " ";
 }
 </style>
 <style>/* Boilerplate: style-issues */
@@ -1894,9 +1901,9 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">GDI Harmonised Minimal Data Model</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-05-28">28 May 2026</time></span></h2>
+   <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
+   <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
+    <time class="dt-updated" datetime="2026-08-11">11 August 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1906,25 +1913,25 @@ dfn > a.self-link::before      { content: "#"; }
      <dt>Issue Tracking:
      <dd><a href="https://github.com/Health-RI/HarmonisedMinimalDatamodel/issues/">GitHub</a>
      <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Ana Konrad</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Jeroen Beliën</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Joeri van der Velde</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Abhishek Nayak</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Aedin Culhane</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Ana Konrad</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Hannah Neikes</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Jeroen Beliën</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Joeri van der Velde</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Abhishek Nayak</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Aedin Culhane</span>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
    <p><img alt="GDI-logo" src="src/images/gdi-logo.svg" title="GDI-logo" width="300"> <br> Some context about the GDI HMD.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
-   <ol class="toc" role="directory">
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
+   <ol class="toc">
     <li>
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
@@ -1951,18 +1958,22 @@ dfn > a.self-link::before      { content: "#"; }
       <li>
        <a href="#test"><span class="secno">2.4</span> <span class="content">Test</span></a>
        <ol class="toc">
-        <li><a href="#biomarker"><span class="secno">2.4.1</span> <span class="content">Biomarker</span></a>
         <li>
-         <a href="#genotyping"><span class="secno">2.4.2</span> <span class="content">Genotyping</span></a>
+         <a href="#genotyping"><span class="secno">2.4.1</span> <span class="content">Genotyping</span></a>
          <ol class="toc">
-          <li><a href="#digital-resource"><span class="secno">2.4.2.1</span> <span class="content">Digital Resource</span></a>
-          <li><a href="#variant"><span class="secno">2.4.2.2</span> <span class="content">Variant</span></a>
-          <li><a href="#target-gene"><span class="secno">2.4.2.3</span> <span class="content">Target Gene</span></a>
-          <li><a href="#identifier"><span class="secno">2.4.2.4</span> <span class="content">Identifier</span></a>
-          <li><a href="#protocol"><span class="secno">2.4.2.5</span> <span class="content">Protocol</span></a>
+          <li><a href="#digital-resource"><span class="secno">2.4.1.1</span> <span class="content">Digital Resource</span></a>
+          <li><a href="#variant"><span class="secno">2.4.1.2</span> <span class="content">Variant</span></a>
+          <li><a href="#variant-calling"><span class="secno">2.4.1.3</span> <span class="content">Variant Calling</span></a>
+          <li><a href="#target-gene"><span class="secno">2.4.1.4</span> <span class="content">Target Gene</span></a>
+          <li><a href="#identifier"><span class="secno">2.4.1.5</span> <span class="content">Identifier</span></a>
+          <li><a href="#protocol"><span class="secno">2.4.1.6</span> <span class="content">Protocol</span></a>
          </ol>
        </ol>
-      <li><a href="#treatment"><span class="secno">2.5</span> <span class="content">Treatment</span></a>
+      <li>
+       <a href="#treatment"><span class="secno">2.5</span> <span class="content">Treatment</span></a>
+       <ol class="toc">
+        <li><a href="#biomarker"><span class="secno">2.5.1</span> <span class="content">Biomarker</span></a>
+       </ol>
       <li><a href="#environmental-exposure"><span class="secno">2.6</span> <span class="content">Environmental Exposure</span></a>
       <li><a href="#geolocation"><span class="secno">2.7</span> <span class="content">GeoLocation</span></a>
       <li><a href="#data-provenance"><span class="secno">2.8</span> <span class="content">Data Provenance</span></a>
@@ -2011,6 +2022,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
 
 
 
+
    <h3 class="heading settled" data-level="2.1" id="subject"><span class="secno">2.1. </span><span class="content">Subject</span><a class="self-link" href="#subject"></a></h3>
    <table>
     <thead>
@@ -2039,7 +2051,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Date_of_Last_Follow_up
       <td>Date of last follow-up, partial date with month and year.
       <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>1..1 (conditional)
      <tr>
       <td>Status_at_Last_Follow_up
       <td>Status of the subject at last follow-up.
@@ -2057,7 +2069,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Country which a person was born in.
       <td>
             GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. If a country-subdivision then a value from the ISO <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>)
-      <td>0..1
+      <td>1..1 (conditional)
      <tr>
       <td>Subject ID
       <td>A sequence of characters used to identify, name, or characterize a trial or study subject.
@@ -2065,14 +2077,14 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>1..1
      <tr>
       <td>Socioeconomic status
-      <td><a href="https://loinc.org/LP438129-1/">https://loinc.org/LP438129-1/</a>
+      <td>An individual’s relative social and economic position in a society based on a combination of education, income, employment, and wealth.
       <td>String
       <td>0..1
      <tr>
       <td>Consent
-      <td>Consent to proceed to personal data analysis
+      <td>Consent to proceed to personal data analysis.
       <td>Consent class
-      <td>1..1
+      <td>1..1 (conditional)
      <tr>
       <td>Environmental exposure
       <td>Establishes a link between Subject and Environmental exposure class.
@@ -2112,7 +2124,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Consent date
       <td>Date on which consent was given.
       <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>1..1 (conditional)
    </table>
    <h3 class="heading settled" data-level="2.2" id="diagnosis"><span class="secno">2.2. </span><span class="content">Diagnosis</span><a class="self-link" href="#diagnosis"></a></h3>
    <table>
@@ -2137,27 +2149,27 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Diagnosis
       <td>Any abnormal condition of the body or mind that causes discomfort, dysfunction, or distress to the affected person.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
-      <td>0..1
+      <td>1..1 (conditional)
      <tr>
       <td>Provisional diagnosis / clinical diagnosis
       <td>An initial diagnosis that is subject to change as new information becomes available.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
-      <td>0..1
+      <td>1..1 (conditional)
      <tr>
       <td>Diagnosis_InfectiousDisease
       <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Diagnosis_InfectiousDisease item may be used.
       <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Provisional/clinical Diagnosis_InfectiousDisease
       <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Provisional/clinical Diagnosis_InfectiousDisease item may be used.
       <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Date of hospitalization
       <td>Date at which subject was hopitalised 
       <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Clinical Department
       <td>Refers to the Clinical Department in charge of the patient
@@ -2180,17 +2192,17 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1
      <tr>
       <td>Date of transfer to an Intensive Care Unit (ICU)
-      <td>Date at which subject was transfered to an Intensive care unit 
+      <td>Date at which subject was transfered to an Intensive care unit. 
       <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>0..1 (conditional)
      <tr>
       <td>Date Declared Cured
-      <td>Date at which subject was called "cured" from the disease
+      <td>Date at which subject was called "cured" from the disease.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
      <tr>
       <td>Clinical Status
-      <td>Indicates the status of the condition
+      <td>Indicates the status of the condition.
       <td>Active<br>
                 Inactive<br>
                 Recurring<br>
@@ -2204,15 +2216,14 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..n
      <tr>
       <td>Topology
-      <td>Describes the anatomical location of (the origin of) the disease
-Finding site (attribute) [SCTID: 363698007]
+      <td>Describes the anatomical location of (the origin of) the disease.
       <td>String
-      <td>0..1
+      <td>1..1 (conditional)
      <tr>
       <td>Morphology
-      <td>Describes the cell type and biological activity
+      <td>Describes the cell type and biological activity.
       <td>String
-      <td>0..1
+      <td>1..1 (conditional)
    </table>
    <h3 class="heading settled" data-level="2.3" id="sample"><span class="secno">2.3. </span><span class="content">Sample</span><a class="self-link" href="#sample"></a></h3>
    <table>
@@ -2227,12 +2238,12 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Anatomical sample location
       <td>Anatomic site from which the sample was taken.
       <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a>
-      <td>1..1
+      <td>1..1 (conditional)
      <tr>
       <td>Pathological state
       <td>The pathological condition of the sample.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
-      <td>1..1
+      <td>1..1 (conditional)
      <tr>
       <td>Date of Sampling
       <td>Defines the date of sampling.
@@ -2251,37 +2262,27 @@ Finding site (attribute) [SCTID: 363698007]
      <tr>
       <td>Biospecimen_Type
       <td>The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.
-      <td>Value from type of Sample table in <a href="https://cdn.ymaws.com/www.isber.org/resource/resmgr/isber_2019/pdf/standard_preanalytical_code_.pdf">SPREC Codes v3.0 </a>:
-            <br>ASC - Ascites fluid
-            <br> AMN - Amniotic fluid
-            <br> BAL - Bronchoalveolar lavage
-            <br> BLD - Blood (whole)
-            <br> BMA - Bone marrow aspirate
-            <br> BMK - Breast milk
-            <br> BUC - Buccal cells
-            <br> BUF - Unficolled buffy coat, viable
-            <br> CEL - Ficoll mononuclear cells, viable
-            <br> CEN - Fresh cells from non blood specimen type
-            <br> CLN - Cells from nonblood specimen type (e.g., disrupted tissue), viable
-            <br> CRD - Cord blood
-            <br> CSF - Cerebrospinal fluid
-            <br> NAS - Nasal washing
-            <br> PEL - Ficoll mononuclear cells, nonviable
-            <br> PEN - Cells from nonblood specimen type (e.g., disrupted tissue), nonviable
-            <br> PFL - Pleural fluid
-            <br> PL1 - Plasma, single spun
-            <br> PL2 - Plasma, double spun
-            <br> SAL - Saliva
-            <br> SEM - Semen
-            <br> SER - Serum
-            <br> SPT - Sputum
-            <br> STL - Stool
-            <br> SYN - Synovial fluid
-            <br> TER - Tears
-            <br> U24 - 24-h urine
-            <br> URN - Urine
-            <br> ZZZ Other 
-      <td>1..1
+      <td><br><a href="http://purl.obolibrary.org/obo/NCIT_C17610">Blood</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C84507">Buffy coat</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C20313">Cancer cell lines</a>
+            <br> Entire body organ
+            <br><a href="http://purl.obolibrary.org/obo/OMIABIS_0001076">Faeces</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C17730">Embryo or fetal tissue</a>
+            <br> Immortalized cell lines
+            <br> Isolated microbes
+            <br> Other body fluid
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C185204">Plasma</a>
+            <br> Primary cells
+            <br><a href="http://purl.obolibrary.org/obo/OBI_0000902">Post-mortem tissue</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C174119">Saliva</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C178987">Serum</a>
+            <br><a href="http://purl.obolibrary.org/obo/OBI_0600012">Specimen from environment or food: environmental collection</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C150895">Swab</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C158417">Tissue (Frozen)</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C172265">Tissue (FFPE)</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C189126">Urine</a>
+            <br><a href="https://terminology.hl7.org/en/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTHOther">Other</a>
+      <td>1..1 (conditional)
      <tr>
       <td>Extraction_Technique
       <td>The technique of extraction of the sample.
@@ -2317,31 +2318,26 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Indicates the size of the primary tumor.
       <td>Double
       <td>0..1
-    <tbody>
      <tr>
       <td>Tumor_size_unit
       <td>Indicates the unit in which tumor size is stated.
       <td><a href="https://ucum.org/">UCUM</a>
       <td>0..1
-    <tbody>
      <tr>
       <td>Lymph_Node_Status
       <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.
       <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)
       <td>0..1
-    <tbody>
      <tr>
       <td>Metastases
       <td>Indicates presence or absence of metastasis according to the international TNM classification for solid tumors.
       <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222587001">SCTID: 1222587001 </a> | American Joint Committee on Cancer pathological M category allowable value (qualifier value), <br> or <br> Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222591006">SCTID: 1222591006 </a> | American Joint Committee on Cancer clinical M category allowable value (qualifier value), <br> or HL7 NULL flavor in case not determined.
       <td>0..1
-    <tbody>
      <tr>
       <td>Version
       <td>Version of the TNM classification.
       <td>String
       <td>0..1
-    <tbody>
      <tr>
       <td>Stage
       <td>The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.
@@ -2349,15 +2345,13 @@ Finding site (attribute) [SCTID: 363698007]
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222592004">SCTID: 1222592004</a> |  American Joint Committee on Cancer clinical stage group allowable value (qualifier value), <br> or <br>
             <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222593009">SCTID: 1222593009</a> | American Joint Committee on Cancer pathological stage group allowable value (qualifier value),<br> or
             <br> <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222594003">SCTID: 1222594003</a> |  American Joint Committee on Cancer yp stage group allowable value (qualifier value),<br> or
-            <br> UICC values (to be added to SNOMED in 2025) 
+            <br> <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=1352503003&amp;edition=MAIN&amp;release=&amp;languages=en">UICC values</a> 
       <td>0..1
-    <tbody>
      <tr>
       <td>Pathology_Clinical
       <td>Indication whether TNM classification is based on clinical or pathological evaluation. If pathological is available, this always goes before clinical.
       <td>Clinical or pathological
       <td>1..1
-    <tbody>
      <tr>
       <td>Date of evaluation
       <td>Date of the clinical/pathological evaluation.
@@ -2378,7 +2372,6 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Points to a related sample.
       <td>Sample ID
       <td>1..1
-    <tbody>
      <tr>
       <td>Relation_Type
       <td>Describes the relationship type between the two connected samples.
@@ -2394,7 +2387,6 @@ Finding site (attribute) [SCTID: 363698007]
             <br>Familial
             <br>Spatial
       <td>1..1
-    <tbody>
      <tr>
       <td>Relation_Description
       <td>Free text describing the Relation Type of two samples.
@@ -2440,105 +2432,7 @@ Finding site (attribute) [SCTID: 363698007]
       <td>Class Protocol
       <td>0..n
    </table>
-   <h4 class="heading settled" data-level="2.4.1" id="biomarker"><span class="secno">2.4.1. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h4>
-   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td>Purpose
-      <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201361">Diagnosis</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201363">Prognosis</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
-            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Type
-      <td>What type is the biomarker classified as.
-      <td>Molecular
-            <br>Imaging
-            <br>Anthropometric
-            <br>Cellular
-            <br>Physiological
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Subtype
-      <td>Subtype of the biomarker as classified in the type.
-      <td>If Type ==
-            <br>- <b>Molecular</b>: Genetics/Genomics,
-            Epigenetics/Epigenomics,
-            Transcription/Transcriptomics,
-            Metabolites/Metabolomics,
-            Proteins/Proteomics,
-            Microbiomics/Microbiology,
-            Biochemistry (biochemical),
-            Other molecular biomarker,
-            N/P
-            <br>- <b>Imaging</b>: X-Rays,
-            Ultrasound (echography, etc),
-            CT Scan,
-            PET/SPECT,
-            Spectrometry,
-            MRI,
-            Scintigraphy (Gamma),
-            Mammography,
-            Other image biomarker,
-            N/P
-            <br>- <b>Anthropometric</b>: BMI,
-            Body perimeters (circumference),
-            Other anthropometric biomarker,
-            N/P
-            <br>- <b>Cellular</b>: Histology (tissue abnormalities),
-            Cytology (cell types),
-            Other cellular biomarker,
-            N/P
-            <br>- <b>Physiological</b>: Blood Pressure,
-            Ankle-brachial Index,
-            ECG,
-            EEG,
-            Electromyography,
-            Other physiological biomarker,
-            N/P
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Name
-      <td>Biomarker name.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Code
-      <td>Code of the biomarker.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Code System
-      <td>Code System of the Biomarker Code.
-      <td>String or URI
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Measured value of biomarker
-      <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)
-      <td>integer/float or string
-      <td>0..1
-     <tr>
-      <td>Unit of measured biomarker
-      <td>Unit associated with the measured value of the biomarker (if applicable).
-      <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
-      <td>0..1
-   </table>
-   <h4 class="heading settled" data-level="2.4.2" id="genotyping"><span class="secno">2.4.2. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h4>
+   <h4 class="heading settled" data-level="2.4.1" id="genotyping"><span class="secno">2.4.1. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h4>
    <p>The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
 The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.</p>
    <table>
@@ -2615,16 +2509,6 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors
       <td>0..n
      <tr>
-      <td>Panel_of_Normals_Included
-      <td>Indicate whether a panel of normals is included during variant calling.
-      <td>Boolean
-      <td>0..1
-     <tr>
-      <td>Panel_of_Normals_Description
-      <td>Free text description of panel of normals, if applicable.
-      <td>String
-      <td>0..1
-     <tr>
       <td>Average depth of coverage
       <td>Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted sequencing (eg 60x, average number of times each target base has been ‘read’ by sequencer). (Observed)
       <td>Float
@@ -2635,6 +2519,16 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             Example of usage: <br>
             Eighty percent of the reference genome was covered by sequence fragments with a coverage depth of 4X; therefore, the breadth of coverage was 80% (4:5).
       <td>Float
+      <td>0..1
+     <tr>
+      <td>Average Read Length
+      <td>The average length for nucleic acid sequencing reads.
+      <td>String
+      <td>0..1
+     <tr>
+      <td>Amount of reads sequenced
+      <td>Number of sequencing reads produced.
+      <td>Integer
       <td>0..1
      <tr>
       <td>Additional NGS quality control metrics
@@ -2673,31 +2567,16 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..n
      <tr>
       <td>Variant
-      <td>A detected and reported variant.
+      <td>A reported variant.
       <td>--> Variant class
       <td>0..n
      <tr>
       <td>Variant_calling
-      <td>Identification of the software used for variant calling.
-      <td>--> Digital Resource class
-      <td>0..n
-     <tr>
-      <td>Variant_calling_date
-      <td>Defines the date of variant calling.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
-     <tr>
-      <td>Variant_Annotation
-      <td>Identification of the software used for variant annotation.
-      <td>--> Digital Resource class
-      <td>0..n
-     <tr>
-      <td>Variant_Annotation_database
-      <td>Database and version used for variant annotation.
-      <td>--> Digital Resource class
+      <td>Description of the procedure for variant calling
+      <td>--> Variant Calling class
       <td>0..n
    </table>
-   <h5 class="heading settled" data-level="2.4.2.1" id="digital-resource"><span class="secno">2.4.2.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h5>
+   <h5 class="heading settled" data-level="2.4.1.1" id="digital-resource"><span class="secno">2.4.1.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2724,7 +2603,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
      <tr>
       <td>Version
       <td>The version of the tool/software/database used.
-      <td>string
+      <td>String
       <td>1..1
      <tr>
       <td>Date used
@@ -2740,9 +2619,9 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Parameters
       <td>Description of parameters used with the specified software. Copy the complete command line (all lines executed) used.
       <td>String
-      <td>0..n
+      <td>1..n (conditional)
    </table>
-   <h5 class="heading settled" data-level="2.4.2.2" id="variant"><span class="secno">2.4.2.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h5>
+   <h5 class="heading settled" data-level="2.4.1.2" id="variant"><span class="secno">2.4.1.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2764,12 +2643,12 @@ The Biomarker class is another subclass from the Test class. Any reference from 
      <tr>
       <td>Variant_representation
       <td>The representation of the variant using HGVS nomenclature.
-      <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>
+      <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>. If HGVS cannot be followed, a string form another source can be provided. In this case, the source should also be provided in the string.
       <td>1..1
      <tr>
       <td>Clinical_Variant_Interpretation_criteria
       <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation, gene specific interpretation is essential (gene specific databases are expert panel cured databases)
-      <td>List of versions of ACMG, ESMO-ESCAT, others??
+      <td>List of versions of ACMG, ESMO-ESCAT
       <td>0..n
      <tr>
       <td>Clinical_Variant_Interpretation_result
@@ -2778,7 +2657,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..1
      <tr>
       <td>Clinical_expert_panel_decision
-      <td>Decision by clinical expert panel concerning the variant interpretation
+      <td>Decision by clinical expert panel (e.g., molecular tumor board or other board) concerning the variant interpretation.
       <td>String
       <td>0..1
      <tr>
@@ -2792,27 +2671,52 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>--> Digital Resource class
       <td>0..n
      <tr>
-      <td>Variant_calling_software_deviation
-      <td>Identification of the software used for variant calling, if different from software stated in Sequence class.
-      <td>--> Digital Resource class
-      <td>0..n
-     <tr>
-      <td>Variant_Annotation_tools_deviation
-      <td>Identification of the software used for variant annotation, if different from software stated in Sequence class. 
-      <td>--> Digital Resource class
-      <td>0..n
-     <tr>
-      <td>Variant_Annotation_database_deviation
-      <td>Database and version used for variant annotation, if different from software stated in Sequence class.
-      <td>--> Digital Resource class
+      <td>Variant_calling_deviation
+      <td>Identification of the software used for variant calling, if different from software stated in Genotyping class.
+      <td>--> Variant Calling class
       <td>0..n
      <tr>
       <td>Reported_to_patient
-      <td>Indication if the variant has been reported back to the patient, if different from software stated in Sequence class.
+      <td>Indication if the variant has been reported back to the patient.
       <td>Boolean
       <td>0..1
    </table>
-   <h5 class="heading settled" data-level="2.4.2.3" id="target-gene"><span class="secno">2.4.2.3. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h5>
+   <h5 class="heading settled" data-level="2.4.1.3" id="variant-calling"><span class="secno">2.4.1.3. </span><span class="content">Variant Calling</span><a class="self-link" href="#variant-calling"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Variant_calling_software
+      <td>Identification of the software used for variant calling.
+      <td>--> Digital Resource class
+      <td>1..1
+     <tr>
+      <td>Variant_Annotation
+      <td>Identification of the software used for variant annotation.
+      <td>--> Digital Resource class
+      <td>0..n
+     <tr>
+      <td>Variant_Annotation_database
+      <td>Database and version used for variant annotation.
+      <td>--> Digital Resource class
+      <td>0..1
+     <tr>
+      <td>Panel_of_Normals_Included
+      <td>Indicate whether a panel of normals is included during variant calling.
+      <td>Boolean
+      <td>0..1
+     <tr>
+      <td>Panel_of_Normals_Description
+      <td>Free text description of panel of normals, if applicable.
+      <td>String
+      <td>0..1 (conditional)
+   </table>
+   <h5 class="heading settled" data-level="2.4.1.4" id="target-gene"><span class="secno">2.4.1.4. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2825,13 +2729,13 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Identifier
       <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier
       <td>Identifier class
-      <td>0..1
+      <td>1..1 (conditional)
     <tbody>
      <tr>
       <td>Label
       <td>Label of the target gene, if no URI can be provided.
       <td>String
-      <td>0..1
+      <td>1..1 (conditional)
     <tbody>
      <tr>
       <td>Description
@@ -2839,7 +2743,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>String
       <td>0..1
    </table>
-   <h5 class="heading settled" data-level="2.4.2.4" id="identifier"><span class="secno">2.4.2.4. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h5>
+   <h5 class="heading settled" data-level="2.4.1.5" id="identifier"><span class="secno">2.4.1.5. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2864,7 +2768,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>String (with#anyURI) of either <a href="http://www.wikidata.org/entity/Q1646383">HGNC</a>, <a href="http://www.wikidata.org/entity/Q20641742">NCBI gene</a>, <a href="http://www.wikidata.org/entity/Q905695">UniProtID</a>, <a href="http://www.wikidata.org/entity/Q241953">OMIM</a>, <a href="http://www.wikidata.org/entity/Q17027854">HPO</a> or <a href="http://semanticscience.org/resource/SIO_001389">HGVS</a> for variants 
       <td>1..1
    </table>
-   <h5 class="heading settled" data-level="2.4.2.5" id="protocol"><span class="secno">2.4.2.5. </span><span class="content">Protocol</span><a class="self-link" href="#protocol"></a></h5>
+   <h5 class="heading settled" data-level="2.4.1.6" id="protocol"><span class="secno">2.4.1.6. </span><span class="content">Protocol</span><a class="self-link" href="#protocol"></a></h5>
    <table>
     <thead>
      <tr>
@@ -3115,6 +3019,104 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
       <td>0..n
    </table>
+   <h4 class="heading settled" data-level="2.5.1" id="biomarker"><span class="secno">2.5.1. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h4>
+   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Gentyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Purpose
+      <td>Necessary information to indicate the objective of the biomarker used  (coded value, e.g. diagnostic, prognostic,…).
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201361">Diagnosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201363">Prognosis</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
+            <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Type
+      <td>What type is the biomarker classified as.
+      <td>Molecular
+            <br>Imaging
+            <br>Anthropometric
+            <br>Cellular
+            <br>Physiological
+      <td>1..1 (conditional)
+    <tbody>
+     <tr>
+      <td>Subtype
+      <td>Subtype of the biomarker as classified in the type.
+      <td>If Type ==
+            <br>- <b>Molecular</b>: Genetics/Genomics,
+            Epigenetics/Epigenomics,
+            Transcription/Transcriptomics,
+            Metabolites/Metabolomics,
+            Proteins/Proteomics,
+            Microbiomics/Microbiology,
+            Biochemistry (biochemical),
+            Other molecular biomarker,
+            N/P
+            <br>- <b>Imaging</b>: X-Rays,
+            Ultrasound (echography, etc),
+            CT Scan,
+            PET/SPECT,
+            Spectrometry,
+            MRI,
+            Scintigraphy (Gamma),
+            Mammography,
+            Other image biomarker,
+            N/P
+            <br>- <b>Anthropometric</b>: BMI,
+            Body perimeters (circumference),
+            Other anthropometric biomarker,
+            N/P
+            <br>- <b>Cellular</b>: Histology (tissue abnormalities),
+            Cytology (cell types),
+            Other cellular biomarker,
+            N/P
+            <br>- <b>Physiological</b>: Blood Pressure,
+            Ankle-brachial Index,
+            ECG,
+            EEG,
+            Electromyography,
+            Other physiological biomarker,
+            N/P
+      <td>1..1 (conditional)
+    <tbody>
+     <tr>
+      <td>Name
+      <td>Biomarker name.
+      <td>String
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Code
+      <td>Code of the biomarker.
+      <td>String
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Code System
+      <td>Code System of the Biomarker Code.
+      <td>String or URI
+      <td>0..1
+    <tbody>
+     <tr>
+      <td>Measured value of biomarker
+      <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)
+      <td>integer/float or string
+      <td>0..1
+     <tr>
+      <td>Unit of measured biomarker
+      <td>Unit associated with the measured value of the biomarker (if applicable).
+      <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
+      <td>0..1
+   </table>
    <h3 class="heading settled" data-level="2.6" id="environmental-exposure"><span class="secno">2.6. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
    <table>
     <thead>
@@ -3170,7 +3172,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Exposure Route
       <td>The means through which an agent enters a target organism after contact (e.g. by ingestion, inhalation, or dermal absorption)
       <td>string; e.g. inhalation, sexual transmission, eating, licking, handshake, …
-      <td>0..n
+      <td>0..n (conditional)
      <tr>
       <td>Other Type of Exposure
       <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field
@@ -3267,7 +3269,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
      <tr>
       <td>locationType
       <td>type of location (e.g. residence, infection site, event, facility, hospital)
-      <td>valuelist (still to be made)
+      <td>Children of <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=276339004&amp;edition=MAIN/2026-08-01&amp;release=&amp;languages=en">SNOMED 276339004 | Environment (environment)</a>
       <td>1..1
      <tr>
       <td>geometry
