@@ -10,6 +10,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <th>Definition</th>
             <th>Value</th>
             <th>Cardinality</th>
+            <th>Condition</th>
         </tr>
     </thead>
     <tbody>
@@ -28,12 +29,14 @@ The Biomarker class is another subclass from the Test class. Any reference from 
                 single exon (200 nt, 0-1 variants), <br>
                 single variant (1nt, 0-1 variants)</td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>IVDR_passed</td>
             <td>Indicate whether the methodology (including chemistry and genotyping standards) used for genotyping follows the In vitro diagnostic medical devices (IVDR) regulation passed by the EU in April 2017.</td>
             <td>boolean</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Platform</td>
@@ -70,24 +73,28 @@ The Biomarker class is another subclass from the Test class. Any reference from 
                 Illumina Omni5, <br>
                **OTHER (String)**</td>
             <td>1..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Targeted_Gene</td>
             <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene</td>
             <td>Class Target_Gene</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Target Other</td>
             <td>Any other targeted genomic region, like non-coding regulatory elements, promotors/enhancers.</td>
             <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Average depth of coverage</td>
             <td>Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted sequencing (eg 60x, average number of times each target base has been ‘read’ by sequencer). (Observed)</td>
             <td>Float</td>
             <td>1..1 (conditional)</td>
+            <td>Mandadory if technology = sequencing</td>
         </tr>
         <tr>
             <td>Breadth of coverage</td>
@@ -96,72 +103,84 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             Eighty percent of the reference genome was covered by sequence fragments with a coverage depth of 4X; therefore, the breadth of coverage was 80% (4:5).</td>
             <td>Float</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Average Read Length</td>
             <td>The average length for nucleic acid sequencing reads.</td>
             <td>String</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>       
         <tr>
             <td>Amount of reads sequenced</td>
             <td>Number of sequencing reads produced.</td>
             <td>Integer</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>    
         <tr>
             <td>Additional NGS quality control metrics</td>
             <td>Statement of any additional NGS quality control metrics.</td>
             <td>String</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Initial_input_file_format</td>
             <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Final_output_file_format</td>
             <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Final_output_file_format_version</td>
             <td>Identification of the version of genomic file format of the final output file (eg. VCF version 4.3).</td>
             <td>String</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Alignment_software</td>
             <td>Identification of the software used for alignment.</td>
             <td>--> Digital Resource class</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Alignment_Genome</td>
             <td>The specific build of the human genome used as reference for sequence alignment and variant calling.</td>
             <td>--> Digital Resource class</td>
             <td>1..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Specific_Settings_Alignment_Genome</td>
             <td> Any specific settings regarding alternative contigs or decoys.</td>
             <td>String</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Variant</td>
             <td>A reported variant.</td>
             <td>--> Variant class</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Variant_calling</td>
             <td>Description of the procedure for variant calling</td>
             <td>--> Variant Calling class</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
     </tbody>
 </table>

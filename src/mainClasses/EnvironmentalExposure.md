@@ -7,6 +7,7 @@
             <th>Definition</th>
             <th>Value</th>
             <th>Cardinality</th>
+            <th>Condition</th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +40,7 @@
             <br>Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, <br>Human activities (eg. traffic accident)
             <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a></td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Type of Contact</td>
@@ -53,42 +55,49 @@
             <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001618">GENEPIO:0001618</a> | Missing
             <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001810">GENEPIO:0001810</a> | Restricted Access</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Exposure Route</td>
             <td>The means through which an agent enters a target organism after contact (e.g. by ingestion, inhalation, or dermal absorption)</td>
             <td>string; e.g. inhalation, sexual transmission, eating, licking, handshake, …</td>
             <td>0..n (conditional)</td>
+            <td>Only allowed if Type of Exposure has been provided</td>
         </tr>
         <tr>
             <td>Other Type of Exposure</td>
             <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field</td>
             <td>String</td>
             <td>1..1 (conditional)</td>
+            <td>if Type of Exposure == "Other" then this item needs to be completed</td>
         </tr>
         <tr>
             <td>Travel History</td>
             <td>Description of any travel within 4 weeks before the diagnosis</td>
             <td>String</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Travel History_start_date</td>
             <td>Start date of relevant travel history</td>
             <td>Date (YYYY-MM-DD), ISO 8601</td>
             <td>0..n (conditional)</td>
+            <td>Only allowed (optional) if Travel History has been provided</td>
         </tr>
        <tr>
             <td>Travel History_end_date</td>
             <td>End date of relevant travel history</td>
             <td>Date (YYYY-MM-DD), ISO 8601</td>
             <td>0..n (conditional)</td>
+            <td>Only allowed (optional) if Travel History has been provided</td>
         </tr>
       <tr>
             <td>Residential area at risk</td>
             <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides</td>
             <td>String</td>
             <td>0..n</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Type of Nicotine product used</td>
@@ -103,6 +112,7 @@
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/228494002">SCTID:228494002</a> | snuff 
             <br>NULL flavors (e.g. not asked, unknown, nothing)</td>
             <td>0..n (conditional)</td>
+            <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
             <td>Other type of Nicotine product used</td>
@@ -110,6 +120,7 @@
             <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">https://addictovocab.org/ADDICTO_0000311</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">https://addictovocab.org/ADDICTO_0000316</a> or <br>
                 HL7 NULL flavors</td>
             <td>0..n (conditional)</td>
+            <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
             <td>Tobacco Use Status</td>
@@ -122,12 +133,14 @@
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266919005">SCTID:266919005</a> | Never smoked tobacco
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> </td>
             <td>0..1 (conditional)</td>
+            <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
             <td>Nicotine use amount</td>
             <td>Describe the amount of nicotine or tobacco consumed.</td>
             <td>String</td>
             <td>0..1 (conditional)</td>
+            <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
             <td>Alcohol use status</td>
@@ -138,6 +151,7 @@
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/783261004">SCTID:783261004</a> | Lifetime non-drinker of alcohol
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> </td>
             <td>0..1 (conditional)</td>
+            <td>If Type of Exposure == Alcohol</td>
         </tr>
         <tr>
             <td>Alcohol amount</td>
@@ -148,6 +162,7 @@
             <br>80 ml of drink, 
             <br>40 ml liquor</td>
             <td>0..n (conditional)</td>
+            <td>If Type of Exposure == Alcohol</td>
         </tr>
     </tbody>
 </table>

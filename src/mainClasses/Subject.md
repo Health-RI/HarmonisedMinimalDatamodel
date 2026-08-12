@@ -1,4 +1,4 @@
-## Subject
+## [Subject](https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48910)
 
 <table>
     <thead>
@@ -7,6 +7,7 @@
             <th>Definition</th>
             <th>Value</th>
             <th>Cardinality</th>
+            <th>Condition</th>
         </tr>
     </thead>
     <tbody>
@@ -15,24 +16,28 @@
             <td>The calendar date on which a person was born.</td>
             <td>Complete date, without time, following the ISO 8601. If only year or year-month is available, use that. xsd:date or xsd:gYearMonth or xsd:gYear</td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Administrative Gender</td>
             <td>The gender of a person used for administrative purposes.</td>
             <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a></td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Genetic determined sex</td>
             <td>The sex of a person at birth as genetically proven.</td>
             <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a></td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Date_of_Last_Follow_up</td>
             <td>Date of last follow-up, partial date with month and year.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>1..1 (conditional)</td>
+            <td>Mandatory item in cancer use case</td>
         </tr>
         <tr>
             <td>Status_at_Last_Follow_up</td>
@@ -46,6 +51,7 @@
                 Lost to follow-up, <br>
                 Unknown</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Country of birth</td>
@@ -53,30 +59,35 @@
             <td>
             GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. If a country-subdivision then a value from the ISO <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>)</td>
             <td>1..1 (conditional)</td>
+            <td>Mandatory item in GoE & complex and common disease use cases</td>
         </tr>
         <tr>
             <td>Subject ID</td>
             <td>A sequence of characters used to identify, name, or characterize a trial or study subject.</td>
             <td>String</td>
             <td>1..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Socioeconomic status</td>
             <td>An individual's relative social and economic position in a society based on a combination of education, income, employment, and wealth.</td>
             <td>String</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
         <tr>
             <td>Consent</td>
             <td>Consent to proceed to personal data analysis.</td>
             <td>Consent class</td>
             <td>1..1 (conditional)</td>
+            <td>Mandatory for Infectious Disease</td>
         </tr>
         <tr>
             <td>Environmental exposure</td>
             <td>Establishes a link between Subject and Environmental exposure class.</td>
             <td>Environmental Exposure class</td>
             <td>0..1</td>
+            <td>NA</td>
         </tr>
     </tbody>
 </table>

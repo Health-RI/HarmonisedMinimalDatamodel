@@ -7,6 +7,7 @@
             <th>Definition</th>
             <th>Value</th>
             <th>Cardinality</th>
+            <th>Condition</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
             <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier</td>
             <td>Identifier class</td>
             <td>1..1 (conditional)</td>
+            <td>It is mandatory to provide either identifier or label.</td>
         </tr>
     </tbody>
     <tbody>
@@ -23,6 +25,8 @@
             <td>Label of the target gene, if no URI can be provided.</td>
             <td>String</td>
             <td>1..1 (conditional)</td>
+            <td>1..1 (conditional)</td>
+            <td>It is mandatory to provide either identifier or label.</td>
         </tr>
     </tbody>
     <tbody>
@@ -31,6 +35,8 @@
             <td>Description of target gene.</td>
             <td>String</td>
             <td>0..1</td>
+            <td>1..1 (conditional)</td>
+            <td>NA</td>
         </tr>
     </tbody>
 </table>

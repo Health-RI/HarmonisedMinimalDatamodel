@@ -59,6 +59,10 @@ path: src/mainClasses/Test.md
 </pre>
 
 <pre class=include>
+path: src/mainClasses/Biomarker.md
+</pre>
+
+<pre class=include>
 path: src/mainClasses/Genotyping.md
 </pre>
 
@@ -88,10 +92,6 @@ path: src/mainClasses/Protocol.md
 
 <pre class=include>
 path: src/mainClasses/Treatment.md
-</pre>
-
-<pre class=include>
-path: src/mainClasses/Biomarker.md
 </pre>
 
 <pre class=include>
