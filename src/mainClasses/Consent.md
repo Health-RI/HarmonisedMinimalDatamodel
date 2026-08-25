@@ -40,7 +40,7 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Consent date</td>
+            <td><a href="http://purl.obolibrary.org/obo/GENEPIO_0002032">Consent date</a></td>
             <td>Date on which consent was given.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>1..1 (conditional)</td>

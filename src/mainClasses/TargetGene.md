@@ -25,7 +25,6 @@
             <td>Label of the target gene, if no URI can be provided.</td>
             <td>String</td>
             <td>1..1 (conditional)</td>
-            <td>1..1 (conditional)</td>
             <td>It is mandatory to provide either identifier or label.</td>
         </tr>
     </tbody>
@@ -35,7 +34,6 @@
             <td>Description of target gene.</td>
             <td>String</td>
             <td>0..1</td>
-            <td>1..1 (conditional)</td>
             <td>NA</td>
         </tr>
     </tbody>

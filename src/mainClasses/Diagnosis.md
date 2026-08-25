@@ -12,28 +12,28 @@
     </thead>
     <tbody>
         <tr>
-            <td>Date of Diagnosis</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164339">Date of Diagnosis</a></td>
             <td>Date at which diagnosis was made.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Date of Onset</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=298059007&edition=MAIN&release=&languages=en">Date of Onset</a></td>
             <td>Date of onset.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Diagnosis</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C2991">Diagnosis</a></td>
             <td>Any abnormal condition of the body or mind that causes discomfort, dysfunction, or distress to the affected person.</td>
             <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a></td>
             <td>1..1 (conditional)</td>
             <td>It is mandatory to provide either Diagnosis or Provisional Diagnosis</td>
         </tr>
         <tr>
-            <td>Provisional diagnosis / clinical diagnosis</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C200660">Provisional diagnosis / clinical diagnosis</a></td>
             <td>An initial diagnosis that is subject to change as new information becomes available.</td>
             <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a></td>
             <td>1..1 (conditional)</td>
@@ -54,14 +54,14 @@
             <td>If infectious disease and specific SNOMED term is not available, Genepio may be used. May not be used if a SNOMED code is available.</td>
         </tr>
         <tr>
-            <td>Date of hospitalization</td>
+            <td><a href="https://loinc.org/8656-1/">Date of hospitalization</a></td>
             <td>Date at which subject was hopitalised </td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1 (conditional)</td>
             <td>Optional for Infectious Disease</td>
         </tr>
         <tr>
-            <td>Clinical Department</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=284548004&edition=MAIN/2026-08-01&release=&languages=en">Clinical Department</a></td>
             <td>Refers to the Clinical Department in charge of the patient</td>
             <td>String</td>
             <td>0..1</td>
@@ -75,7 +75,7 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Severity Grading</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=272141005&edition=MAIN&release=&languages=en">Severity Grading</a></td>
             <td>Classification scale used for severity grading</td>
             <td><a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=442452003&edition=MAIN/2025-11-01&release=&languages=en">442452003 | Life threatening severity</a> <br>
             <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=255604002&edition=MAIN/2025-11-01&release=&languages=en">255604002 | Mild</a> <br>
@@ -87,7 +87,7 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Date of transfer to an Intensive Care Unit (ICU)</td>
+            <td><a href="https://loinc.org/95367-9/">Date of transfer to an Intensive Care Unit (ICU)</a></td>
             <td>Date at which subject was transfered to an Intensive care unit. </td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1 (conditional)</td>

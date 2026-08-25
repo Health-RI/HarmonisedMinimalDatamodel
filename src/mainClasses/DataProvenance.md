@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Data Submitter</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201979">Data Submitter</a></td>
             <td>Full name of the person responsible for submitting the data into the dataset. A string with the name can be provided, but a ORCID can be submitted as well (as a string).</td>
             <td>String</td>
             <td>1..1</td>
@@ -40,21 +40,21 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Submitter Institution</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81294">Submitter Institution</a></td>
             <td>Identifies the Institution of the data submitter. A string with the name can be provided, but a ROR can be submitted as well (as a string).</td>
             <td>String</td>
             <td>0..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Country</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=223369002&edition=MAIN&release=&languages=en">Country</a></td>
             <td>Country of Submission.</td>
             <td>GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from ISO 3166-1)</td>
             <td>1..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Data Collector</td>
+            <td><a href="https://w3id.org/gdmt/DataCollector">Data Collector</a></td>
             <td>Identifies the person responsible for Data Collection</td>
             <td>String</td>
             <td>1..1</td>
@@ -75,14 +75,14 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Projects/Trial/cohort/surveillance study</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C47885">Projects/Trial/cohort/surveillance study</a></td>
             <td>Identifies projects which data are part of</td>
             <td>String</td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Research Consortia</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C61538">Research Consortia</a></td>
             <td>Identifies Research Consortia involved</td>
             <td>String</td>
             <td>0..n</td>

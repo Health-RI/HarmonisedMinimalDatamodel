@@ -12,21 +12,21 @@
     </thead>
     <tbody>
         <tr>
-            <td>Anatomical sample location</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717">Anatomical sample location</a></td>
             <td>Anatomic site from which the sample was taken.</td>
             <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a></td>
             <td>1..1 (conditional)</td>
             <td>In use case cancer, the exact sample location is relevant; therefore the more detailed value list of ICD-O3 can be used (which is included in ICD-11)</td>
         </tr>
         <tr>
-            <td>Pathological state</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19697">Pathological state</a></td>
             <td>The pathological condition of the sample.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a></td>
             <td>1..1 (conditional)</td>
             <td>In cancer use case, the pathological state of the sample must be recorded; several instances of the sample class can be filled if matching samples of different pathological states (normal, primary tumor,...) are present</td>
         </tr>
         <tr>
-            <td>Date of Sampling</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25164">Date of Sampling</a></td>
             <td>Defines the date of sampling.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -40,14 +40,14 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Organism</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">Organism</a></td>
             <td>A living entity.</td>
             <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">NCIT Organism</a></td>
             <td>1..1</td>
             <td>If Organism is for example "Virus" then Biospecimen_Type should not be something like "tissue"</td>
         </tr>
         <tr>
-            <td>Biospecimen_Type</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713">Biospecimen Type</a></td>
             <td>The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.</td>
             <td><br><a href="http://purl.obolibrary.org/obo/NCIT_C17610">Blood</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C84507">Buffy coat</a>
@@ -94,7 +94,7 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Sampling_Intent</td>
+            <td><a href="https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=24.06d&ns=ncit&code=C25725&key=645876995&b=1&n=null">Sampling_Intent</a></td>
             <td>Describes the purpose for taking the sample.</td>
             <td>String</td>
             <td>0..n</td>

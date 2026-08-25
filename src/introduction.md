@@ -3,7 +3,7 @@
 
 The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
 Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
-You can visit https://gdi.onemilliongenomes.eu/ for more information about the project.
+You can visit <a href="https://gdi.onemilliongenomes.eu/">https://gdi.onemilliongenomes.eu/</a> for more information about the project.
 
 ## About the Harmonized Minimal Data Model for GDI
 Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.

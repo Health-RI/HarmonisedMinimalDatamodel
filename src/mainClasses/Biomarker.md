@@ -26,7 +26,7 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
     </tbody>
     <tbody>
         <tr>
-            <td>Type</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164707">Type</a></td>
             <td>What type is the biomarker classified as.</td>
             <td>Molecular
             <br>Imaging
@@ -82,8 +82,8 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
     </tbody>
     <tbody>
         <tr>
-            <td>Name</td>
-            <td>Biomarker name.</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164706">Name</a></td>
+            <td>Biomarker name</td>
             <td>String</td>
             <td>0..1</td>
             <td>NA</td>
@@ -91,8 +91,8 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
     </tbody>    
     <tbody>
         <tr>
-            <td>Code</td>
-            <td>Code of the biomarker.</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164640">Code</a></td>
+            <td>Code of the biomarker</td>
             <td>String</td>
             <td>0..1</td>
             <td>NA</td>
@@ -100,7 +100,7 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
     </tbody>
     <tbody>
         <tr>
-            <td>Code System</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70895">Code System</a></td>
             <td>Code System of the Biomarker Code.</td>
             <td>String or URI</td>
             <td>0..1</td>
