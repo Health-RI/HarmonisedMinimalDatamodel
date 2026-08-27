@@ -44,7 +44,7 @@
             <td>Date on which consent was given.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>1..1 (conditional)</td>
-            <td>Mandatory for Infection Diseases</td>
+            <td>Mandatory for Infectious Disease</td>
         </tr>
     </tbody>
 </table>

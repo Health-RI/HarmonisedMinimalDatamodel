@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Intention_to_Treat</td>
+            <td>Intention to Treat</td>
             <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
@@ -95,7 +95,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>treatmentCode</td>
+            <td>Treatment Code</td>
             <td>A drug product that contains one or more active and/or inactive ingredients used by the patient intended to treat, prevent or alleviate the symptoms of disease. Any hormone therapies, gender-related or otherwise, should also be recorded here.</td>
             <td><a href="https://raw.githubusercontent.com/fairgenomes/fairgenomes-semantic-model/main/lookups/Drugs.txt">ATC codes</a>, IDMP when available. <br> In case of Cancer: <a href="https://hemonc.org/wiki/Main_Page">HEMONC</a>, <a href="https://mor.nlm.nih.gov/RxClass/">RxNorm</a></td>
             <td>1..n (conditional)</td>
@@ -104,7 +104,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Date_start_overall</td>
+            <td>Date Start Overall</td>
             <td>The date and time of (the start of) the treatment.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -113,7 +113,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Date_end_overall</td>
+            <td>Date End Overall</td>
             <td>The date and time of the end of the overall treatment.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -131,16 +131,16 @@
     </tbody>
     <tbody>
         <tr>
-            <td>DoseUnits</td>
+            <td>Dose Units</td>
             <td>Indicates the total dose given in units (e.g. of Gray (Gy) when radiation, Millimeters/24hours for medication).</td>
-            <td>Choicelist with most common DoseUnits, like Gray, Milligrams/24 hours: make use of <a href="https://ucum.org/">UCUM</a>.</td>
+            <td><a href="https://ucum.org/">UCUM</a></td>
             <td>0..1</td>
             <td>NA</td>
         </tr>
     </tbody>
     <tbody>
         <tr>
-            <td>cumulativeDose</td>
+            <td>Cumulative Dose</td>
             <td>The amount of any substance administered over a specific period of time.</td>
             <td>Float</td>
             <td>0..1</td>
@@ -149,7 +149,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>doseIntervals</td>
+            <td>Dose Intervals</td>
             <td>The number of times a substance is administered within a specific time period.</td>
             <td>ISO8601 Period</td>
             <td>0..1</td>
@@ -158,7 +158,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>routeOfAdministration</td>
+            <td>Route of Administration</td>
             <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.</td>
             <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a></td>
             <td>0..n</td>
@@ -197,7 +197,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Treatment_Status</td>
+            <td>Treatment Status</td>
             <td>Indicates the patient's outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
@@ -214,7 +214,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Reason_for_incomplete_Treatment</td>
+            <td>Reason for incomplete Treatment</td>
             <td>Reason for discontinuation of the treatment.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/419099009">SCTID: 419099009</a> | Dead (finding)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1296859006">SCTID: 1296859006</a> | Procedure declined (situation)   
@@ -232,7 +232,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Response_to_Treatment</td>
+            <td>Response to Treatment</td>
             <td>The patients' response to the applied treatment regimen. (Source: RECIST).</td>
             <td><a href="https://w3id.org/fair-genomes/resource/FG_0000761">Complete Response</a> <br>
             <a href="https://w3id.org/fair-genomes/resource/FG_0000762">Disease progression</a> <br>
@@ -245,7 +245,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Adverse_Events</td>
+            <td>Adverse Events</td>
             <td>Reports any treatment related adverse events. (Codelist reference: NCI-CTCAE (v5.0))</td>
             <td><a href="https://ctep.cancer.gov/protocoldevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_5x7.pdf">CTCAE Codes</a></td>
             <td>0..n</td>
@@ -254,7 +254,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Toxicity_Type</td>
+            <td>Toxicity Type</td>
             <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.</td>
             <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a></td>
             <td>0..1</td>
@@ -286,6 +286,13 @@
             <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a></td>
             <td>0..n (conditional)</td>
             <td>if Type == Radiation therapy</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Establishes connection between Treatment and Test classes.</td>
+            <td><a href="#test">Test class</a></td>
+            <td>0..n</td>
+            <td>NA</td>
         </tr>
     </tbody>
 </table>

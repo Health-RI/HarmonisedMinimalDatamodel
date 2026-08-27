@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="a238171e6d5e80e2f5af7df576308b9ffb3dd309" name="revision">
+  <meta content="09b2911fa0b37dbf1a62fbe836a17c1c8a75be24" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1903,7 +1903,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-08-11">11 August 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-08-25">25 August 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1988,7 +1988,7 @@ dfn > a.self-link::before      { content: "#"; }
    <h3 class="heading settled" data-level="1.1" id="about-gdi"><span class="secno">1.1. </span><span class="content">About GDI</span><a class="self-link" href="#about-gdi"></a></h3>
    <p>The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
 Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
-You can visit https://gdi.onemilliongenomes.eu/ for more information about the project.</p>
+You can visit <a href="https://gdi.onemilliongenomes.eu/">https://gdi.onemilliongenomes.eu/</a> for more information about the project.</p>
    <h3 class="heading settled" data-level="1.2" id="about-the-harmonized-minimal-data-model-for-gdi"><span class="secno">1.2. </span><span class="content">About the Harmonized Minimal Data Model for GDI</span><a class="self-link" href="#about-the-harmonized-minimal-data-model-for-gdi"></a></h3>
    
 Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.
@@ -2049,13 +2049,13 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1
       <td>NA
      <tr>
-      <td>Date_of_Last_Follow_up
+      <td>Date of Last Follow-up
       <td>Date of last follow-up, partial date with month and year.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>1..1 (conditional)
       <td>Mandatory item in cancer use case
      <tr>
-      <td>Status_at_Last_Follow_up
+      <td>Status at Last Follow-up
       <td>Status of the subject at last follow-up.
       <td>Alive, <br>
                 Alive with disease, <br>
@@ -2071,7 +2071,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Country of birth
       <td>Country which a person was born in.
       <td>
-            GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. If a country-subdivision then a value from the ISO <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>)
+            2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. <br>If a country-subdivision then a value from the ISO <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>
       <td>1..1 (conditional)
       <td>Mandatory item in GoE &amp; complex and common disease use cases
      <tr>
@@ -2089,14 +2089,38 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
      <tr>
       <td>Consent
       <td>Consent to proceed to personal data analysis.
-      <td>Consent class
+      <td><a href="#consent">Consent class</a>
       <td>1..1 (conditional)
-      <td>Mandatory for Infectious Disease
+      <td>Mandatory for Infectious Diseases.
      <tr>
       <td>Environmental exposure
       <td>Establishes a link between Subject and Environmental exposure class.
-      <td>Environmental Exposure class
+      <td><a href="#environmental-exposure">Environmental Exposure class</a>
       <td>0..1
+      <td>NA
+     <tr>
+      <td>has Sample
+      <td>Establishes a link between Subject and Sample class.
+      <td><a href="#sample">Sample class</a>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td>has Treatment
+      <td>Establishes a link between Subject and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Subject Diagnosis
+      <td>Establishes a link between Subject and Diagnosis class.
+      <td><a href="#diagnosis">Diagnosis class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes a link between Subject and Test class.
+      <td><a href="#test">Test class</a>
+      <td>0..n
       <td>NA
    </table>
    <h4 class="heading settled" data-level="2.1.1" id="consent"><span class="secno">2.1.1. </span><span class="content">Consent</span><a class="self-link" href="#consent"></a></h4>
@@ -2134,11 +2158,11 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1
       <td>NA
      <tr>
-      <td>Consent date
+      <td><a href="http://purl.obolibrary.org/obo/GENEPIO_0002032">Consent date</a>
       <td>Date on which consent was given.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>1..1 (conditional)
-      <td>Mandatory for Infection Diseases
+      <td>Mandatory for Infectious Disease
    </table>
    <h3 class="heading settled" data-level="2.2" id="diagnosis"><span class="secno">2.2. </span><span class="content">Diagnosis</span><a class="self-link" href="#diagnosis"></a></h3>
    <table>
@@ -2151,25 +2175,25 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <th>Condition
     <tbody>
      <tr>
-      <td>Date of Diagnosis
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164339">Date of Diagnosis</a>
       <td>Date at which diagnosis was made.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
       <td>NA
      <tr>
-      <td>Date of Onset
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=298059007&amp;edition=MAIN&amp;release=&amp;languages=en">Date of Onset</a>
       <td>Date of onset.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
       <td>NA
      <tr>
-      <td>Diagnosis
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C2991">Diagnosis</a>
       <td>Any abnormal condition of the body or mind that causes discomfort, dysfunction, or distress to the affected person.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
       <td>1..1 (conditional)
       <td>It is mandatory to provide either Diagnosis or Provisional Diagnosis
      <tr>
-      <td>Provisional diagnosis / clinical diagnosis
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C200660">Provisional diagnosis / clinical diagnosis</a>
       <td>An initial diagnosis that is subject to change as new information becomes available.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
       <td>1..1 (conditional)
@@ -2187,13 +2211,13 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1 (conditional)
       <td>If infectious disease and specific SNOMED term is not available, Genepio may be used. May not be used if a SNOMED code is available.
      <tr>
-      <td>Date of hospitalization
-      <td>Date at which subject was hopitalised 
+      <td><a href="https://loinc.org/8656-1/">Date of hospitalization</a>
+      <td>Date at which subject was hospitalised.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1 (conditional)
       <td>Optional for Infectious Disease
      <tr>
-      <td>Clinical Department
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=284548004&amp;edition=MAIN/2026-08-01&amp;release=&amp;languages=en">Clinical Department</a>
       <td>Refers to the Clinical Department in charge of the patient
       <td>String
       <td>0..1
@@ -2205,7 +2229,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1
       <td>NA
      <tr>
-      <td>Severity Grading
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=272141005&amp;edition=MAIN&amp;release=&amp;languages=en">Severity Grading</a>
       <td>Classification scale used for severity grading
       <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=442452003&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">442452003 | Life threatening severity</a> <br>
             <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=255604002&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">255604002 | Mild</a> <br>
@@ -2216,11 +2240,11 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>0..1
       <td>NA
      <tr>
-      <td>Date of transfer to an Intensive Care Unit (ICU)
+      <td><a href="https://loinc.org/95367-9/">Date of transfer to an Intensive Care Unit (ICU)</a>
       <td>Date at which subject was transfered to an Intensive care unit. 
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1 (conditional)
-      <td>Recommended for Infectious Disease
+      <td>Recommended for Infectious Diseases.
      <tr>
       <td>Date Declared Cured
       <td>Date at which subject was called "cured" from the disease.
@@ -2240,7 +2264,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
      <tr>
       <td>Has Comorbidity
       <td>Points to another diagnosis that acts as a comorbidity to the current diagnosis.
-      <td>Diagnosis class
+      <td><a href="#diagnosis">Diagnosis class</a>
       <td>0..n
       <td>NA
      <tr>
@@ -2248,13 +2272,25 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Describes the anatomical location of (the origin of) the disease.
       <td>String
       <td>1..1 (conditional)
-      <td>Mandatory for Infectious Disease
+      <td>Mandatory for Infectious Diseases
      <tr>
       <td>Morphology
       <td>Describes the cell type and biological activity.
       <td>String
       <td>1..1 (conditional)
-      <td>Mandatory for Infectious Disease
+      <td>Mandatory for Infectious Diseases
+     <tr>
+      <td>Has Treatment
+      <td>Establishes a link between Diagnosis and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes a link between Diagnosis and Test class.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
    </table>
    <h3 class="heading settled" data-level="2.3" id="sample"><span class="secno">2.3. </span><span class="content">Sample</span><a class="self-link" href="#sample"></a></h3>
    <table>
@@ -2267,19 +2303,19 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <th>Condition
     <tbody>
      <tr>
-      <td>Anatomical sample location
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717">Anatomical sample location</a>
       <td>Anatomic site from which the sample was taken.
       <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a>
       <td>1..1 (conditional)
       <td>In use case cancer, the exact sample location is relevant; therefore the more detailed value list of ICD-O3 can be used (which is included in ICD-11)
      <tr>
-      <td>Pathological state
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19697">Pathological state</a>
       <td>The pathological condition of the sample.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94480">Germline DNA</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
       <td>1..1 (conditional)
-      <td>In cancer use case, the pathological state of the sample must be recorded; several instances of the sample class can be filled if matching samples of different pathological states (normal, primary tumor,...) are present
+      <td>In cancer use case, the pathological state of the sample must be recorded; several instances of the sample class can be filled if matching samples of different pathological states (normal, primary tumor,...) are present.
      <tr>
-      <td>Date of Sampling
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25164">Date of Sampling</a>
       <td>Defines the date of sampling.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
@@ -2291,18 +2327,18 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>1..1
       <td>NA
      <tr>
-      <td>Organism
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">Organism</a>
       <td>A living entity.
       <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">NCIT Organism</a>
       <td>1..1
       <td>If Organism is for example "Virus" then Biospecimen_Type should not be something like "tissue"
      <tr>
-      <td>Biospecimen_Type
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713">Biospecimen Type</a>
       <td>The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.
       <td><br><a href="http://purl.obolibrary.org/obo/NCIT_C17610">Blood</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C84507">Buffy coat</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C20313">Cancer cell lines</a>
-            <br> Entire body organ
+            <br><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=272625005&amp;edition=MAIN&amp;release=&amp;languages=en">Entire body organ</a>
             <br><a href="http://purl.obolibrary.org/obo/OMIABIS_0001076">Faeces</a>
             <br><a href="http://purl.obolibrary.org/obo/NCIT_C17730">Embryo or fetal tissue</a>
             <br> Immortalized cell lines
@@ -2322,27 +2358,75 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>1..1 (conditional)
       <td>For Cancer use case, and for the Infectious disease use case, this field is mandatory, otherwise optional.
      <tr>
-      <td>Extraction_Technique
+      <td>Extraction Technique
       <td>The technique of extraction of the sample.
-      <td>Protocol class
+      <td><a href="#protocol">Protocol class</a>
       <td>0..1
       <td>NA
      <tr>
-      <td>Storage_Conditions
+      <td>Storage Conditions
       <td>Storage conditions of the sample.
       <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a>
       <td>0..n
       <td>NA
      <tr>
-      <td>Assayed_Biological_Macromolecule
+      <td>Assayed Biological Macromolecule
       <td>Macromolecule derived from the sample.
       <td>Children of <a href="http://www.ebi.ac.uk/efo/EFO_0004446">EFO biological macromolecule</a>
       <td>0..1
       <td>NA
      <tr>
-      <td>Sampling_Intent
+      <td><a href="https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=24.06d&amp;ns=ncit&amp;code=C25725&amp;key=645876995&amp;b=1&amp;n=null">Sampling Intent</a>
       <td>Describes the purpose for taking the sample.
       <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Sampling Place
+      <td>Defines the geographic location of sampling
+      <td><a href="#geolocation">GeoLocation class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Sample Diagnosis
+      <td>Diagnosis established based on sample.
+      <td><a href="#diagnosis">Diagnosis class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Sample Relation
+      <td>Establishes the relation with another sample.
+      <td><a href="#sample-relation">Sample Relation class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Sample TNM
+      <td>TNM classification of the sample.
+      <td><a href="#tnm">TNM class</a>
+      <td>0..2(conditional)
+      <td>Recommended for Cancer use case.
+     <tr>
+      <td>Sample Genotyping
+      <td>Establishes the relation with Genotyping class.
+      <td><a href="#genotyping">Genotyping class</a>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td>Subject
+      <td>Establishes the relation with the subject.
+      <td><a href="#subject">Subject class</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Sample Provenance
+      <td>Establishes the relation with provenance class.
+      <td><a href="#data-provenance">Data Provenance class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes the relation with Test class.
+      <td><a href="#test">Test class</a>
       <td>0..n
       <td>NA
    </table>
@@ -2356,17 +2440,17 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Tumor_size
+      <td>Tumor size
       <td>Indicates the size of the primary tumor.
       <td>Double
       <td>0..1
      <tr>
-      <td>Tumor_size_unit
+      <td>Tumor size Unit
       <td>Indicates the unit in which tumor size is stated.
       <td><a href="https://ucum.org/">UCUM</a>
       <td>0..1
      <tr>
-      <td>Lymph_Node_Status
+      <td>Lymph Node Status
       <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.
       <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)
       <td>0..1
@@ -2390,7 +2474,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
             <br> <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=1352503003&amp;edition=MAIN&amp;release=&amp;languages=en">UICC values</a> 
       <td>0..1
      <tr>
-      <td>Pathology_Clinical
+      <td>Pathology Clinical
       <td>Indication whether TNM classification is based on clinical or pathological evaluation. If pathological is available, this always goes before clinical.
       <td>Clinical or pathological
       <td>1..1
@@ -2410,12 +2494,12 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Related_Sample
+      <td>Related Sample
       <td>Points to a related sample.
       <td>Sample ID
       <td>1..1
      <tr>
-      <td>Relation_Type
+      <td>Relation Type
       <td>Describes the relationship type between the two connected samples.
       <td>List to be defined/extended:
             <br>New sample
@@ -2430,7 +2514,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
             <br>Spatial
       <td>1..1
      <tr>
-      <td>Relation_Description
+      <td>Relation Description
       <td>Free text describing the Relation Type of two samples.
       <td>String
       <td>0..1
@@ -2445,13 +2529,13 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Test_description
+      <td>Test Description
       <td>Name or description of the test.
       <td>String
       <td>0..1
     <tbody>
      <tr>
-      <td>Test_Start_Date
+      <td>Test Start Date
       <td>Defined the date of when the genotyping began.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
@@ -2471,7 +2555,12 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
      <tr>
       <td>Protocol
       <td>The protocol used for the test.
-      <td>Class Protocol
+      <td><a href="#protocol">Protocol class</a>
+      <td>0..n
+     <tr>
+      <td>Diagnosis
+      <td>Establishes the link between Test and Diagnosis class.
+      <td><a href="#diagnosis">Diagnosis class</a>
       <td>0..n
    </table>
    <h4 class="heading settled" data-level="2.4.1" id="biomarker"><span class="secno">2.4.1. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h4>
@@ -2496,7 +2585,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>NA
     <tbody>
      <tr>
-      <td>Type
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164707">Type</a>
       <td>What type is the biomarker classified as.
       <td>Molecular
             <br>Imaging
@@ -2548,25 +2637,25 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>See Values column for allowed values depending on the Type.
     <tbody>
      <tr>
-      <td>Name
-      <td>Biomarker name.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164706">Name</a>
+      <td>Biomarker name
       <td>String
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>Code
-      <td>Code of the biomarker.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164640">Code</a>
+      <td>Code of the biomarker
       <td>String
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>Code System
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70895">Code System</a>
       <td>Code System of the Biomarker Code.
       <td>String or URI
-      <td>0..1
-      <td>NA
+      <td>1..1(conditional)
+      <td>If code is provided, code system should be provided.
     <tbody>
      <tr>
       <td>Measured value of biomarker
@@ -2580,9 +2669,15 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
       <td>0..1
       <td>NA
+     <tr>
+      <td>Treatment
+      <td>Establishes connection between Biomarker and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
    </table>
    <h4 class="heading settled" data-level="2.4.2" id="genotyping"><span class="secno">2.4.2. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h4>
-   <p>The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
+   <p>The Genotyping class is a subclass of the <a href="#test">Test class</a>. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
 The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.</p>
    <table>
     <thead>
@@ -2610,7 +2705,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>1..1
       <td>NA
      <tr>
-      <td>IVDR_passed
+      <td>IVDR passed
       <td>Indicate whether the methodology (including chemistry and genotyping standards) used for genotyping follows the In vitro diagnostic medical devices (IVDR) regulation passed by the EU in April 2017.
       <td>boolean
       <td>0..1
@@ -2652,9 +2747,9 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>1..n
       <td>NA
      <tr>
-      <td>Targeted_Gene
+      <td>Targeted Gene
       <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene
-      <td>Class Target_Gene
+      <td><a href="#target-gene">Target Gene class</a>
       <td>0..n
       <td>NA
      <tr>
@@ -2696,37 +2791,37 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..1
       <td>NA
      <tr>
-      <td>Initial_input_file_format
+      <td>Initial input file format
       <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).
       <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
       <td>1..1
       <td>NA
      <tr>
-      <td>Final_output_file_format
+      <td>Final output file format
       <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).
       <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
       <td>1..1
       <td>NA
      <tr>
-      <td>Final_output_file_format_version
+      <td>Final output file format version
       <td>Identification of the version of genomic file format of the final output file (eg. VCF version 4.3).
       <td>String
       <td>0..1
       <td>NA
      <tr>
-      <td>Alignment_software
+      <td>Alignment Software
       <td>Identification of the software used for alignment.
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>0..n
       <td>NA
      <tr>
-      <td>Alignment_Genome
+      <td>Alignment Genome
       <td>The specific build of the human genome used as reference for sequence alignment and variant calling.
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>1..n
       <td>NA
      <tr>
-      <td>Specific_Settings_Alignment_Genome
+      <td>Specific Settings Alignment Genome
       <td> Any specific settings regarding alternative contigs or decoys.
       <td>String
       <td>0..n
@@ -2734,13 +2829,13 @@ The Biomarker class is another subclass from the Test class. Any reference from 
      <tr>
       <td>Variant
       <td>A reported variant.
-      <td>--> Variant class
+      <td><a href="#variant">Variant class</a>
       <td>0..n
       <td>NA
      <tr>
-      <td>Variant_calling
+      <td>Variant Calling
       <td>Description of the procedure for variant calling
-      <td>--> Variant Calling class
+      <td><a href="#variant-calling">Variant Calling class</a>
       <td>0..n
       <td>NA
    </table>
@@ -2807,52 +2902,52 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Variant_Type
+      <td>Variant Type
       <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).
       <td>0..1
      <tr>
-      <td>Variant_Origin
+      <td>Variant Origin
       <td>A quality inhering in a variant by virtue of its origin.
       <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.
       <td>0..n
      <tr>
-      <td>Variant_representation
+      <td>Variant Representation
       <td>The representation of the variant using HGVS nomenclature.
       <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>. If HGVS cannot be followed, a string form another source can be provided. In this case, the source should also be provided in the string.
       <td>1..1
      <tr>
-      <td>Clinical_Variant_Interpretation_criteria
+      <td>Clinical Variant Interpretation Criteria
       <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation, gene specific interpretation is essential (gene specific databases are expert panel cured databases)
       <td>List of versions of ACMG, ESMO-ESCAT
       <td>0..n
      <tr>
-      <td>Clinical_Variant_Interpretation_result
+      <td>Clinical Variant Interpretation Result
       <td>Indicates result of clinical variant interpretation.
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
       <td>0..1
      <tr>
-      <td>Clinical_expert_panel_decision
+      <td>Clinical Expert Panel Decision
       <td>Decision by clinical expert panel (e.g., molecular tumor board or other board) concerning the variant interpretation.
       <td>String
       <td>0..1
      <tr>
-      <td>Applied_Criteria_of_Evidence
+      <td>Applied Criteria of Evidence
       <td>A category which fits with categories provided by Expert panels or tools accepted in Clincial Practice. If such recommendations are not available the weighted categories provided by freely available tools would be acceptable.
       <td>As listed in tables 3 and 4 in <a href="https://doi.org/10.1038/gim.2015.30">Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology</a>
       <td>0..n
      <tr>
-      <td>Clinical_Interpretation_Tool
+      <td>Clinical Interpretation Tool
       <td>Identification of the tool used for clinical interpretation
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>0..n
      <tr>
-      <td>Variant_calling_deviation
+      <td>Variant Calling Deviation
       <td>Identification of the software used for variant calling, if different from software stated in Genotyping class.
-      <td>--> Variant Calling class
+      <td><a href="#variant-calling">Variant Calling class</a>
       <td>0..n
      <tr>
-      <td>Reported_to_patient
+      <td>Reported to Patient
       <td>Indication if the variant has been reported back to the patient.
       <td>Boolean
       <td>0..1
@@ -2868,31 +2963,31 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Condition
     <tbody>
      <tr>
-      <td>Variant_calling_software
+      <td>Variant Calling Software
       <td>Identification of the software used for variant calling.
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>1..1
       <td>NA
      <tr>
-      <td>Variant_Annotation
+      <td>Variant Annotation
       <td>Identification of the software used for variant annotation.
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>0..n
       <td>NA
      <tr>
-      <td>Variant_Annotation_database
+      <td>Variant Annotation Database
       <td>Database and version used for variant annotation.
-      <td>--> Digital Resource class
+      <td><a href="#digital-resource">Digital Resource class</a>
       <td>0..1
       <td>NA
      <tr>
-      <td>Panel_of_Normals_Included
+      <td>Panel of Normals Included
       <td>Indicate whether a panel of normals is included during variant calling.
       <td>Boolean
       <td>0..1
       <td>NA
      <tr>
-      <td>Panel_of_Normals_Description
+      <td>Panel of Normals Description
       <td>Free text description of panel of normals, if applicable.
       <td>String
       <td>0..1 (conditional)
@@ -2911,7 +3006,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
      <tr>
       <td>Identifier
       <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier
-      <td>Identifier class
+      <td><a href="#identifier">Identifier class</a>
       <td>1..1 (conditional)
       <td>It is mandatory to provide either identifier or label.
     <tbody>
@@ -2920,7 +3015,6 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Label of the target gene, if no URI can be provided.
       <td>String
       <td>1..1 (conditional)
-      <td>1..1 (conditional)
       <td>It is mandatory to provide either identifier or label.
     <tbody>
      <tr>
@@ -2928,7 +3022,6 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Description of target gene.
       <td>String
       <td>0..1
-      <td>1..1 (conditional)
       <td>NA
    </table>
    <h5 class="heading settled" data-level="2.4.2.5" id="identifier"><span class="secno">2.4.2.5. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h5>
@@ -3003,7 +3096,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Condition
     <tbody>
      <tr>
-      <td>Intention_to_Treat
+      <td>Intention to Treat
       <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.
       <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
@@ -3076,21 +3169,21 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>NA
     <tbody>
      <tr>
-      <td>treatmentCode
+      <td>Treatment Code
       <td>A drug product that contains one or more active and/or inactive ingredients used by the patient intended to treat, prevent or alleviate the symptoms of disease. Any hormone therapies, gender-related or otherwise, should also be recorded here.
       <td><a href="https://raw.githubusercontent.com/fairgenomes/fairgenomes-semantic-model/main/lookups/Drugs.txt">ATC codes</a>, IDMP when available. <br> In case of Cancer: <a href="https://hemonc.org/wiki/Main_Page">HEMONC</a>, <a href="https://mor.nlm.nih.gov/RxClass/">RxNorm</a>
       <td>1..n (conditional)
       <td>if Type == (Chemotherapy or Hormonal. etc)
     <tbody>
      <tr>
-      <td>Date_start_overall
+      <td>Date Start Overall
       <td>The date and time of (the start of) the treatment.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>Date_end_overall
+      <td>Date End Overall
       <td>The date and time of the end of the overall treatment.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
@@ -3104,28 +3197,28 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>NA
     <tbody>
      <tr>
-      <td>DoseUnits
+      <td>Dose Units
       <td>Indicates the total dose given in units (e.g. of Gray (Gy) when radiation, Millimeters/24hours for medication).
-      <td>Choicelist with most common DoseUnits, like Gray, Milligrams/24 hours: make use of <a href="https://ucum.org/">UCUM</a>.
+      <td><a href="https://ucum.org/">UCUM</a>
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>cumulativeDose
+      <td>Cumulative Dose
       <td>The amount of any substance administered over a specific period of time.
       <td>Float
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>doseIntervals
+      <td>Dose Intervals
       <td>The number of times a substance is administered within a specific time period.
       <td>ISO8601 Period
       <td>0..1
       <td>NA
     <tbody>
      <tr>
-      <td>routeOfAdministration
+      <td>Route of Administration
       <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.
       <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a>
       <td>0..n
@@ -3156,7 +3249,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>If type == surgery
     <tbody>
      <tr>
-      <td>Treatment_Status
+      <td>Treatment Status
       <td>Indicates the patient’s outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).
       <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
@@ -3171,7 +3264,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>NA
     <tbody>
      <tr>
-      <td>Reason_for_incomplete_Treatment
+      <td>Reason for incomplete Treatment
       <td>Reason for discontinuation of the treatment.
       <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/419099009">SCTID: 419099009</a> | Dead (finding)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1296859006">SCTID: 1296859006</a> | Procedure declined (situation)   
@@ -3187,7 +3280,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>If Treatment_Status == 416406003 | Procedure discontinued (situation)
     <tbody>
      <tr>
-      <td>Response_to_Treatment
+      <td>Response to Treatment
       <td>The patients' response to the applied treatment regimen. (Source: RECIST).
       <td><a href="https://w3id.org/fair-genomes/resource/FG_0000761">Complete Response</a> <br>
             <a href="https://w3id.org/fair-genomes/resource/FG_0000762">Disease progression</a> <br>
@@ -3198,14 +3291,14 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>NA
     <tbody>
      <tr>
-      <td>Adverse_Events
+      <td>Adverse Events
       <td>Reports any treatment related adverse events. (Codelist reference: NCI-CTCAE (v5.0))
       <td><a href="https://ctep.cancer.gov/protocoldevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_5x7.pdf">CTCAE Codes</a>
       <td>0..n
       <td>NA
     <tbody>
      <tr>
-      <td>Toxicity_Type
+      <td>Toxicity Type
       <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.
       <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a>
       <td>0..1
@@ -3231,6 +3324,12 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
       <td>0..n (conditional)
       <td>if Type == Radiation therapy
+     <tr>
+      <td>Test
+      <td>Establishes connection between Treatment and Test classes.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
    </table>
    <h3 class="heading settled" data-level="2.6" id="environmental-exposure"><span class="secno">2.6. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
    <table>
@@ -3305,13 +3404,13 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..n
       <td>NA
      <tr>
-      <td>Travel History_start_date
+      <td>Travel History Start Date
       <td>Start date of relevant travel history
       <td>Date (YYYY-MM-DD), ISO 8601
       <td>0..n (conditional)
       <td>Only allowed (optional) if Travel History has been provided
      <tr>
-      <td>Travel History_end_date
+      <td>Travel History End Date
       <td>End date of relevant travel history
       <td>Date (YYYY-MM-DD), ISO 8601
       <td>0..n (conditional)
@@ -3393,56 +3492,56 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Condition
     <tbody>
      <tr>
-      <td>locationName
-      <td>human readable name of the location
+      <td>Location Name
+      <td>Human readable name of the location
       <td>String or <a href="geonames.org">Geonames.org</a> Ontology IRI (https://sws.geonames.org/xyz)
       <td>1..1
       <td>NA
      <tr>
-      <td>locationType
-      <td>type of location (e.g. residence, infection site, event, facility, hospital)
+      <td>Location Type
+      <td>Type of location (e.g. residence, infection site, event, facility, hospital)
       <td>Children of <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=276339004&amp;edition=MAIN/2026-08-01&amp;release=&amp;languages=en">SNOMED 276339004 | Environment (environment)</a>
       <td>1..1
       <td>NA
      <tr>
-      <td>geometry
+      <td>Geometry
       <td>Geospatial shape (point, polygon, etc.)
       <td>GeoJSON or WKT (Well Known Text)
       <td>0..n
       <td>NA
      <tr>
-      <td>country
+      <td>Country
       <td>Country code
       <td>2- or 3-lettercode from ISO 3166-1
       <td>0..1 (conditional)
       <td>If geometry is provided then country, region and city are more or less obsolete
      <tr>
-      <td>region
+      <td>Region
       <td>Administrative region
       <td><a href="geonames.org">Geonames.org</a>
       <td>0..1
       <td>NA
      <tr>
-      <td>city
-      <td>city or municipality
+      <td>City
+      <td>City or municipality
       <td>rdfs:Literal (xsd:anyURI or xsd:string) where URI is from <a href="geonames.org">Geonames.org</a> (e.g https://www.geonames.org/2759794 is Amsterdam)
       <td>0..1
       <td>NA
      <tr>
-      <td>source
+      <td>Source
       <td>Source of the location data (e.g. self-reported, registry, sensor).
       <td>rdfs:Literal (xsd:anyURI or xsd:string)
       <td>0..n
       <td>NA
      <tr>
-      <td>validFrom
-      <td>temporal validity of location (when applicable)
+      <td>Valid From
+      <td>Temporal validity of location (when applicable)
       <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
       <td>0..1
       <td>NA
      <tr>
-      <td>ValidTo
-      <td>temporal validity of location (when applicable)
+      <td>Valid To
+      <td>Temporal validity of location (when applicable)
       <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
       <td>0..1
       <td>NA
@@ -3458,7 +3557,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Condition
     <tbody>
      <tr>
-      <td>Data Submitter
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201979">Data Submitter</a>
       <td>Full name of the person responsible for submitting the data into the dataset. A string with the name can be provided, but a ORCID can be submitted as well (as a string).
       <td>String
       <td>1..1
@@ -3482,19 +3581,19 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..n
       <td>NA
      <tr>
-      <td>Submitter Institution
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81294">Submitter Institution</a>
       <td>Identifies the Institution of the data submitter. A string with the name can be provided, but a ROR can be submitted as well (as a string).
       <td>String
       <td>0..1
       <td>NA
      <tr>
-      <td>Country
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=223369002&amp;edition=MAIN&amp;release=&amp;languages=en">Country</a>
       <td>Country of Submission.
       <td>GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from ISO 3166-1)
       <td>1..1
       <td>NA
      <tr>
-      <td>Data Collector
+      <td><a href="https://w3id.org/gdmt/DataCollector">Data Collector</a>
       <td>Identifies the person responsible for Data Collection
       <td>String
       <td>1..1
@@ -3512,13 +3611,13 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <td>0..n
       <td>NA
      <tr>
-      <td>Projects/Trial/cohort/surveillance study
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C47885">Projects/Trial/cohort/surveillance study</a>
       <td>Identifies projects which data are part of
       <td>String
       <td>0..n
       <td>NA
      <tr>
-      <td>Research Consortia
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C61538">Research Consortia</a>
       <td>Identifies Research Consortia involved
       <td>String
       <td>0..n

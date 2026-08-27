@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Test_description</td>
+            <td>Test Description</td>
             <td>Name or description of the test.</td>
             <td>String</td>
             <td>0..1</td>
@@ -19,7 +19,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Test_Start_Date</td>
+            <td>Test Start Date</td>
             <td>Defined the date of when the genotyping began.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -45,7 +45,13 @@
         <tr>
             <td>Protocol</td>
             <td>The protocol used for the test.</td>
-            <td>Class Protocol</td>
+            <td><a href="#protocol">Protocol class</a></td>
+            <td>0..n</td>
+        </tr>
+        <tr>
+            <td>Diagnosis</td>
+            <td>Establishes the link between Test and Diagnosis class.</td>
+            <td><a href="#diagnosis">Diagnosis class</a></td>
             <td>0..n</td>
         </tr>
     </tbody>

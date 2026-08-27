@@ -55,7 +55,7 @@
         </tr>
         <tr>
             <td><a href="https://loinc.org/8656-1/">Date of hospitalization</a></td>
-            <td>Date at which subject was hopitalised </td>
+            <td>Date at which subject was hospitalised.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1 (conditional)</td>
             <td>Optional for Infectious Disease</td>
@@ -91,7 +91,7 @@
             <td>Date at which subject was transfered to an Intensive care unit. </td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1 (conditional)</td>
-            <td>Recommended for Infectious Disease</td>
+            <td>Recommended for Infectious Diseases.</td>
         </tr>
         <tr>
             <td>Date Declared Cured</td>
@@ -114,7 +114,7 @@
         <tr>
             <td>Has Comorbidity</td>
             <td>Points to another diagnosis that acts as a comorbidity to the current diagnosis.</td>
-            <td>Diagnosis class</td>
+            <td><a href="#diagnosis">Diagnosis class</a></td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
@@ -123,14 +123,28 @@
             <td>Describes the anatomical location of (the origin of) the disease.</td>
             <td>String</td>
             <td>1..1 (conditional)</td>
-            <td>Mandatory for Infectious Disease</td>
+            <td>Mandatory for Infectious Diseases</td>
         </tr>
         <tr>
             <td>Morphology</td>
             <td>Describes the cell type and biological activity.</td>
             <td>String</td>
             <td>1..1 (conditional)</td>
-            <td>Mandatory for Infectious Disease</td>
+            <td>Mandatory for Infectious Diseases</td>
+        </tr>
+        <tr>
+            <td>Has Treatment</td>
+            <td>Establishes a link between Diagnosis and Treatment class.</td>
+            <td><a href="#treatment">Treatment class</a></td>
+            <td>0..n</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Establishes a link between Diagnosis and Test class.</td>
+            <td><a href="#test">Test class</a></td>
+            <td>0..n</td>
+            <td>NA</td>
         </tr>
     </tbody>
 </table>

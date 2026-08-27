@@ -79,14 +79,14 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Travel History_start_date</td>
+            <td>Travel History Start Date</td>
             <td>Start date of relevant travel history</td>
             <td>Date (YYYY-MM-DD), ISO 8601</td>
             <td>0..n (conditional)</td>
             <td>Only allowed (optional) if Travel History has been provided</td>
         </tr>
        <tr>
-            <td>Travel History_end_date</td>
+            <td>Travel History End Date</td>
             <td>End date of relevant travel history</td>
             <td>Date (YYYY-MM-DD), ISO 8601</td>
             <td>0..n (conditional)</td>

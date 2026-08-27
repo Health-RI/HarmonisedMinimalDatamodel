@@ -103,8 +103,8 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70895">Code System</a></td>
             <td>Code System of the Biomarker Code.</td>
             <td>String or URI</td>
-            <td>0..1</td>
-            <td>NA</td>
+            <td>1..1(conditional)</td>
+            <td>If code is provided, code system should be provided.</td>
         </tr>
     </tbody>
     <tbody>
@@ -120,6 +120,13 @@ The Biomarker class is a subclass of the Test class. This means that it adopts a
             <td>Unit associated with the measured value of the biomarker (if applicable).</td>
             <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A</td>
             <td>0..1</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>Treatment</td>
+            <td>Establishes connection between Biomarker and Treatment class.</td>
+            <td><a href="#treatment">Treatment class</a></td>
+            <td>0..n</td>
             <td>NA</td>
         </tr>
     </tbody>        

@@ -11,19 +11,19 @@
     </thead>
     <tbody>
         <tr>
-            <td>Tumor_size</td>
+            <td>Tumor size</td>
             <td>Indicates the size of the primary tumor.</td>
             <td>Double</td>
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Tumor_size_unit</td>
+            <td>Tumor size Unit</td>
             <td>Indicates the unit in which tumor size is stated.</td>
             <td><a href="https://ucum.org/">UCUM</a></td>
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Lymph_Node_Status</td>
+            <td>Lymph Node Status</td>
             <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.</td>
             <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)</td>
             <td>0..1</td>
@@ -51,7 +51,7 @@
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Pathology_Clinical</td>
+            <td>Pathology Clinical</td>
             <td>Indication whether TNM classification is based on clinical or pathological evaluation. If pathological is available, this always goes before clinical.</td>
             <td>Clinical or pathological</td>
             <td>1..1</td>

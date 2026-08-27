@@ -14,7 +14,7 @@
         <tr>
             <td>Identifier</td>
             <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier</td>
-            <td>Identifier class</td>
+            <td><a href="#identifier">Identifier class</a></td>
             <td>1..1 (conditional)</td>
             <td>It is mandatory to provide either identifier or label.</td>
         </tr>

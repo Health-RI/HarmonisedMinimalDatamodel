@@ -1,6 +1,6 @@
 ### Genotyping
 
-The Genotyping class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
+The Genotyping class is a subclass of the <a href="#test">Test class</a>. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
 The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.
 
 <table>
@@ -32,7 +32,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>IVDR_passed</td>
+            <td>IVDR passed</td>
             <td>Indicate whether the methodology (including chemistry and genotyping standards) used for genotyping follows the In vitro diagnostic medical devices (IVDR) regulation passed by the EU in April 2017.</td>
             <td>boolean</td>
             <td>0..1</td>
@@ -76,9 +76,9 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Targeted_Gene</td>
+            <td>Targeted Gene</td>
             <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene</td>
-            <td>Class Target_Gene</td>
+            <td><a href="#target-gene">Target Gene class</a></td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
@@ -127,42 +127,42 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Initial_input_file_format</td>
+            <td>Initial input file format</td>
             <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Final_output_file_format</td>
+            <td>Final output file format</td>
             <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Final_output_file_format_version</td>
+            <td>Final output file format version</td>
             <td>Identification of the version of genomic file format of the final output file (eg. VCF version 4.3).</td>
             <td>String</td>
             <td>0..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Alignment_software</td>
+            <td>Alignment Software</td>
             <td>Identification of the software used for alignment.</td>
-            <td>--> Digital Resource class</td>
+            <td><a href="#digital-resource">Digital Resource class</a></td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Alignment_Genome</td>
+            <td>Alignment Genome</td>
             <td>The specific build of the human genome used as reference for sequence alignment and variant calling.</td>
-            <td>--> Digital Resource class</td>
+            <td><a href="#digital-resource">Digital Resource class</a></td>
             <td>1..n</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Specific_Settings_Alignment_Genome</td>
+            <td>Specific Settings Alignment Genome</td>
             <td> Any specific settings regarding alternative contigs or decoys.</td>
             <td>String</td>
             <td>0..n</td>
@@ -171,14 +171,14 @@ The Biomarker class is another subclass from the Test class. Any reference from 
         <tr>
             <td>Variant</td>
             <td>A reported variant.</td>
-            <td>--> Variant class</td>
+            <td><a href="#variant">Variant class</a></td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Variant_calling</td>
+            <td>Variant Calling</td>
             <td>Description of the procedure for variant calling</td>
-            <td>--> Variant Calling class</td>
+            <td><a href="#variant-calling">Variant Calling class</a></td>
             <td>0..n</td>
             <td>NA</td>
         </tr>
