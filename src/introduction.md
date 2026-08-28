@@ -1,21 +1,28 @@
 # Introduction # {#introduction}
-Some info about GDI here.
+## About GDI
+
+The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
+Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
+You can visit <a href="https://gdi.onemilliongenomes.eu/">https://gdi.onemilliongenomes.eu/</a> for more information about the project.
+
+## About the Harmonized Minimal Data Model for GDI
+Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.
+This page outlines the content of the Harmonized minimal data model for GDI.
 
 ## Goals and Scope of the Harmonized Minimal Data Model
 
-The **Harmonized Minimal Data Model (HMDM)** has multiple purposes, some of these are:
+The **Harmonized Minimal Data Model (HMD)** has multiple purposes, some of these are:
 1. Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model
 2. Within the catalogue based on our model search options can be made available (filters/facets)
-3. The HMDM can/needs to be implemented in the Beacons (and/or other discovery tools).
-
-Next to the HMDM we provided a **minimal metadata for submission schema**.
-
-Version 1 of metadata for submission model was released and can be seen [here](https://drive.google.com/drive/u/0/folders/1oojXociy39DD_VzUZHfx1n4queVJD1RE). This version was based on the version of HealthDCAT-AP from December 2024. Since the work on HealthDCAT-AP is still ongoing, there have been some changes since that time. This means our metadata for submission is not compliant to the [current version of HealthDCAT-AP](https://healthdcat-ap.github.io/) anymore.
-We will update the metadata for submission to version 1.1, which will be, according to HealthDCAT-AP, provided in 3 variants, based on the access level of the dataset: *Open*, *Sensitive* and *Protected*, which differ in cardinalities of the properties. The metadata for submission model will include all the current mandatory fields from those HealthDCAT-AP vairants, as well as a custom class created specifically for the submission of metadata in GDI, called HMD Submission. 
-The name spaces for HMD Submission class and its properties were made available through [FAIR Genomes repository](https://github.com/fairgenomes/fairgenomes-semantic-model).
-There are also some mandatory fields that were already included in the GDI MS8 deliverable, which will stay mandatory for backwards compatibility. This update will be very minimal, so only extending the current model with new mandatory fields.
-
+3. The HMD can/needs to be implemented in the Beacons (and/or other discovery tools).
 
 ## Overview and Diagram
 
-<img src="https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/main/src/new/images/HMD_v1.1_UML.png" alt="UML diagram" width=1200>
+In the diagram below, you can view the complete HMD.
+Each box within the diagram comprises one of the classes of the model. Within each box, you find all concepts of the respective class.
+Red boxes represent mandatory classes. The remaining classes (green boxes) are optional and usage of these classes depends on each case.
+For example, for data of healthy subjects, the diagnosis class will not be used, but there always needs to be information about the Subject, Sample, Genotyping and Consent.
+
+The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.
+
+<img src="src/images/GDI_diagram_v2.png" alt="UML diagram" width=1200>

@@ -1,3 +1,3 @@
 # Main Classes # {#main-classes}
-In the Harmonized Minimal Dataset, we defined 12 different classes.
+In the Harmonized Minimal Datamodel, we defined separate classes.
 
