@@ -11,19 +11,19 @@
     </thead>
     <tbody>
         <tr>
-            <td>Tumor size</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120284">Tumor size</a></td>
             <td>Indicates the size of the primary tumor.</td>
             <td>Double</td>
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Tumor size Unit</td>
+            <td><a href="http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-units-vs">Tumor size Unit</a></td>
             <td>Indicates the unit in which tumor size is stated.</td>
             <td><a href="https://ucum.org/">UCUM</a></td>
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Lymph Node Status</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=258283002&edition=MAIN&release=&languages=en">Lymph Node Status</a></td>
             <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.</td>
             <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)</td>
             <td>0..1</td>

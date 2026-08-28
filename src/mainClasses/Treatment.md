@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Intention to Treat</td>
+            <td><a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ValueSet-mcode-procedure-intent-vs.html">Intention to Treat</a></td>
             <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
@@ -33,8 +33,8 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Setting</td>
-            <td>Indicate the treatment setting, which describes the treatment's purpose in relation to the primary treatment (Reference: NCIT C124308)</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124308">Setting</a></td>
+            <td>Indicate the treatment setting, which describes the treatment's purpose in relation to the primary treatment.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15675">Adjuvant</a> <br> <a href="https://w3id.org/fair-genomes/resource/FG_0000760">Advanced/Metastatic</a><br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15665">Neoadjuvant</a><br> <a href="https://terminology.hl7.org/5.1.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">Not applicable</a></td>
             <td>0..1</td>
             <td>NA</td>
@@ -104,7 +104,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Date Start Overall</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90459">Date Start Overall</a></td>
             <td>The date and time of (the start of) the treatment.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -113,7 +113,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Date End Overall</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90459">Date End Overall</a></td>
             <td>The date and time of the end of the overall treatment.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
@@ -122,7 +122,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Intended Duration</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198202">Intended Duration</a></td>
             <td>The duration of treatment regimen, in days.</td>
             <td>Integer</td>
             <td>0..1</td>
@@ -131,7 +131,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Dose Units</td>
+            <td><a href="https://fairgenomes.org/fairgenomes-semantic-model/generated/resource/FG_0000759.xml">Dose Units</a></td>
             <td>Indicates the total dose given in units (e.g. of Gray (Gy) when radiation, Millimeters/24hours for medication).</td>
             <td><a href="https://ucum.org/">UCUM</a></td>
             <td>0..1</td>
@@ -149,7 +149,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Dose Intervals</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C89081">Dose Intervals</a></td>
             <td>The number of times a substance is administered within a specific time period.</td>
             <td>ISO8601 Period</td>
             <td>0..1</td>
@@ -158,7 +158,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Route of Administration</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38114">Route of Administration</a></td>
             <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.</td>
             <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a></td>
             <td>0..n</td>
@@ -176,7 +176,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Procedures</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=71388002&edition=MAIN&release=&languages=en">Procedures</a></td>
             <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".</td>
             <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a></td>
             <td>0..1</td>
@@ -197,7 +197,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Treatment Status</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18919">Treatment Status</a></td>
             <td>Indicates the patient's outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
@@ -232,7 +232,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Response to Treatment</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=182985004&edition=MAIN&release=&languages=en">Response to Treatment</a></td>
             <td>The patients' response to the applied treatment regimen. (Source: RECIST).</td>
             <td><a href="https://w3id.org/fair-genomes/resource/FG_0000761">Complete Response</a> <br>
             <a href="https://w3id.org/fair-genomes/resource/FG_0000762">Disease progression</a> <br>
@@ -245,7 +245,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Adverse Events</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41331">Adverse Events</a></td>
             <td>Reports any treatment related adverse events. (Codelist reference: NCI-CTCAE (v5.0))</td>
             <td><a href="https://ctep.cancer.gov/protocoldevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_5x7.pdf">CTCAE Codes</a></td>
             <td>0..n</td>
@@ -254,7 +254,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Toxicity Type</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity Type</a></td>
             <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.</td>
             <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a></td>
             <td>0..1</td>
@@ -263,7 +263,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Modality</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41147">Modality</a></td>
             <td>Indicates the method of radiation treatment or modality.</td>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15650">Electron</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15458">Heavy Ions</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93337">Photon</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66897">Proton</a></td>
             <td>0..n (conditional)</td>
@@ -272,7 +272,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Fractions</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15654">Fractions</a></td>
             <td>Indicates the total number of fractions delivered as part of radiation treatment.</td>
             <td>Integer</td>
             <td>0..1 (conditional)</td>
@@ -281,7 +281,7 @@
     </tbody>
     <tbody>
         <tr>
-            <td>Site</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C157120">Site</a></td>
             <td>Indicates the body region where radiation therapy was administered.</td>
             <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a></td>
             <td>0..n (conditional)</td>

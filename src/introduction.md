@@ -25,4 +25,4 @@ For example, for data of healthy subjects, the diagnosis class will not be used,
 
 The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.
 
-<img src="src/images/GDI_diagram-v2.0 UML Diagram 1+MG GDI.drawio.png" alt="UML diagram" width=1200>
+<img src="src/images/GDI_diagram_v2-v2.0 UML Diagram 1+MG GDI.drawio.png" alt="UML diagram" width=1200>

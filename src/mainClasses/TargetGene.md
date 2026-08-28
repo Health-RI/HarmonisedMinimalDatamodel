@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Identifier</td>
+            <td><a href="https://www.w3.org/TR/vocab-adms/#dt_identifier">Identifier</a></td>
             <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier</td>
             <td><a href="#identifier">Identifier class</a></td>
             <td>1..1 (conditional)</td>

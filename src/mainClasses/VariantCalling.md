@@ -22,7 +22,7 @@
             <td>Variant Annotation</td>
             <td>Identification of the software used for variant annotation.</td>
             <td><a href="#digital-resource">Digital Resource class</a></td>
-            <td>0..n</td>
+            <td>0..1</td>
             <td>NA</td>
         </tr>
         <tr>

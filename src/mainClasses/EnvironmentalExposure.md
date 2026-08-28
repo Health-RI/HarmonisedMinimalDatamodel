@@ -100,7 +100,7 @@
             <td>NA</td>
         </tr>
         <tr>
-            <td>Type of Nicotine product used</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=53661000146106&edition=MAIN&release=&languages=en">Type of Nicotine product used</a></td>
             <td>Type of nicotine product used by the subject.</td>
             <td><br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/65568007">SCTID:65568007</a> | Cigarettes
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/59978006">SCTID:59978006</a> | Cigar 
@@ -123,7 +123,7 @@
             <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
-            <td>Tobacco Use Status</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=229819007&edition=MAIN&release=&languages=en">Tobacco Use Status</a></td>
             <td>The status of the patient’s tobacco use.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/449868002">SCTID:449868002</a> | Smokes tobacco daily
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428041000124106">SCTID:428041000124106</a> | Occasional tobacco smoker
@@ -143,7 +143,7 @@
             <td>If Type of Exposure == Tobacco / nicotine</td>
         </tr>
         <tr>
-            <td>Alcohol use status</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=228273003&edition=MAIN&release=&languages=en">Alcohol use status</a></td>
             <td>The status of the patient’s alcohol use.</td>
             <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/219006">SCTID:219006</a> | Current drinker
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/105542008">SCTID:105542008</a> | Non - drinker
@@ -154,7 +154,7 @@
             <td>If Type of Exposure == Alcohol</td>
         </tr>
         <tr>
-            <td>Alcohol amount</td>
+            <td><a href="https://snomedbrowser.org/?perspective=full&conceptId1=897148007&edition=MAIN&release=&languages=en">Alcohol amount</a></td>
             <td>The extent of the patient’s alcohol use in units of alcohol per time period (day/week/year).</td>
             <td>AU per (day/week/year). 1 A.U.= 
             <br>125 ml of wine, 

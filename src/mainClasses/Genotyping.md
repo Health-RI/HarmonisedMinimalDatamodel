@@ -39,7 +39,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Platform</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172274">Platform</a></td>
             <td>The used sequencing platform (i.e. brand, name of a company that produces sequencer equipment).</td>
             <td>**Sequencing:**<a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="https://bioportal.bioontology.org/ontologies/EFO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0400103">EFO list</a> <br>
                **Microarrays:** <br>
@@ -76,7 +76,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Targeted Gene</td>
+            <td><a href="http://purl.obolibrary.org/obo/OBI_0001962">Targeted Gene</a></td>
             <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene</td>
             <td><a href="#target-gene">Target Gene class</a></td>
             <td>0..n</td>
@@ -97,7 +97,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>Mandadory if technology = sequencing</td>
         </tr>
         <tr>
-            <td>Breadth of coverage</td>
+            <td><a href="http://purl.obolibrary.org/obo/GENEPIO_0002137">Breadth of coverage</a></td>
             <td>A data item which is the amount of a reference sequence covered by a sequence of interest. (Observed) <br>
             Example of usage: <br>
             Eighty percent of the reference genome was covered by sequence fragments with a coverage depth of 4X; therefore, the breadth of coverage was 80% (4:5).</td>
@@ -106,7 +106,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Average Read Length</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181712">Average Read Length</a></td>
             <td>The average length for nucleic acid sequencing reads.</td>
             <td>String</td>
             <td>0..1</td>
@@ -127,14 +127,14 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Initial input file format</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171252">Initial input file format</a></td>
             <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
             <td>NA</td>
         </tr>
         <tr>
-            <td>Final output file format</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171252">Final output file format</a></td>
             <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).</td>
             <td><a href="http://edamontology.org/format_1921">EDAM's file types and formats</a></td>
             <td>1..1</td>
@@ -148,7 +148,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
             <td>NA</td>
         </tr>
         <tr>
-            <td>Alignment Software</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C175896">Alignment Software</a></td>
             <td>Identification of the software used for alignment.</td>
             <td><a href="#digital-resource">Digital Resource class</a></td>
             <td>0..n</td>

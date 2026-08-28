@@ -40,7 +40,7 @@
             <td>If geometry is provided then country, region and city are more or less obsolete</td>
         </tr>
         <tr>
-            <td>Region</td>
+            <td><a href="http://purl.obolibrary.org/obo/ENVO_00000004">Region</a></td>
             <td>Administrative region</td>
             <td><a href="geonames.org">Geonames.org</a></td>
             <td>0..1</td>

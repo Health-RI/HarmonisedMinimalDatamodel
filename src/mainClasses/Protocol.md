@@ -23,7 +23,7 @@
             <td>0..1</td>
         </tr>
         <tr>
-            <td>Kit number</td>
+            <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87822">Kit number</a></td>
             <td>A number or sequence of characters that identifies a particular kit.</td>
             <td>String</td>
             <td>0..n</td>
