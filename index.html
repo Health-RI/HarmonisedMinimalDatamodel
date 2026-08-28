@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
+  <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="6f2f2c30ffc6424e0904bf323530a65116338029" name="revision">
+  <meta content="eef416009550bd9d36ab0a95229eaaed6f510cbc" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1786,7 +1786,7 @@ pre .property::before, pre .property::after {
 </style>
 <style>/* Boilerplate: style-counters */
 body {
-    counter-reset: example figure issue;
+    counter-reset: example figure issue table;
 }
 .issue {
     counter-increment: issue;
@@ -1811,6 +1811,13 @@ figcaption {
 }
 figcaption:not(.no-marker)::before {
     content: "Figure " counter(figure) " ";
+}
+
+figure.table figcaption {
+    counter-increment: table;
+}
+figure.table figcaption:not(.no-marker)::before {
+    content: "Table " counter(table) " ";
 }
 </style>
 <style>/* Boilerplate: style-issues */
@@ -1896,7 +1903,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-04-16">16 April 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-08-28">28 August 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1915,15 +1922,6 @@ dfn > a.self-link::before      { content: "#"; }
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
-To the extent possible under law, the editors have waived all copyright
-and related or neighboring rights to this work.
-In addition, as of 16 April 2026,
-the editors have made this specification available under the
-<a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
-which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
-Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document.
-</p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -1937,13 +1935,19 @@ Parts of this work may be from another specification document.  If so, those par
     <li>
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
-      <li><a href="#overview-and-diagram"><span class="secno">1.2</span> <span class="content">Overview and Diagram</span></a>
+      <li><a href="#about-gdi"><span class="secno">1.1</span> <span class="content">About GDI</span></a>
+      <li><a href="#about-the-harmonized-minimal-data-model-for-gdi"><span class="secno">1.2</span> <span class="content">About the Harmonized Minimal Data Model for GDI</span></a>
+      <li><a href="#goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.3</span> <span class="content">Goals and Scope of the Harmonized Minimal Data Model</span></a>
+      <li><a href="#overview-and-diagram"><span class="secno">1.4</span> <span class="content">Overview and Diagram</span></a>
      </ol>
     <li>
      <a href="#main-classes"><span class="secno">2</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
-      <li><a href="#subject"><span class="secno">2.1</span> <span class="content">Subject</span></a>
+      <li>
+       <a href="#subject"><span class="secno">2.1</span> <span class="content"><span>Subject</span></span></a>
+       <ol class="toc">
+        <li><a href="#consent"><span class="secno">2.1.1</span> <span class="content">Consent</span></a>
+       </ol>
       <li><a href="#diagnosis"><span class="secno">2.2</span> <span class="content">Diagnosis</span></a>
       <li>
        <a href="#sample"><span class="secno">2.3</span> <span class="content">Sample</span></a>
@@ -1952,15 +1956,24 @@ Parts of this work may be from another specification document.  If so, those par
         <li><a href="#sample-relation"><span class="secno">2.3.2</span> <span class="content">Sample Relation</span></a>
        </ol>
       <li>
-       <a href="#sequence"><span class="secno">2.4</span> <span class="content">Sequence</span></a>
+       <a href="#test"><span class="secno">2.4</span> <span class="content">Test</span></a>
        <ol class="toc">
-        <li><a href="#digital-resource"><span class="secno">2.4.1</span> <span class="content">Digital Resource</span></a>
-        <li><a href="#variant"><span class="secno">2.4.2</span> <span class="content">Variant</span></a>
-        <li><a href="#target-gene"><span class="secno">2.4.3</span> <span class="content">Target Gene</span></a>
+        <li><a href="#biomarker"><span class="secno">2.4.1</span> <span class="content">Biomarker</span></a>
+        <li>
+         <a href="#genotyping"><span class="secno">2.4.2</span> <span class="content">Genotyping</span></a>
+         <ol class="toc">
+          <li><a href="#digital-resource"><span class="secno">2.4.2.1</span> <span class="content">Digital Resource</span></a>
+          <li><a href="#variant"><span class="secno">2.4.2.2</span> <span class="content">Variant</span></a>
+          <li><a href="#variant-calling"><span class="secno">2.4.2.3</span> <span class="content">Variant Calling</span></a>
+          <li><a href="#target-gene"><span class="secno">2.4.2.4</span> <span class="content">Target Gene</span></a>
+          <li><a href="#identifier"><span class="secno">2.4.2.5</span> <span class="content">Identifier</span></a>
+          <li><a href="#protocol"><span class="secno">2.4.2.6</span> <span class="content">Protocol</span></a>
+         </ol>
        </ol>
       <li><a href="#treatment"><span class="secno">2.5</span> <span class="content">Treatment</span></a>
-      <li><a href="#biomarker"><span class="secno">2.6</span> <span class="content">Biomarker</span></a>
-      <li><a href="#environmental-exposure"><span class="secno">2.7</span> <span class="content">Environmental Exposure</span></a>
+      <li><a href="#environmental-exposure"><span class="secno">2.6</span> <span class="content">Environmental Exposure</span></a>
+      <li><a href="#geolocation"><span class="secno">2.7</span> <span class="content">GeoLocation</span></a>
+      <li><a href="#data-provenance"><span class="secno">2.8</span> <span class="content">Data Provenance</span></a>
      </ol>
     <li>
      <a href="#matches"><span class="secno">3</span> <span class="content">Matches</span></a>
@@ -1968,47 +1981,46 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#how-to-use-matches"><span class="secno">3.1</span> <span class="content">How To Use Matches</span></a>
       <li><a href="#using-sssom"><span class="secno">3.2</span> <span class="content">Using SSSOM</span></a>
      </ol>
-    <li><a href="#conformance"><span class="secno"></span> <span class="content">
-    Conformance</span></a>
-    <li>
-     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
-     <ol class="toc">
-      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
-     </ol>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="1.1" id="about-gdi"><span class="secno">1.1. </span><span class="content">About GDI</span><a class="self-link" href="#about-gdi"></a></h3>
+   <p>The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
+Our primary goal is to establish a federated, sustainable, and secure infrastructure to enable cross-border access to human genomic, phenotypic, and clinical data across Europe. By providing this infrastructure, we aim to unlock the potential of genomic data to drive breakthroughs in medical research, advance personalized healthcare, and inform public health policymaking.
+You can visit <a href="https://gdi.onemilliongenomes.eu/">https://gdi.onemilliongenomes.eu/</a> for more information about the project.</p>
+   <h3 class="heading settled" data-level="1.2" id="about-the-harmonized-minimal-data-model-for-gdi"><span class="secno">1.2. </span><span class="content">About the Harmonized Minimal Data Model for GDI</span><a class="self-link" href="#about-the-harmonized-minimal-data-model-for-gdi"></a></h3>
    
-Some info about GDI here.
+Within the GDI project, deliverable 8.2 encapsulates the collaborative efforts of GDI, 1+MG, Genome of Europe, B1MG(plus) and ERDERA initiatives towards establishing harmonised minimal data models and specifications for genomic data exchange and integration. Establishing harmonised minimal data models (i.e. a blueprint that shows how data is organized and connected) and specifications within GDI facilitates seamless data exchange, supporting better collaboration in healthcare and contributing to improved patient care. Efforts focused on leveraging prior work from 1+MG and B1MG initiatives to define minimal datasets for GDI use cases, particularly in Cancer, Infectious Diseases, Rare Diseases and the Genome of Europe.
+This page outlines the content of the Harmonized minimal data model for GDI.
 
 
-   <h3 class="heading settled" data-level="1.1" id="goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.1. </span><span class="content">Goals and Scope of the Harmonized Minimal Data Model</span><a class="self-link" href="#goals-and-scope-of-the-harmonized-minimal-data-model"></a></h3>
-   <p>The <strong>Harmonized Minimal Data Model (HMDM)</strong> has multiple purposes, some of these are:</p>
+   <h3 class="heading settled" data-level="1.3" id="goals-and-scope-of-the-harmonized-minimal-data-model"><span class="secno">1.3. </span><span class="content">Goals and Scope of the Harmonized Minimal Data Model</span><a class="self-link" href="#goals-and-scope-of-the-harmonized-minimal-data-model"></a></h3>
+   <p>The <strong>Harmonized Minimal Data Model (HMD)</strong> has multiple purposes, some of these are:</p>
    <ol>
     <li data-md>
      <p>Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model</p>
     <li data-md>
      <p>Within the catalogue based on our model search options can be made available (filters/facets)</p>
     <li data-md>
-     <p>The HMDM can/needs to be implemented in the Beacons (and/or other discovery tools).</p>
+     <p>The HMD can/needs to be implemented in the Beacons (and/or other discovery tools).</p>
    </ol>
-   <p>Next to the HMDM we provided a <strong>minimal metadata for submission schema</strong>.</p>
-   <p>Version 1 of metadata for submission model was released and can be seen <a href="https://drive.google.com/drive/u/0/folders/1oojXociy39DD_VzUZHfx1n4queVJD1RE">here</a>. This version was based on the version of HealthDCAT-AP from December 2024. Since the work on HealthDCAT-AP is still ongoing, there have been some changes since that time. This means our metadata for submission is not compliant to the <a href="https://healthdcat-ap.github.io/">current version of HealthDCAT-AP</a> anymore.
-We will update the metadata for submission to version 1.1, which will be, according to HealthDCAT-AP, provided in 3 variants, based on the access level of the dataset: <em>Open</em>, <em>Sensitive</em> and <em>Protected</em>, which differ in cardinalities of the properties. The metadata for submission model will include all the current mandatory fields from those HealthDCAT-AP vairants, as well as a custom class created specifically for the submission of metadata in GDI, called HMD Submission. 
-The name spaces for HMD Submission class and its properties were made available through <a href="https://github.com/fairgenomes/fairgenomes-semantic-model">FAIR Genomes repository</a>.
-There are also some mandatory fields that were already included in the GDI MS8 deliverable, which will stay mandatory for backwards compatibility. This update will be very minimal, so only extending the current model with new mandatory fields.</p>
-   <h3 class="heading settled" data-level="1.2" id="overview-and-diagram"><span class="secno">1.2. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
-   <p><img alt="UML diagram" src="https://raw.githubusercontent.com/Health-RI/HarmonisedMinimalDatamodel/main/src/new/images/HMD_v1.1_UML.png" width="1200"></p>
+   <h3 class="heading settled" data-level="1.4" id="overview-and-diagram"><span class="secno">1.4. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
+   <p>In the diagram below, you can view the complete HMD.
+Each box within the diagram comprises one of the classes of the model. Within each box, you find all concepts of the respective class.
+Red boxes represent mandatory classes. The remaining classes (green boxes) are optional and usage of these classes depends on each case.
+For example, for data of healthy subjects, the diagnosis class will not be used, but there always needs to be information about the Subject, Sample, Genotyping and Consent.</p>
+   <p>The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.</p>
+   <p><img alt="UML diagram" src="src/images/GDI_diagram_v2.png" width="1200"></p>
    <h2 class="heading settled" data-level="2" id="main-classes"><span class="secno">2. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
    
-In the Harmonized Minimal Dataset, we defined 12 different classes.
+In the Harmonized Minimal Datamodel, we defined separate classes.
 
 
 
 
 
-   <h3 class="heading settled" data-level="2.1" id="subject"><span class="secno">2.1. </span><span class="content">Subject</span><a class="self-link" href="#subject"></a></h3>
+   <h3 class="heading settled" data-level="2.1" id="subject"><span class="secno">2.1. </span><span class="content"><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48910">Subject</a></span><a class="self-link" href="#subject"></a></h3>
    <table>
     <thead>
      <tr>
@@ -2016,37 +2028,141 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Definition
       <th>Value
       <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
       <td>Birth Date
       <td>The calendar date on which a person was born.
       <td>Complete date, without time, following the ISO 8601. If only year or year-month is available, use that. xsd:date or xsd:gYearMonth or xsd:gYear
       <td>1..1
+      <td>NA
      <tr>
       <td>Administrative Gender
       <td>The gender of a person used for administrative purposes.
       <td><a href="https://build.fhir.org/valueset-administrative-gender.html">HL7 Administrative Gender</a>
       <td>1..1
+      <td>NA
      <tr>
-      <td>biological sex at birth
-      <td>The sex of a person at birth as molecular proven.
+      <td>Genetic determined sex
+      <td>The sex of a person at birth as genetically proven.
       <td><a href="https://www.hl7.org/fhir/us/core/ValueSet-birthsex.html">HL7 ValueSet: Birth Sex</a>
       <td>0..1
+      <td>NA
      <tr>
-      <td>Date_of_Last_Follow_up
+      <td>Date of Last Follow-up
       <td>Date of last follow-up, partial date with month and year.
       <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>1..1 (conditional)
+      <td>Mandatory item in cancer use case
      <tr>
-      <td>Country of Origin
-      <td>A person’s descent or lineage, from a person or from a population.
-      <td>2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. If a country-subdivision then a value from the <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>
+      <td>Status at Last Follow-up
+      <td>Status of the subject at last follow-up.
+      <td>Alive, <br>
+                Alive with disease, <br>
+                Alive without disease, <br>
+                Dead, <br>
+                Dead with disease, <br>
+                Dead due to other causes, <br>
+                Lost to follow-up, <br>
+                Unknown
       <td>0..1
+      <td>NA
+     <tr>
+      <td>Country of birth
+      <td>Country which a person was born in.
+      <td>
+            2- or 3-lettercode from <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-1:ed-4:v1:en">ISO 3166-1</a> if only a country code is provided. <br>If a country-subdivision then a value from the ISO <a href="https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-4:v1:en">ISO 3166-2</a>
+      <td>1..1 (conditional)
+      <td>Mandatory item in GoE &amp; complex and common disease use cases
      <tr>
       <td>Subject ID
       <td>A sequence of characters used to identify, name, or characterize a trial or study subject.
       <td>String
       <td>1..1
+      <td>NA
+     <tr>
+      <td>Socioeconomic status
+      <td>An individual’s relative social and economic position in a society based on a combination of education, income, employment, and wealth.
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Consent
+      <td>Consent to proceed to personal data analysis.
+      <td><a href="#consent">Consent class</a>
+      <td>1..1 (conditional)
+      <td>Mandatory for Infectious Diseases.
+     <tr>
+      <td>Environmental exposure
+      <td>Establishes a link between Subject and Environmental exposure class.
+      <td><a href="#environmental-exposure">Environmental Exposure class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>has Sample
+      <td>Establishes a link between Subject and Sample class.
+      <td><a href="#sample">Sample class</a>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td>has Treatment
+      <td>Establishes a link between Subject and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Subject Diagnosis
+      <td>Establishes a link between Subject and Diagnosis class.
+      <td><a href="#diagnosis">Diagnosis class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes a link between Subject and Test class.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
+   </table>
+   <h4 class="heading settled" data-level="2.1.1" id="consent"><span class="secno">2.1.1. </span><span class="content">Consent</span><a class="self-link" href="#consent"></a></h4>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td>Consent_scientificResearch
+      <td>Specify whether subject has given consent to secondary use of the data for scientific research for health purposes.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Consent_policy
+      <td>Specify whether subject has given consent to secondary use of the data for policy development in health systems.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Consent_qualityManagement
+      <td>Specify whether subject has given consent to secondary use of the data for quality management in healthcare.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Consent_healthcare
+      <td>Specify whether subject has given consent to secondary use of the data in healthcare.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="http://purl.obolibrary.org/obo/GENEPIO_0002032">Consent date</a>
+      <td>Date on which consent was given.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>1..1 (conditional)
+      <td>Mandatory for Infectious Disease
    </table>
    <h3 class="heading settled" data-level="2.2" id="diagnosis"><span class="secno">2.2. </span><span class="content">Diagnosis</span><a class="self-link" href="#diagnosis"></a></h3>
    <table>
@@ -2056,22 +2172,125 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Definition
       <th>Value
       <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
-      <td>Date of Diagnosis
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164339">Date of Diagnosis</a>
       <td>Date at which diagnosis was made.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
+      <td>NA
      <tr>
-      <td>Diagnosis
-      <td>The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=298059007&amp;edition=MAIN&amp;release=&amp;languages=en">Date of Onset</a>
+      <td>Date of onset.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C2991">Diagnosis</a>
+      <td>Any abnormal condition of the body or mind that causes discomfort, dysfunction, or distress to the affected person.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
-      <td>0..n
+      <td>1..1 (conditional)
+      <td>It is mandatory to provide either Diagnosis or Provisional Diagnosis
      <tr>
-      <td>Provisional diagnosis / clinical diagnosis
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C200660">Provisional diagnosis / clinical diagnosis</a>
       <td>An initial diagnosis that is subject to change as new information becomes available.
       <td>Children of SNOMED-CT <a href="http://purl.bioontology.org/ontology/SNOMEDCT/64572001">Disease (Disorder)</a>
+      <td>1..1 (conditional)
+      <td>It is mandatory to provide either Diagnosis or Provisional Diagnosis
+     <tr>
+      <td>Diagnosis_InfectiousDisease
+      <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Diagnosis_InfectiousDisease item may be used.
+      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
+      <td>0..1 (conditional)
+      <td>If infectious disease and specific SNOMED term is not available, Genepio may be used. May not be used if a SNOMED code is available.
+     <tr>
+      <td>Provisional/clinical Diagnosis_InfectiousDisease
+      <td>For infectious diseases, some specific diagnoses are not available in SNOMED. For these cases, the Provisional/clinical Diagnosis_InfectiousDisease item may be used.
+      <td><a href="https://www.ebi.ac.uk/ols4/ontologies/genepio">Genepio (epidemiology)</a>
+      <td>0..1 (conditional)
+      <td>If infectious disease and specific SNOMED term is not available, Genepio may be used. May not be used if a SNOMED code is available.
+     <tr>
+      <td><a href="https://loinc.org/8656-1/">Date of hospitalization</a>
+      <td>Date at which subject was hospitalised.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1 (conditional)
+      <td>Optional for Infectious Disease
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=284548004&amp;edition=MAIN/2026-08-01&amp;release=&amp;languages=en">Clinical Department</a>
+      <td>Refers to the Clinical Department in charge of the patient
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Institution Clinical
+      <td>Institution of the clinical department in charge of the patient.
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=272141005&amp;edition=MAIN&amp;release=&amp;languages=en">Severity Grading</a>
+      <td>Classification scale used for severity grading
+      <td><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=442452003&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">442452003 | Life threatening severity</a> <br>
+            <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=255604002&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">255604002 | Mild</a> <br>
+            <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=371923003&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">371923003 | Mild to moderate</a> <br>
+            <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=6736007&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">6736007 | Moderate</a> <br>
+            <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=371924009&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">371924009 | Moderate to severe</a> <br>
+            <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24484000&amp;edition=MAIN/2025-11-01&amp;release=&amp;languages=en">24484000 | Severe</a> <br>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://loinc.org/95367-9/">Date of transfer to an Intensive Care Unit (ICU)</a>
+      <td>Date at which subject was transfered to an Intensive care unit. 
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1 (conditional)
+      <td>Recommended for Infectious Diseases.
+     <tr>
+      <td>Date Declared Cured
+      <td>Date at which subject was called "cured" from the disease.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Clinical Status
+      <td>Indicates the status of the condition.
+      <td>Active<br>
+                Inactive<br>
+                Recurring<br>
+                Remission<br>
+                Relapsed
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Has Comorbidity
+      <td>Points to another diagnosis that acts as a comorbidity to the current diagnosis.
+      <td><a href="#diagnosis">Diagnosis class</a>
       <td>0..n
+      <td>NA
+     <tr>
+      <td>Topology
+      <td>Describes the anatomical location of (the origin of) the disease.
+      <td>String
+      <td>1..1 (conditional)
+      <td>Mandatory for Infectious Diseases
+     <tr>
+      <td>Morphology
+      <td>Describes the cell type and biological activity.
+      <td>String
+      <td>1..1 (conditional)
+      <td>Mandatory for Infectious Diseases
+     <tr>
+      <td>Has Treatment
+      <td>Establishes a link between Diagnosis and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes a link between Diagnosis and Test class.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
    </table>
    <h3 class="heading settled" data-level="2.3" id="sample"><span class="secno">2.3. </span><span class="content">Sample</span><a class="self-link" href="#sample"></a></h3>
    <table>
@@ -2081,86 +2300,135 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Definition
       <th>Value
       <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
-      <td>Anatomical sample location
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717">Anatomical sample location</a>
       <td>Anatomic site from which the sample was taken.
       <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a>
-      <td>1..1
+      <td>1..1 (conditional)
+      <td>In use case cancer, the exact sample location is relevant; therefore the more detailed value list of ICD-O3 can be used (which is included in ICD-11)
      <tr>
-      <td>Pathological state
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19697">Pathological state</a>
       <td>The pathological condition of the sample.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, Germline Normal, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
-      <td>1..1
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162623">Tissue Normal</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94480">Germline DNA</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C8509">Primary Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C3261">Tumor Metastasis</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4798">Recurrent Tumor</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172259">Organoid</a>, <a href="https://w3id.org/fair-genomes/resource/FG_0000124">Tumoroid</a>
+      <td>1..1 (conditional)
+      <td>In cancer use case, the pathological state of the sample must be recorded; several instances of the sample class can be filled if matching samples of different pathological states (normal, primary tumor,...) are present.
      <tr>
-      <td>Date
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25164">Date of Sampling</a>
       <td>Defines the date of sampling.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
+      <td>NA
      <tr>
       <td>ID
       <td>Unique identifier for a collected specimen assigned by data provider.
       <td>String
-      <td>0..1
+      <td>1..1
+      <td>NA
      <tr>
-      <td>Organism
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">Organism</a>
       <td>A living entity.
       <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C14250">NCIT Organism</a>
       <td>1..1
+      <td>If Organism is for example "Virus" then Biospecimen_Type should not be something like "tissue"
      <tr>
-      <td>Biospecimen_Type
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713">Biospecimen Type</a>
       <td>The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.
-      <td>Value from type of Sample table in <a href="https://cdn.ymaws.com/www.isber.org/resource/resmgr/isber_2019/pdf/standard_preanalytical_code_.pdf">SPREC Codes v3.0 </a>:
-            <br>ASC - Ascites fluid
-            <br> AMN - Amniotic fluid
-            <br> BAL - Bronchoalveolar lavage
-            <br> BLD - Blood (whole)
-            <br> BMA - Bone marrow aspirate
-            <br> BMK - Breast milk
-            <br> BUC - Buccal cells
-            <br> BUF - Unficolled buffy coat, viable
-            <br> CEL - Ficoll mononuclear cells, viable
-            <br> CEN - Fresh cells from non blood specimen type
-            <br> CLN - Cells from nonblood specimen type (e.g., disrupted tissue), viable
-            <br> CRD - Cord blood
-            <br> CSF - Cerebrospinal fluid
-            <br> NAS - Nasal washing
-            <br> PEL - Ficoll mononuclear cells, nonviable
-            <br> PEN - Cells from nonblood specimen type (e.g., disrupted tissue), nonviable
-            <br> PFL - Pleural fluid
-            <br> PL1 - Plasma, single spun
-            <br> PL2 - Plasma, double spun
-            <br> SAL - Saliva
-            <br> SEM - Semen
-            <br> SER - Serum
-            <br> SPT - Sputum
-            <br> STL - Stool
-            <br> SYN - Synovial fluid
-            <br> TER - Tears
-            <br> U24 - 24-h urine
-            <br> URN - Urine
-            <br> ZZZ Other 
-      <td>1..1
+      <td><br><a href="http://purl.obolibrary.org/obo/NCIT_C17610">Blood</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C84507">Buffy coat</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C20313">Cancer cell lines</a>
+            <br><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=272625005&amp;edition=MAIN&amp;release=&amp;languages=en">Entire body organ</a>
+            <br><a href="http://purl.obolibrary.org/obo/OMIABIS_0001076">Faeces</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C17730">Embryo or fetal tissue</a>
+            <br> Immortalized cell lines
+            <br> Isolated microbes
+            <br> Other body fluid
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C185204">Plasma</a>
+            <br> Primary cells
+            <br><a href="http://purl.obolibrary.org/obo/OBI_0000902">Post-mortem tissue</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C174119">Saliva</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C178987">Serum</a>
+            <br><a href="http://purl.obolibrary.org/obo/OBI_0600012">Specimen from environment or food: environmental collection</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C150895">Swab</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C158417">Tissue (Frozen)</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C172265">Tissue (FFPE)</a>
+            <br><a href="http://purl.obolibrary.org/obo/NCIT_C189126">Urine</a>
+            <br><a href="https://terminology.hl7.org/en/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTHOther">Other</a>
+      <td>1..1 (conditional)
+      <td>For Cancer use case, and for the Infectious disease use case, this field is mandatory, otherwise optional.
      <tr>
-      <td>Extraction_Technique
+      <td>Extraction Technique
       <td>The technique of extraction of the sample.
-      <td>Values within <a href="http://purl.bioontology.org/ontology/MESH/D013048">MESH Specimen Handling</a>
+      <td><a href="#protocol">Protocol class</a>
       <td>0..1
+      <td>NA
      <tr>
-      <td>Storage_Conditions
+      <td>Storage Conditions
       <td>Storage conditions of the sample.
       <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/StorageConditions.txt"> FAIR Genomes Storage Conditions</a>
       <td>0..n
+      <td>NA
      <tr>
-      <td>Assayed_Biological_Macromolecule
+      <td>Assayed Biological Macromolecule
       <td>Macromolecule derived from the sample.
       <td>Children of <a href="http://www.ebi.ac.uk/efo/EFO_0004446">EFO biological macromolecule</a>
       <td>0..1
+      <td>NA
      <tr>
-      <td>Sampling_Intent
+      <td><a href="https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=24.06d&amp;ns=ncit&amp;code=C25725&amp;key=645876995&amp;b=1&amp;n=null">Sampling Intent</a>
       <td>Describes the purpose for taking the sample.
       <td>String
       <td>0..n
+      <td>NA
+     <tr>
+      <td>Sampling Place
+      <td>Defines the geographic location of sampling
+      <td><a href="#geolocation">GeoLocation class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Sample Diagnosis
+      <td>Diagnosis established based on sample.
+      <td><a href="#diagnosis">Diagnosis class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Sample Relation
+      <td>Establishes the relation with another sample.
+      <td><a href="#sample-relation">Sample Relation class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Sample TNM
+      <td>TNM classification of the sample.
+      <td><a href="#tnm">TNM class</a>
+      <td>0..2(conditional)
+      <td>Recommended for Cancer use case.
+     <tr>
+      <td>Sample Genotyping
+      <td>Establishes the relation with Genotyping class.
+      <td><a href="#genotyping">Genotyping class</a>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td>Subject
+      <td>Establishes the relation with the subject.
+      <td><a href="#subject">Subject class</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Sample Provenance
+      <td>Establishes the relation with provenance class.
+      <td><a href="#data-provenance">Data Provenance class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Test
+      <td>Establishes the relation with Test class.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
    </table>
    <h4 class="heading settled" data-level="2.3.1" id="tnm"><span class="secno">2.3.1. </span><span class="content">TNM</span><a class="self-link" href="#tnm"></a></h4>
    <table>
@@ -2172,35 +2440,30 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Tumor_size
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120284">Tumor size</a>
       <td>Indicates the size of the primary tumor.
       <td>Double
       <td>0..1
-    <tbody>
      <tr>
-      <td>Tumor_size_unit
+      <td><a href="http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-units-vs">Tumor size Unit</a>
       <td>Indicates the unit in which tumor size is stated.
       <td><a href="https://ucum.org/">UCUM</a>
       <td>0..1
-    <tbody>
      <tr>
-      <td>Lymph_Node_Status
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=258283002&amp;edition=MAIN&amp;release=&amp;languages=en">Lymph Node Status</a>
       <td>Indicates lymph node involvement according to the international TNM classification for solid tumors.
       <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1279504008">SCTID: 1279504008</a>  | American Joint Committee on Cancer ycN category allowable value (qualifier value)
       <td>0..1
-    <tbody>
      <tr>
       <td>Metastases
       <td>Indicates presence or absence of metastasis according to the international TNM classification for solid tumors.
       <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222587001">SCTID: 1222587001 </a> | American Joint Committee on Cancer pathological M category allowable value (qualifier value), <br> or <br> Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222591006">SCTID: 1222591006 </a> | American Joint Committee on Cancer clinical M category allowable value (qualifier value), <br> or HL7 NULL flavor in case not determined.
       <td>0..1
-    <tbody>
      <tr>
       <td>Version
       <td>Version of the TNM classification.
       <td>String
       <td>0..1
-    <tbody>
      <tr>
       <td>Stage
       <td>The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.
@@ -2208,15 +2471,13 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222592004">SCTID: 1222592004</a> |  American Joint Committee on Cancer clinical stage group allowable value (qualifier value), <br> or <br>
             <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222593009">SCTID: 1222593009</a> | American Joint Committee on Cancer pathological stage group allowable value (qualifier value),<br> or
             <br> <a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222594003">SCTID: 1222594003</a> |  American Joint Committee on Cancer yp stage group allowable value (qualifier value),<br> or
-            <br> UICC values (to be added to SNOMED in 2025) 
+            <br> <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=1352503003&amp;edition=MAIN&amp;release=&amp;languages=en">UICC values</a> 
       <td>0..1
-    <tbody>
      <tr>
-      <td>Pathology_Clinical
+      <td>Pathology Clinical
       <td>Indication whether TNM classification is based on clinical or pathological evaluation. If pathological is available, this always goes before clinical.
       <td>Clinical or pathological
       <td>1..1
-    <tbody>
      <tr>
       <td>Date of evaluation
       <td>Date of the clinical/pathological evaluation.
@@ -2233,13 +2494,12 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Related_Sample
+      <td>Related Sample
       <td>Points to a related sample.
       <td>Sample ID
-      <td>1..n
-    <tbody>
+      <td>1..1
      <tr>
-      <td>Relation_Type
+      <td>Relation Type
       <td>Describes the relationship type between the two connected samples.
       <td>List to be defined/extended:
             <br>New sample
@@ -2253,14 +2513,13 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
             <br>Familial
             <br>Spatial
       <td>1..1
-    <tbody>
      <tr>
-      <td>Relation_Description
+      <td>Relation Description
       <td>Free text describing the Relation Type of two samples.
       <td>String
       <td>0..1
    </table>
-   <h3 class="heading settled" data-level="2.4" id="sequence"><span class="secno">2.4. </span><span class="content">Sequence</span><a class="self-link" href="#sequence"></a></h3>
+   <h3 class="heading settled" data-level="2.4" id="test"><span class="secno">2.4. </span><span class="content">Test</span><a class="self-link" href="#test"></a></h3>
    <table>
     <thead>
      <tr>
@@ -2270,162 +2529,42 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Target
-      <td>Identification of the sequenced target.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101294">Whole Genome Sequencing (WGS)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101295">Whole Exome Sequencing (WES)</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198412">Multi-gene panel sequencing</a> <br>array <br> OTH 
-      <td>1..1
+      <td>Test Description
+      <td>Name or description of the test.
+      <td>String
+      <td>0..1
     <tbody>
      <tr>
-      <td>Sequencing_Date
-      <td>Defines the date of sequencing.
+      <td>Test Start Date
+      <td>Defined the date of when the genotyping began.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
     <tbody>
      <tr>
       <td>ISO 15189 accredited
-      <td>Indication whether the laboratory is accredited according to ISO 15189 (clinical).
+      <td>Indication whether the laboratory is accredited according to ISO 15189 (clinical) at the time of genotyping.
       <td>Boolean
       <td>0..1
     <tbody>
      <tr>
       <td>ISO 17025 accredited
-      <td>Indication whether the laboratory is accredited according to ISO 17025 (research).
+      <td>Indication whether the laboratory is accredited according to ISO 17025 (testing and calibration) at the time of genotyping.
       <td>Boolean
       <td>0..1
     <tbody>
      <tr>
-      <td> <b>WIP</b>  <br> Wet lab protocol
-      <td>
-      <td>String or <a href="https://www.protocols.io">https://www.protocols.io</a> URL
-      <td>
-    <tbody>
-     <tr>
-      <td>Participated in proficiency testing
-      <td>Indication whether the laboratory had participated in any proficiency testing, such as interlaboratory comparison.
-      <td>Boolean
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>IVDR_passed
-      <td>Indicate whether the methodology (including chemistry and sequencing standards) used for sequencing follows the In vitro diagnostic medical devices (IVDR) regulation passed by the EU in April 2017.
-      <td>Boolean
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Sequencing Platform
-      <td>The used sequencing platform (i.e. brand, name of a company that produces sequencer equipment).
-      <td><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="http://purl.obolibrary.org/obo/OBI_0400103">EFO</a> list
-      <td>1..n
-    <tbody>
-     <tr>
-      <td>Average depth of coverage
-      <td>Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted sequencing (eg 60x, average number of times each target base has been ‘read’ by sequencer).
-      <td>Integer
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Breadth of coverage
-      <td>Breadth of coverage (or evenness) is the proportion or percentage of a reads that has been sequenced at a the provided average depth of coverage. (E.g. if for Average depth of coverage, the value is 60, and the Evenness is 50% at 60x, the value here will be 50).
-      <td>Integer
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Additional NGS quality control metrics
-      <td>Statement of any additional NGS quality control metrics.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Initial_input_file_format
-      <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).
-      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Final_output_file_format
-      <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).
-      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Final_output_file_format_version
-      <td>Identification of the version of genomic file format of the final output file (eg. vcf, gvcf).
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Alignment_software
-      <td>Identification of the software used for alignment.
-      <td>--> Digital Resource class
+      <td>Protocol
+      <td>The protocol used for the test.
+      <td><a href="#protocol">Protocol class</a>
       <td>0..n
-    <tbody>
      <tr>
-      <td>Alignment_Genome
-      <td>The specific build of the human genome used as reference for sequence alignment and variant calling.
-      <td>--> Digital Resource class
-      <td>1..n
-    <tbody>
-     <tr>
-      <td>Specific_Settings_Alignment_Genome
-      <td> Any specific settings regarding alternative contigs or decoys.
-      <td>String
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Target Gene
-      <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene.
-      <td>--> Target Gene class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Target Other
-      <td>Any other targeted genomic region.
-      <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Panel_of_Normals_Included
-      <td>Indicate whether a panel of normals is included during variant calling.
-      <td>Boolean
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Panel_of_Normals_Description
-      <td>Free text description of panel of normals, if applicable.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Variant
-      <td>A detected and reported variant.
-      <td>--> Variant class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_calling
-      <td>Identification of the software used for variant calling.
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_calling_date
-      <td>Defines the date of variant calling.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Variant_Annotation
-      <td>Identification of the software used for variant annotation.
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_Annotation_database
-      <td>Database and version used for variant annotation.
-      <td>--> Digital Resource class
+      <td>Diagnosis
+      <td>Establishes the link between Test and Diagnosis class.
+      <td><a href="#diagnosis">Diagnosis class</a>
       <td>0..n
    </table>
-   <h4 class="heading settled" data-level="2.4.1" id="digital-resource"><span class="secno">2.4.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h4>
+   <h4 class="heading settled" data-level="2.4.1" id="biomarker"><span class="secno">2.4.1. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h4>
+   <p>The Biomarker class is a subclass of the Test class. This means that it adopts all items from the Test class, and adds some Biomarker-specific items. The Genotyping class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Biomarker or Genotyping class. If a reference from a class is established directly to Biomarker, that class has to be used.</p>
    <table>
     <thead>
      <tr>
@@ -2433,364 +2572,7 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Definition
       <th>Value
       <th>Cardinality
-    <tbody>
-     <tr>
-      <td>Name
-      <td>The name of the tool/software/database used.
-      <td>String
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Website
-      <td>Link to the website or repository (like GitHub) of the tool/software/database.
-      <td>URL
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Identifier
-      <td>bio.tools identifier for the digital resource.
-      <td><a href="https://bio.tools/">bio.tools</a> identifier
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Version
-      <td>The version of the tool/software/database used.
-      <td>double
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Date used
-      <td>The date when the tool/software/database was last used.
-      <td>xsd:dateTime
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Settings
-      <td>Free text account of the settings used in the tool/software/database.
-      <td>String
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Parameters
-      <td>Description of parameters used with the specified software. Copy the complete command line (all lines executed) used.
-      <td>String
-      <td>0..n
-   </table>
-   <h4 class="heading settled" data-level="2.4.2" id="variant"><span class="secno">2.4.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h4>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td>Variant_Type
-      <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_Origin
-      <td>A quality inhering in a variant by virtue of its origin.
-      <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Variant_representation
-      <td>The representation of the variant using HGVS nomenclature.
-      <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Clinical_Variant_Interpretation_criteria
-      <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation
-      <td>List of versions of ACMG, ESMO-ESCAT, others??
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Clinical_Variant_Interpretation_result
-      <td>Indicates result of clinical variant interpretation.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Clinical_expert_panel_decision
-      <td>Decision by clinical expert panel concerning the variant interpretation
-      <td>String
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Applied_Criteria_of_Evidence
-      <td>A category which fits with categories provided by Expert panels or tools accepted in Clincial Practice. If such recommendations are not available the weighted categories provided by freely available tools would be acceptable.
-      <td>As listed in tables 3 and 4 in <a href="https://doi.org/10.1038/gim.2015.30">Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology</a>
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Clinical_Interpretation_Tool
-      <td>Identification of the tool used for clinical interpretation
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_calling_software_deviation
-      <td>Identification of the software used for variant calling, if different from software stated in Sequence class.
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_Annotation_tools_deviation
-      <td>Identification of the software used for variant annotation, if different from software stated in Sequence class. 
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Variant_Annotation_database_deviation
-      <td>Database and version used for variant annotation, if different from software stated in Sequence class.
-      <td>--> Digital Resource class
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Reported_to_patient
-      <td>Indication if the variant has been reported back to the patient, if different from software stated in Sequence class.
-      <td>Boolean
-      <td>0..1
-   </table>
-   <h4 class="heading settled" data-level="2.4.3" id="target-gene"><span class="secno">2.4.3. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h4>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td>URI
-      <td>URI identifying the targeted gene.
-      <td>URI to either <a href="https://www.genenames.org/">HGNC</a> <a href="https://www.ncbi.nlm.nih.gov/gene">NCBI gene</a>, <a href="https://www.omim.org/">OMIM</a>, <a href="https://hpo.jax.org/">HPO</a> or <a href="https://hgvs-nomenclature.org/stable/">HGVS</a> for variants.
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Label
-      <td>Label of the target gene, if no URI can be provided.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Description
-      <td>Description of target gene.
-      <td>String
-      <td>0..1
-   </table>
-   <h3 class="heading settled" data-level="2.5" id="treatment"><span class="secno">2.5. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td>Intention_to_Treat
-      <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.
-      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373846009">SCTID: 373846009</a> | Adjuvant - intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/363676003">SCTID: 363676003</a> | Palliative - procedure intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360271000">SCTID: 360271000</a> | Prophylaxis - procedure intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243114000">SCTID: 243114000</a> | Support (regime/therapy)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129304002">SCTID: 129304002</a> | Excision - action 
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/261004008">SCTID: 261004008</a> | Diagnostic intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129428001">SCTID: 129428001</a> | Preventive - intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/429892002">SCTID: 429892002</a> | Guidance intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360156006">SCTID: 360156006</a> | Screening - procedure intent
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/447295008">SCTID: 447295008</a> | Forensic intent
-            <br>Other - HL7 NULL flavor (OTH, UNK, NI, NA)
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Setting
-      <td>Indicate the treatment setting, which describes the treatment’s purpose in relation to the primary treatment (Reference: NCIT C124308)
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15675">Adjuvant</a> <br> <a href="https://w3id.org/fair-genomes/resource/FG_0000760">Advanced/Metastatic</a><br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15665">Neoadjuvant</a><br> <a href="https://terminology.hl7.org/5.1.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">Not applicable</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Type
-      <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
-      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/23719005">SCTID: 23719005</a> | Bone marrow transplant
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/367336001">SCTID: 367336001</a> | Chemotherapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/18629005">SCTID: 18629005</a> | Medication
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/423827005">SCTID: 423827005</a> | Endoscopic therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/169413002">SCTID: 169413002</a> | Hormonal therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/76334006">SCTID: 76334006</a> | Immunotherapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/257891001">SCTID: 257891001</a> | Photodynamic therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1287742003">SCTID: 1287742003</a> | Radiation therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/56305001">SCTID: 56305001</a> | Radionucleotide therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1269349006">SCTID: 1269349006</a> | Stem cell transplant
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/387713003">SCTID: 387713003</a> | Surgery
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/394613000">SCTID: 394613000</a> | Gene therapy
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/310341009">SCTID: 310341009</a> or 373818007 | Watchful waiting
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/424313000">SCTID: 424313000</a> | Active follow-up
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/703423002">SCTID: 703423002</a> | Chemoradiotherapy
-            <br>HL7 NULL flavor (NI, NA, OTH) | Other
-      <td>1..1
-    <tbody>
-     <tr>
-      <td>Subtype
-      <td>Detailed specification of the treatment type.
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Line
-      <td>Indicate if the treatment was the primary treatment following the initial diagnosis or 2nd, 3rd, …
-      <td>String
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>treatmentCode
-      <td>A drug product that contains one or more active and/or inactive ingredients used by the patient intended to treat, prevent or alleviate the symptoms of disease. Any hormone therapies, gender-related or otherwise, should also be recorded here.
-      <td><a href="https://raw.githubusercontent.com/fairgenomes/fairgenomes-semantic-model/main/lookups/Drugs.txt">ATC codes</a>, IDMP when available. <br> In case of Cancer: <a href="https://hemonc.org/wiki/Main_Page">HEMONC</a>, <a href="https://mor.nlm.nih.gov/RxClass/">RxNorm</a>
-      <td>1..n
-    <tbody>
-     <tr>
-      <td>Date_start_overall
-      <td>The date and time of (the start of) the treatment.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Date_end_overall
-      <td>The date and time of the end of the overall treatment.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Intended Duration
-      <td>The duration of treatment regimen, in days.
-      <td>Integer
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>DoseUnits
-      <td>Indicates the total dose given in units (e.g. of Gray (Gy) when radiation, Millimeters/24hours for medication).
-      <td>Choicelist with most common DoseUnits, like Gray, Milligrams/24 hours: make use of <a href="https://ucum.org/">UCUM</a>.
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>cumulativeDose
-      <td>The amount of any substance administered over a specific period of time.
-      <td>Float
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>doseIntervals
-      <td>The number of times a substance is administered within a specific time period.
-      <td>ISO8601 Period
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>routeOfAdministration
-      <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.
-      <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a>
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Pre-Treated
-      <td>Indicates if disease has been pre-treated or is in course of treatment.
-      <td>Boolean
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Procedures
-      <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
-      <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Surgical resection quality
-      <td>Evaluation of the surgical resection quality based on coded values.
-      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222638005">SCTID: 1222638005</a> |American Joint Committee on Cancer R0 (qualifier value)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222639002">SCTID: 1222639002</a> | American Joint Committee on Cancer R1 (qualifier value)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222640000">SCTID: 1222640000</a> | American Joint Committee on Cancer R2 (qualifier value)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222641001">SCTID: 1222641001</a> | American Joint Committee on Cancer RX (qualifier value)
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Treatment_Status
-      <td>Indicates the patient’s outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).
-      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405613005">SCTID: 405613005</a> | Planned procedure (situation)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Reason_for_incomplete_Treatment
-      <td>Reason for discontinuation of the treatment.
-      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/419099009">SCTID: 419099009</a> | Dead (finding)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1296859006">SCTID: 1296859006</a> | Procedure declined (situation)   
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713247000">SCTID: 713247000</a> | Procedure discontinued by patient (situation)
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713246009">SCTID: 713246009</a> | Procedure discontinued by healthcare professional (situation) 
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266721009">SCTID: 266721009</a> | Absent response to treatment (situation)       
-            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/407563006">SCTID: 407563006</a> | Treatment not tolerated (situation) 
-            <br>technical or organizational problems | to be added, or use OTH 
-            <br>Other | HL7 null flavour OTH      
-            <br>Not applicable | HL7 null flavour, NA
-            <br>No information | HL7 null flavour, NI
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Response_to_Treatment
-      <td>The patients' response to the applied treatment regimen. (Source: RECIST).
-      <td><a href="https://w3id.org/fair-genomes/resource/FG_0000761">Complete Response</a> <br>
-            <a href="https://w3id.org/fair-genomes/resource/FG_0000762">Disease progression</a> <br>
-            <a href="https://w3id.org/fair-genomes/resource/FG_0000763">NED</a> <br>
-            <a href="https://w3id.org/fair-genomes/resource/FG_0000764">Partial Response</a> <br>
-            <a href="https://w3id.org/fair-genomes/resource/FG_0000765">Stable Disease</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Adverse_Events
-      <td>Reports any treatment related adverse events. (Codelist reference: NCI-CTCAE (v5.0))
-      <td><a href="https://ctep.cancer.gov/protocoldevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_5x7.pdf">CTCAE Codes</a>
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Toxicity_Type
-      <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.
-      <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a>
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Modality
-      <td>Indicates the method of radiation treatment or modality.
-      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15650">Electron</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15458">Heavy Ions</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93337">Photon</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66897">Proton</a>
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Fractions
-      <td>Indicates the total number of fractions delivered as part of radiation treatment.
-      <td>Integer
-      <td>0..1
-    <tbody>
-     <tr>
-      <td>Site
-      <td>Indicates the body region where radiation therapy was administered.
-      <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
-      <td>0..n
-   </table>
-   <h3 class="heading settled" data-level="2.6" id="biomarker"><span class="secno">2.6. </span><span class="content">Biomarker</span><a class="self-link" href="#biomarker"></a></h3>
-   <table>
-    <thead>
-     <tr>
-      <th>Item
-      <th>Definition
-      <th>Value
-      <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
       <td>Purpose
@@ -2800,16 +2582,18 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
             <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201364">Prediction</a> <br>
             <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201362">Monitoring</a>
       <td>0..1
+      <td>NA
     <tbody>
      <tr>
-      <td>Type
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164707">Type</a>
       <td>What type is the biomarker classified as.
       <td>Molecular
             <br>Imaging
             <br>Anthropometric
             <br>Cellular
             <br>Physiological
-      <td>1..1
+      <td>1..1 (conditional)
+      <td>If Purpose is stated, the Type must be given
     <tbody>
      <tr>
       <td>Subtype
@@ -2849,33 +2633,266 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
             Electromyography,
             Other physiological biomarker,
             N/P
+      <td>1..1 (conditional)
+      <td>See Values column for allowed values depending on the Type.
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164706">Name</a>
+      <td>Biomarker name
+      <td>String
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164640">Code</a>
+      <td>Code of the biomarker
+      <td>String
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70895">Code System</a>
+      <td>Code System of the Biomarker Code.
+      <td>String or URI
+      <td>1..1(conditional)
+      <td>If code is provided, code system should be provided.
+    <tbody>
+     <tr>
+      <td>Measured value of biomarker
+      <td>Value of the biomarker obtained from measurement (quantitative or qualitative result)
+      <td>integer/float or string
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Unit of measured biomarker
+      <td>Unit associated with the measured value of the biomarker (if applicable).
+      <td>UCUM code, standardized unit (e.g., mg/dL, mmol/L), or N/A
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Treatment
+      <td>Establishes connection between Biomarker and Treatment class.
+      <td><a href="#treatment">Treatment class</a>
+      <td>0..n
+      <td>NA
+   </table>
+   <h4 class="heading settled" data-level="2.4.2" id="genotyping"><span class="secno">2.4.2. </span><span class="content">Genotyping</span><a class="self-link" href="#genotyping"></a></h4>
+   <p>The Genotyping class is a subclass of the <a href="#test">Test class</a>. This means that it adopts all items from the Test class, and adds some Genotyping-specific items.
+The Biomarker class is another subclass from the Test class. Any reference from another class to a Test can be either a generic Test (in that case, the Test class is used), or an instance of the Genotyping or Biomarker class. If a reference from a class is established directly to Genotyping, that class has to be used.</p>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td>Technology
+      <td>Genotyping technology used.
+      <td>whole genome (3gb, 3m variants) - short read, <br>
+                whole genome (3gb, 3m variants) - long read, <br>
+                whole exome ( ~45Mb, 40k variants) - short read, <br>
+                whole exome ( ~45Mb, 40k variants) - long read, <br>
+                optical genome mapping, <br>
+                genotyping array (~1Mb, 200k variants), <br>
+                arrays + imputation (~1Mb, 1m variants), <br>
+                gene panel (~45kb, ~50 variants), <br>
+                single gene (2kb, 3 variants), <br>
+                single exon (200 nt, 0-1 variants), <br>
+                single variant (1nt, 0-1 variants)
       <td>1..1
+      <td>NA
+     <tr>
+      <td>IVDR passed
+      <td>Indicate whether the methodology (including chemistry and genotyping standards) used for genotyping follows the In vitro diagnostic medical devices (IVDR) regulation passed by the EU in April 2017.
+      <td>boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172274">Platform</a>
+      <td>The used sequencing platform (i.e. brand, name of a company that produces sequencer equipment).
+      <td><strong>Sequencing:</strong><a href="https://github.com/fairgenomes/fairgenomes-semantic-model/blob/main/lookups/SequencingInstrumentModels.txt">FAIR Genomes</a> or <a href="https://bioportal.bioontology.org/ontologies/EFO/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0400103">EFO list</a> <br>
+               <strong>Microarrays:</strong> <br>
+                Illumina Exome V1.1, <br>
+                Illumina Immuno V2, <br>
+                Illumina Cyto12, <br>
+                Illumina Core, <br>
+                Illumina  DrugDev, <br>
+                Illumina Onco, <br>
+                Illumina PsychArray, <br>
+                Affymetrix Axiom_GW_ASI, <br>
+                Illumina 660w-Quad, <br>
+                Affymetrix Axiom_GW_CHB, <br>
+                Affymetrix Axiom_NL, <br>
+                Affymetrix Axiom_GW_EUR, <br>
+                Illumina OmniExpress, <br>
+                Illumina GSAv1, <br>
+                Illumina GSAv3, <br>
+                Affymetrix Axiom_LAT, <br>
+                Affymetrix Axiom_UKB, <br>
+                Illumina CytoSNP850K, <br>
+                Illumina OmniZhongHua, <br>
+                Affymetrix PMRA, <br>
+                Affymetrix PMDA, <br>
+                Affymetrix Affy6.0, <br>
+                Illumina MultiEthnic-AMR/AFR, <br>
+                Illumina MultiEthnic-EUR/ASN, <br>
+                Illumina MultiEthnic-Global, <br>
+                Affymetrix Axiom_GW_PanAFR, <br>
+                Illumina Omni2.5, <br>
+                Illumina Omni5, <br>
+               <strong>OTHER (String)</strong>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td><a href="http://purl.obolibrary.org/obo/OBI_0001962">Targeted Gene</a>
+      <td>In case of targeted sequencing, specify which gene is being targeted. This item points to another class: Target_Gene
+      <td><a href="#target-gene">Target Gene class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Target Other
+      <td>Any other targeted genomic region, like non-coding regulatory elements, promotors/enhancers.
+      <td>Children of <a href="http://www.sequenceontology.org/browser/current_release/term/SO:0000001">SIO region</a> <br> NULL flavors
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Average depth of coverage
+      <td>Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted sequencing (eg 60x, average number of times each target base has been ‘read’ by sequencer). (Observed)
+      <td>Float
+      <td>1..1 (conditional)
+      <td>Mandadory if technology = sequencing
+     <tr>
+      <td><a href="http://purl.obolibrary.org/obo/GENEPIO_0002137">Breadth of coverage</a>
+      <td>A data item which is the amount of a reference sequence covered by a sequence of interest. (Observed) <br>
+            Example of usage: <br>
+            Eighty percent of the reference genome was covered by sequence fragments with a coverage depth of 4X; therefore, the breadth of coverage was 80% (4:5).
+      <td>Float
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181712">Average Read Length</a>
+      <td>The average length for nucleic acid sequencing reads.
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Amount of reads sequenced
+      <td>Number of sequencing reads produced.
+      <td>Integer
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Additional NGS quality control metrics
+      <td>Statement of any additional NGS quality control metrics.
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171252">Initial input file format</a>
+      <td>Identification of the genomic file format of the initial input file (eg. fastq, bam, cram).
+      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171252">Final output file format</a>
+      <td>Identification of the genomic file format of the final output file (eg. vcf, gvcf).
+      <td><a href="http://edamontology.org/format_1921">EDAM’s file types and formats</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Final output file format version
+      <td>Identification of the version of genomic file format of the final output file (eg. VCF version 4.3).
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C175896">Alignment Software</a>
+      <td>Identification of the software used for alignment.
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Alignment Genome
+      <td>The specific build of the human genome used as reference for sequence alignment and variant calling.
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>1..n
+      <td>NA
+     <tr>
+      <td>Specific Settings Alignment Genome
+      <td> Any specific settings regarding alternative contigs or decoys.
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Variant
+      <td>A reported variant.
+      <td><a href="#variant">Variant class</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Variant Calling
+      <td>Description of the procedure for variant calling
+      <td><a href="#variant-calling">Variant Calling class</a>
+      <td>0..n
+      <td>NA
+   </table>
+   <h5 class="heading settled" data-level="2.4.2.1" id="digital-resource"><span class="secno">2.4.2.1. </span><span class="content">Digital Resource</span><a class="self-link" href="#digital-resource"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
       <td>Name
-      <td>Biomarker name.
+      <td>The name of the tool/software/database used.
       <td>String
-      <td>0..1
-    <tbody>
+      <td>1..1
+      <td>NA
      <tr>
-      <td>Code
-      <td>Code of the biomarker.
+      <td>Website
+      <td>Link to the website or repository (like GitHub) of the tool/software/database.
+      <td>URL
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Identifier
+      <td>bio.tools identifier for the digital resource.
+      <td><a href="https://bio.tools/">bio.tools</a> identifier
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Version
+      <td>The version of the tool/software/database used.
       <td>String
-      <td>0..1
-    <tbody>
+      <td>1..1
+      <td>NA
      <tr>
-      <td>Code System
-      <td>Code System of the Biomarker Code.
-      <td>String or URI
-      <td>0..1
-    <tbody>
+      <td>Date used
+      <td>The date when the tool/software/database was last used.
+      <td>Date, ISO 8601 format, YYYY-MM-DD
+      <td>1..1
+      <td>NA
      <tr>
-      <td>Date
-      <td>The date of the biomarker being obtained.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..1
+      <td>Settings
+      <td>Free text account of the settings used in the tool/software/database.
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Parameters
+      <td>Description of parameters used with the specified software. Copy the complete command line (all lines executed) used.
+      <td>String
+      <td>1..n (conditional)
+      <td>Mandatory if this Digital Reosurce is coming from Genotyping:Alignment_software
    </table>
-   <h3 class="heading settled" data-level="2.7" id="environmental-exposure"><span class="secno">2.7. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
+   <h5 class="heading settled" data-level="2.4.2.2" id="variant"><span class="secno">2.4.2.2. </span><span class="content">Variant</span><a class="self-link" href="#variant"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2885,7 +2902,548 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
       <th>Cardinality
     <tbody>
      <tr>
-      <td>Tobacco Use Status
+      <td>Variant Type
+      <td>The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164674">SNVs</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99752">indels</a>, SVs, CNVs, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20195">gene fusions</a>, ... (to be extended).
+      <td>0..1
+     <tr>
+      <td>Variant Origin
+      <td>A quality inhering in a variant by virtue of its origin.
+      <td><a href="http://purl.obolibrary.org/obo/SO_0001777">somatic</a>, <a href="http://purl.obolibrary.org/obo/SO_0001778">germline</a>, <a href="http://purl.obolibrary.org/obo/SO_0001775">maternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001776">paternal</a>, <a href="http://purl.obolibrary.org/obo/SO_0001779">pedigree specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001780">population specific</a>, <a href="http://purl.obolibrary.org/obo/SO_0001781">de novo</a>.
+      <td>0..n
+     <tr>
+      <td>Variant Representation
+      <td>The representation of the variant using HGVS nomenclature.
+      <td>String following <a href="https://hgvs-nomenclature.org/stable/">HGVS nomenclature</a>. If HGVS cannot be followed, a string form another source can be provided. In this case, the source should also be provided in the string.
+      <td>1..1
+     <tr>
+      <td>Clinical Variant Interpretation Criteria
+      <td>Internationally (e.g. ACMG, ESMO-ESCAT) criteria met for variant interpretation, gene specific interpretation is essential (gene specific databases are expert panel cured databases)
+      <td>List of versions of ACMG, ESMO-ESCAT
+      <td>0..n
+     <tr>
+      <td>Clinical Variant Interpretation Result
+      <td>Indicates result of clinical variant interpretation.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802">benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168801">likely benign</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94187">VUS</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800">likely pathogenic</a>, <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799">pathogenic</a>.
+      <td>0..1
+     <tr>
+      <td>Clinical Expert Panel Decision
+      <td>Decision by clinical expert panel (e.g., molecular tumor board or other board) concerning the variant interpretation.
+      <td>String
+      <td>0..1
+     <tr>
+      <td>Applied Criteria of Evidence
+      <td>A category which fits with categories provided by Expert panels or tools accepted in Clincial Practice. If such recommendations are not available the weighted categories provided by freely available tools would be acceptable.
+      <td>As listed in tables 3 and 4 in <a href="https://doi.org/10.1038/gim.2015.30">Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology</a>
+      <td>0..n
+     <tr>
+      <td>Clinical Interpretation Tool
+      <td>Identification of the tool used for clinical interpretation
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>0..n
+     <tr>
+      <td>Variant Calling Deviation
+      <td>Identification of the software used for variant calling, if different from software stated in Genotyping class.
+      <td><a href="#variant-calling">Variant Calling class</a>
+      <td>0..n
+     <tr>
+      <td>Reported to Patient
+      <td>Indication if the variant has been reported back to the patient.
+      <td>Boolean
+      <td>0..1
+   </table>
+   <h5 class="heading settled" data-level="2.4.2.3" id="variant-calling"><span class="secno">2.4.2.3. </span><span class="content">Variant Calling</span><a class="self-link" href="#variant-calling"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td>Variant Calling Software
+      <td>Identification of the software used for variant calling.
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Variant Annotation
+      <td>Identification of the software used for variant annotation.
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Variant Annotation Database
+      <td>Database and version used for variant annotation.
+      <td><a href="#digital-resource">Digital Resource class</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Panel of Normals Included
+      <td>Indicate whether a panel of normals is included during variant calling.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Panel of Normals Description
+      <td>Free text description of panel of normals, if applicable.
+      <td>String
+      <td>0..1 (conditional)
+      <td>If panel of normals == TRUE
+   </table>
+   <h5 class="heading settled" data-level="2.4.2.4" id="target-gene"><span class="secno">2.4.2.4. </span><span class="content">Target Gene</span><a class="self-link" href="#target-gene"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td><a href="https://www.w3.org/TR/vocab-adms/#dt_identifier">Identifier</a>
+      <td>Schema and identifier of the target gene, expressed with an instance of adms:Identifier
+      <td><a href="#identifier">Identifier class</a>
+      <td>1..1 (conditional)
+      <td>It is mandatory to provide either identifier or label.
+    <tbody>
+     <tr>
+      <td>Label
+      <td>Label of the target gene, if no URI can be provided.
+      <td>String
+      <td>1..1 (conditional)
+      <td>It is mandatory to provide either identifier or label.
+    <tbody>
+     <tr>
+      <td>Description
+      <td>Description of target gene.
+      <td>String
+      <td>0..1
+      <td>NA
+   </table>
+   <h5 class="heading settled" data-level="2.4.2.5" id="identifier"><span class="secno">2.4.2.5. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms-schemaagency">Schema</a>
+      <td>Name of the schema agency
+      <td>String
+      <td>0..1
+     <tr>
+      <td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#notation">Identifier</a>
+      <td>Identifier from the corresponding schema for the target gene.
+      <td>String
+      <td>1..1
+     <tr>
+      <td><a href="http://purl.org/dc/terms/conformsTo">Scheme URI</a>
+      <td>URI of the scheme used to construct the identifier.
+      <td>String (with#anyURI) of either <a href="http://www.wikidata.org/entity/Q1646383">HGNC</a>, <a href="http://www.wikidata.org/entity/Q20641742">NCBI gene</a>, <a href="http://www.wikidata.org/entity/Q905695">UniProtID</a>, <a href="http://www.wikidata.org/entity/Q241953">OMIM</a>, <a href="http://www.wikidata.org/entity/Q17027854">HPO</a> or <a href="http://semanticscience.org/resource/SIO_001389">HGVS</a> for variants 
+      <td>1..1
+   </table>
+   <h5 class="heading settled" data-level="2.4.2.6" id="protocol"><span class="secno">2.4.2.6. </span><span class="content">Protocol</span><a class="self-link" href="#protocol"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+    <tbody>
+     <tr>
+      <td>Description
+      <td>Type of protocol
+      <td>String (e.g.library preparation, Genome extraction protocol, Sequencing protocol)
+      <td>1..1
+     <tr>
+      <td>Available at
+      <td>Link to a protocol available at <a href="protocols.io">protocols.io</a>
+      <td>URL to <a href="protocols.io">protocols.io</a>
+      <td>0..1
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87822">Kit number</a>
+      <td>A number or sequence of characters that identifies a particular kit.
+      <td>String
+      <td>0..n
+     <tr>
+      <td>Participated in proficiency testing
+      <td>Indication of what type of proficiency testing the laboratory had participated in.
+      <td>String (for example:
+                external EQA, <br>
+                national PT program, <br>
+                international PT program, <br>
+                internal PT, <br>
+                interlaboratory comparison, <br>
+                Include as well if PT is for a specific test or analysis)
+      <td>0..n
+   </table>
+   <h3 class="heading settled" data-level="2.5" id="treatment"><span class="secno">2.5. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ValueSet-mcode-procedure-intent-vs.html">Intention to Treat</a>
+      <td>Indicate the intended disease outcome for which the treatment is given, may be coded as SNOMED-CT.
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373808002">SCTID: 373808002</a> | Curative - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373847000">SCTID: 373847000</a> | Neoadjuvant intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/373846009">SCTID: 373846009</a> | Adjuvant - intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/363676003">SCTID: 363676003</a> | Palliative - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360271000">SCTID: 360271000</a> | Prophylaxis - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243114000">SCTID: 243114000</a> | Support (regime/therapy)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129304002">SCTID: 129304002</a> | Excision - action 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/261004008">SCTID: 261004008</a> | Diagnostic intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/129428001">SCTID: 129428001</a> | Preventive - intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/429892002">SCTID: 429892002</a> | Guidance intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/360156006">SCTID: 360156006</a> | Screening - procedure intent
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/447295008">SCTID: 447295008</a> | Forensic intent
+            <br>Other - HL7 NULL flavor (OTH, UNK, NI, NA)
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124308">Setting</a>
+      <td>Indicate the treatment setting, which describes the treatment’s purpose in relation to the primary treatment.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15675">Adjuvant</a> <br> <a href="https://w3id.org/fair-genomes/resource/FG_0000760">Advanced/Metastatic</a><br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15665">Neoadjuvant</a><br> <a href="https://terminology.hl7.org/5.1.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">Not applicable</a>
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Type
+      <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/23719005">SCTID: 23719005</a> | Bone marrow transplant
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/367336001">SCTID: 367336001</a> | Chemotherapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/18629005">SCTID: 18629005</a> | Medication
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/423827005">SCTID: 423827005</a> | Endoscopic therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/169413002">SCTID: 169413002</a> | Hormonal therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/76334006">SCTID: 76334006</a> | Immunotherapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/257891001">SCTID: 257891001</a> | Photodynamic therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1287742003">SCTID: 1287742003</a> | Radiation therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/56305001">SCTID: 56305001</a> | Radionucleotide therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1269349006">SCTID: 1269349006</a> | Stem cell transplant
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/387713003">SCTID: 387713003</a> | Surgery
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/394613000">SCTID: 394613000</a> | Gene therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/310341009">SCTID: 310341009</a> or 373818007 | Watchful waiting
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/424313000">SCTID: 424313000</a> | Active follow-up
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/703423002">SCTID: 703423002</a> | Chemoradiotherapy
+            <br>HL7 NULL flavor (NI, NA, OTH) | Other
+            <br><strong>MDID Treatment types:</strong>
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/33879002">SCTID: 33879002</a> | Vaccination
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428311008">SCTID: 428311008</a> | Non-invasive ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1258985005">SCTID: 1258985005</a> | Invasive mechanical ventilation
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/233573008">SCTID: 233573008</a> | Extracorporeal membrane oxygenation 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/281789004">SCTID: 281789004</a> | Antibiotic Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/718526003">SCTID: 718526003</a> | Antifungal Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/427314002">SCTID: 427314002</a> | Antiviral Therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243127001">SCTID: 243127001</a> | Glucocorticoids hormone therapy
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/243196004">SCTID: 243196004</a> | Immunoglobulin desensitization therapy (regime/therapy)
+            
+      <td>1..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Subtype
+      <td>Detailed specification of the treatment type.
+      <td>String
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Line
+      <td>Indicate if the treatment was the primary treatment following the initial diagnosis or 2nd, 3rd, …
+      <td>String
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Treatment Code
+      <td>A drug product that contains one or more active and/or inactive ingredients used by the patient intended to treat, prevent or alleviate the symptoms of disease. Any hormone therapies, gender-related or otherwise, should also be recorded here.
+      <td><a href="https://raw.githubusercontent.com/fairgenomes/fairgenomes-semantic-model/main/lookups/Drugs.txt">ATC codes</a>, IDMP when available. <br> In case of Cancer: <a href="https://hemonc.org/wiki/Main_Page">HEMONC</a>, <a href="https://mor.nlm.nih.gov/RxClass/">RxNorm</a>
+      <td>1..n (conditional)
+      <td>if Type == (Chemotherapy or Hormonal. etc)
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90459">Date Start Overall</a>
+      <td>The date and time of (the start of) the treatment.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90459">Date End Overall</a>
+      <td>The date and time of the end of the overall treatment.
+      <td>Date (YYYY-MM-DD), ISO 8601 format
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198202">Intended Duration</a>
+      <td>The duration of treatment regimen, in days.
+      <td>Integer
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://fairgenomes.org/fairgenomes-semantic-model/generated/resource/FG_0000759.xml">Dose Units</a>
+      <td>Indicates the total dose given in units (e.g. of Gray (Gy) when radiation, Millimeters/24hours for medication).
+      <td><a href="https://ucum.org/">UCUM</a>
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Cumulative Dose
+      <td>The amount of any substance administered over a specific period of time.
+      <td>Float
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C89081">Dose Intervals</a>
+      <td>The number of times a substance is administered within a specific time period.
+      <td>ISO8601 Period
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38114">Route of Administration</a>
+      <td>Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.
+      <td>Subclass of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13442">Anatomy qualifier</a>
+      <td>0..n
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Pre-Treated
+      <td>Indicates if disease has been pre-treated or is in course of treatment.
+      <td>Boolean
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=71388002&amp;edition=MAIN&amp;release=&amp;languages=en">Procedures</a>
+      <td>Indicates the type of treatment regimen that the patient completed; coded values can be chosen, SNOMED may be chosen for "procedures".
+      <td>Children of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/71388002">SNOMED Procedure</a>
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Surgical resection quality
+      <td>Evaluation of the surgical resection quality based on coded values.
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222638005">SCTID: 1222638005</a> |American Joint Committee on Cancer R0 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222639002">SCTID: 1222639002</a> | American Joint Committee on Cancer R1 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222640000">SCTID: 1222640000</a> | American Joint Committee on Cancer R2 (qualifier value)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1222641001">SCTID: 1222641001</a> | American Joint Committee on Cancer RX (qualifier value)
+      <td>0..1 (conditional)
+      <td>If type == surgery
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18919">Treatment Status</a>
+      <td>Indicates the patient’s outcome of the prescribed treatment (coded values, e.g. treatment not completed | because of toxicity).
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/182992009">SCTID: 182992009</a> | Treatment completed (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/445528004">SCTID: 445528004</a> | Treatment changed (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405613005">SCTID: 405613005</a> | Planned procedure (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/416406003">SCTID: 416406003</a> | Procedure discontinued (situation)
+            <br><strong>If treatment == Vaccination:</strong>
+            <br>Fully vaccinated
+            <br>Partially vaccinated
+            <br>Not vaccinated
+            <br>Unknown/not reported
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td>Reason for incomplete Treatment
+      <td>Reason for discontinuation of the treatment.
+      <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/419099009">SCTID: 419099009</a> | Dead (finding)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/1296859006">SCTID: 1296859006</a> | Procedure declined (situation)   
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713247000">SCTID: 713247000</a> | Procedure discontinued by patient (situation)
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/713246009">SCTID: 713246009</a> | Procedure discontinued by healthcare professional (situation) 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266721009">SCTID: 266721009</a> | Absent response to treatment (situation)       
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/407563006">SCTID: 407563006</a> | Treatment not tolerated (situation) 
+            <br>technical or organizational problems | to be added, or use OTH 
+            <br>Other | HL7 null flavour OTH      
+            <br>Not applicable | HL7 null flavour, NA
+            <br>No information | HL7 null flavour, NI
+      <td>0..1 (conditional)
+      <td>If Treatment_Status == 416406003 | Procedure discontinued (situation)
+    <tbody>
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=182985004&amp;edition=MAIN&amp;release=&amp;languages=en">Response to Treatment</a>
+      <td>The patients' response to the applied treatment regimen. (Source: RECIST).
+      <td><a href="https://w3id.org/fair-genomes/resource/FG_0000761">Complete Response</a> <br>
+            <a href="https://w3id.org/fair-genomes/resource/FG_0000762">Disease progression</a> <br>
+            <a href="https://w3id.org/fair-genomes/resource/FG_0000763">NED</a> <br>
+            <a href="https://w3id.org/fair-genomes/resource/FG_0000764">Partial Response</a> <br>
+            <a href="https://w3id.org/fair-genomes/resource/FG_0000765">Stable Disease</a>
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41331">Adverse Events</a>
+      <td>Reports any treatment related adverse events. (Codelist reference: NCI-CTCAE (v5.0))
+      <td><a href="https://ctep.cancer.gov/protocoldevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_5x7.pdf">CTCAE Codes</a>
+      <td>0..n
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity Type</a>
+      <td>If the treatment was terminated early due to acute toxicity, indicates the type of toxicity that caused early termination of treatment.
+      <td>Children of <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C27990">Toxicity (NCIT)</a>
+      <td>0..1
+      <td>NA
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41147">Modality</a>
+      <td>Indicates the method of radiation treatment or modality.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15650">Electron</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15458">Heavy Ions</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93337">Photon</a> <br> <a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66897">Proton</a>
+      <td>0..n (conditional)
+      <td>if Type == Radiation therapy
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15654">Fractions</a>
+      <td>Indicates the total number of fractions delivered as part of radiation treatment.
+      <td>Integer
+      <td>0..1 (conditional)
+      <td>if Type == Radiation therapy
+    <tbody>
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C157120">Site</a>
+      <td>Indicates the body region where radiation therapy was administered.
+      <td>Children concepts of <a href="http://purl.bioontology.org/ontology/SNOMEDCT/91723000">Anatomical Structure (body structure)</a>
+      <td>0..n (conditional)
+      <td>if Type == Radiation therapy
+     <tr>
+      <td>Test
+      <td>Establishes connection between Treatment and Test classes.
+      <td><a href="#test">Test class</a>
+      <td>0..n
+      <td>NA
+   </table>
+   <h3 class="heading settled" data-level="2.6" id="environmental-exposure"><span class="secno">2.6. </span><span class="content">Environmental Exposure</span><a class="self-link" href="#environmental-exposure"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
+    <tbody>
+     <tr>
+      <td>Type of Exposure
+      <td>Indicates the nature of the exposure hazard. This exposure can include direct physical contact, inhalation, ingestion, or residing in close proximity to the source.
+      <td>- Inadequate water (quantity and quality), sanitation and solid waste disposal, improper hygein (handwashing) --> <a href="http://purl.obolibrary.org/obo/ENVO_02500039">water pollution</a>, <a href="http://snomed.info/id/424466003">Water supply insufficient</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=160707003&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Inadequate sanitation</a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=248056001&amp;edition=MAIN&amp;release=&amp;languages=en"> Neglect of personal hygiene</a>,
+            <br>- Improper water resource managment, including poor drainage,
+            <br>- Crowded housing and poor ventialtion of smoke --> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=423859003&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en"> Crowded living space</a>, <a href="https://loinc.org/46688-8/"> Fumes, odors, dusts, gases, poor ventilation, etc </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1290134008&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Household polluted air </a>,
+            <br>- Exposures to vehicular and industrial air pollution --> <a href="http://purl.obolibrary.org/obo/ECTO_8000036"> Exposure to air pollution </a>,
+            <br>- Population movement and encroachment and construction, which affect feeding and breeding grounds of vectors, such as mosquitoes,
+            <br>- Exposure to naturally ocurring toxic substances --> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=420239005&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Exposure to toxin </a>,
+            <br>- Natural resources degradation (for example, landslides, poor drainage, erosion) --> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1290214003&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Soil degradation </a>, <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1290129009&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en&amp;latestRedirect=false"> Land degradation </a>,
+            <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry --> <a href="http://purl.obolibrary.org/obo/ENVO_01000629"> Climate change </a>,
+            <br>- Ozone depletion from industrial and commercial actvitiy --> <a href="http://purl.obolibrary.org/obo/ECTO_9000052"> Exposure to ozone </a>, <br>
+            <br><b>- Biological hazard:</b> 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_4751">Fungi</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=37017009&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Parasitic worms </a>, 
+            <br><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77916">Protozoa</a>, 
+            <br><a href="http://purl.obolibrary.org/obo/NCBITaxon_10239">Viruses</a>, 
+            <br><a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=84676004&amp;edition=MAIN/2025-07-01&amp;release=&amp;languages=en">Prions</a> <br>
+            <br><b><a href="http://purl.obolibrary.org/obo/CHEBI_59999">- Chemical hazards:</a></b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_02500037">Air pollutant</a>, <br><a href="http://purl.obolibrary.org/obo/CHEBI_5631">Heavy metal</a> (<a href="http://purl.obolibrary.org/obo/CHEBI_22632">Arsenic</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_25196">Mercury</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_33585">Lead</a>), 
+            <br><a href="http://purl.obolibrary.org/obo/CHEBI_25944">Pesticides</a>, <br>Alcohol, 
+            <br>Tobacco/Nicotine, 
+            <br>Other ( <a href="http://purl.obolibrary.org/obo/CHEBI_16842">Formaldehyde</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_46661">Asbestos</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_172406">PFAS</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:53156">PCBs</a>, <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33216">BPA</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_26092">Phthalates</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_36911">Radon</a>, <a href="http://purl.obolibrary.org/obo/CHEBI_16130">DDT</a>)<br>
+            <br><b>- Physical environmental hazard</b> 
+            <br><a href="http://purl.obolibrary.org/obo/ENVO_01001023">Radiation</a>, <br>Natural disaster (narrow matches: <a href="http://purl.obolibrary.org/obo/ECTO_8000011">exposure to earthquake</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000016">exposure to flooding</a>, <a href="http://purl.obolibrary.org/obo/ECTO_8000012">exposure to tsunami</a> etc.), 
+            <br>Extreme <a href="http://purl.obolibrary.org/obo/ENVO_01001078">weather</a>, <br>Human activities (eg. traffic accident)
+            <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Type of Contact
+      <td>For exposure to virus, the level of contact can be stated.
+      <td><a href="http://purl.obolibrary.org/obo/TRANS_0000001">TRANS:0000001</a> | Direct (human-to-human contact)
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100246">GENEPIO:0100246</a> | Indirect contact
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100247">GENEPIO:0100247</a> | Close contact (face-to-face contact)
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0100248">GENEPIO:0100248</a> | Casual contact 
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001619">GENEPIO:0001619</a> | Not Applicable
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001620">GENEPIO:0001620</a> | Not Collected
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001668">GENEPIO:0001668</a> | Not Provided
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001618">GENEPIO:0001618</a> | Missing
+            <br><a href="http://purl.obolibrary.org/obo/GENEPIO_0001810">GENEPIO:0001810</a> | Restricted Access
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Exposure Route
+      <td>The means through which an agent enters a target organism after contact (e.g. by ingestion, inhalation, or dermal absorption)
+      <td>string; e.g. inhalation, sexual transmission, eating, licking, handshake, …
+      <td>0..n (conditional)
+      <td>Only allowed if Type of Exposure has been provided
+     <tr>
+      <td>Other Type of Exposure
+      <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field
+      <td>String
+      <td>1..1 (conditional)
+      <td>if Type of Exposure == "Other" then this item needs to be completed
+     <tr>
+      <td>Travel History
+      <td>Description of any travel within 4 weeks before the diagnosis
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Travel History Start Date
+      <td>Start date of relevant travel history
+      <td>Date (YYYY-MM-DD), ISO 8601
+      <td>0..n (conditional)
+      <td>Only allowed (optional) if Travel History has been provided
+     <tr>
+      <td>Travel History End Date
+      <td>End date of relevant travel history
+      <td>Date (YYYY-MM-DD), ISO 8601
+      <td>0..n (conditional)
+      <td>Only allowed (optional) if Travel History has been provided
+     <tr>
+      <td>Residential area at risk
+      <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=53661000146106&amp;edition=MAIN&amp;release=&amp;languages=en">Type of Nicotine product used</a>
+      <td>Type of nicotine product used by the subject.
+      <td><br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/65568007">SCTID:65568007</a> | Cigarettes
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/59978006">SCTID:59978006</a> | Cigar 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/82302008">SCTID:82302008</a> | Pipe 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/160619003">SCTID:160619003</a> | Shag 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/722499006">SCTID:722499006</a> | e-cigarette 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/81703003">SCTID:81703003</a> | chewing tobacco 
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/698289004">SCTID:698289004</a> | waterpipe
+            <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/228494002">SCTID:228494002</a> | snuff 
+            <br>NULL flavors (e.g. not asked, unknown, nothing)
+      <td>0..n (conditional)
+      <td>If Type of Exposure == Tobacco / nicotine
+     <tr>
+      <td>Other type of Nicotine product used
+      <td>Other type of nicotine product used by the subject.
+      <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">https://addictovocab.org/ADDICTO_0000311</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">https://addictovocab.org/ADDICTO_0000316</a> or <br>
+                HL7 NULL flavors
+      <td>0..n (conditional)
+      <td>If Type of Exposure == Tobacco / nicotine
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=229819007&amp;edition=MAIN&amp;release=&amp;languages=en">Tobacco Use Status</a>
       <td>The status of the patient’s tobacco use.
       <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/449868002">SCTID:449868002</a> | Smokes tobacco daily
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/428041000124106">SCTID:428041000124106</a> | Occasional tobacco smoker
@@ -2894,94 +3452,176 @@ In the Harmonized Minimal Dataset, we defined 12 different classes.
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/405746006">SCTID:405746006</a> | Current non smoker but past smoking history unknown
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/266919005">SCTID:266919005</a> | Never smoked tobacco
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
-      <td>0..1
-    <tbody>
+      <td>0..1 (conditional)
+      <td>If Type of Exposure == Tobacco / nicotine
      <tr>
-      <td>Type Of Tobacco Used
-      <td>Type of tobacco the patient uses.
-      <td>Children of <a href="https://addictovocab.org/ADDICTO_0000311">tobacco product</a> combined with childred of <a href="https://addictovocab.org/ADDICTO_0000316">vaporizer</a>, or
-            <br> <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
-      <td>1..n (conditional)
-    <tbody>
+      <td>Nicotine use amount
+      <td>Describe the amount of nicotine or tobacco consumed.
+      <td>String
+      <td>0..1 (conditional)
+      <td>If Type of Exposure == Tobacco / nicotine
      <tr>
-      <td>Smoking amount
-      <td>The number of cigarettes, cigars or grams of rolling tobacco consumed per day, week, month or year.
-      <td>amount/day | amount/week | amount/month | amount/year
-      <td>1..1 (conditional)
-    <tbody>
-     <tr>
-      <td>Pack years
-      <td>The unit indicating the smoker’s total exposure to tobacco smoke. For cigarettes, this is calculated using the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. For other forms of tobacco, this is usually converted to an equivalent cigarette consumption. Often, only the number of pack years is estimated.
-      <td>Integer 
-      <td>1..1 (conditional)
-    <tbody>
-     <tr>
-      <td>Alcohol use status
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=228273003&amp;edition=MAIN&amp;release=&amp;languages=en">Alcohol use status</a>
       <td>The status of the patient’s alcohol use.
       <td><a href="http://purl.bioontology.org/ontology/SNOMEDCT/219006">SCTID:219006</a> | Current drinker
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/105542008">SCTID:105542008</a> | Non - drinker
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/82581004">SCTID:82581004</a> | Ex-drinker
             <br><a href="http://purl.bioontology.org/ontology/SNOMEDCT/783261004">SCTID:783261004</a> | Lifetime non-drinker of alcohol
             <br>NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a> 
-      <td>0..1
-    <tbody>
+      <td>0..1 (conditional)
+      <td>If Type of Exposure == Alcohol
      <tr>
-      <td>Alcohol amount
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=897148007&amp;edition=MAIN&amp;release=&amp;languages=en">Alcohol amount</a>
       <td>The extent of the patient’s alcohol use in units of alcohol per time period (day/week/year).
       <td>AU per (day/week/year). 1 A.U.= 
             <br>125 ml of wine, 
             <br>330 ml of beer, 
             <br>80 ml of drink, 
             <br>40 ml liquor
-      <td>0..n
+      <td>0..n (conditional)
+      <td>If Type of Exposure == Alcohol
+   </table>
+   <h3 class="heading settled" data-level="2.7" id="geolocation"><span class="secno">2.7. </span><span class="content">GeoLocation</span><a class="self-link" href="#geolocation"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
-      <td>Other Type of Exposure
-      <td>Indicates other exposures other than tabacco/smoking and alcohol use, for example asbestos. This exposure can include direct physical contact, inhalation, ingestion, or residing in close proximity to the source.
-      <td>- Inadequate water (quantity and quality), sanitation and solid waste disposal, improper hygein (handwashing)
-            <br>- Improper water resource managment, uncluding poor drainage,
-            <br>- Crowded housing and poor ventialtion of smoke
-            <br>- Exposures to vehicular and industrial air pollution
-            <br>- Population movement and encroachment and construction, which affect feeding and breeding grounds of vectors, such as mosquitoes,
-            <br>- Exposure to naturally ocurring toxic substances
-            <br>- Natural resources degradation (for example, landslides, poor drainage, erosion)
-            <br>- Climate change, partly from combustion of fossil fuel and release of greenhouse gases in transportation, industry, and poor energy conservation in housing, fuel, commerce, and industry
-            <br>- Ozone depletion from industrial and commercial actvitiy
-            <br><b>Biological hazard</b> (Bacteria, Fungi, Parasitic worms, Protozoa, Viruses, Prions)
-            <br><b>Chemical hazards</b> (Air pollutant, Heavy metal (Arsenice, Mercury, Lead), Pesticides, Other ( Formaldehyde, Asbestos, PFAS, PCBs, BPA, Phthalates, Radon, DDT)
-            <br><b>Physical environmental hazard</b> (Radiation, Natural disaster (narrow matches: exposure to earthquake, exposure to flooding, exposure to tsunami etc.), Extreme weather, Human activities (eg. traffic accident))
-            <br><a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html">HL7 NULL flavors</a>
+      <td>Location Name
+      <td>Human readable name of the location
+      <td>String or <a href="geonames.org">Geonames.org</a> Ontology IRI (https://sws.geonames.org/xyz)
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Location Type
+      <td>Type of location (e.g. residence, infection site, event, facility, hospital)
+      <td>Children of <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=276339004&amp;edition=MAIN/2026-08-01&amp;release=&amp;languages=en">SNOMED 276339004 | Environment (environment)</a>
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Geometry
+      <td>Geospatial shape (point, polygon, etc.)
+      <td>GeoJSON or WKT (Well Known Text)
       <td>0..n
+      <td>NA
+     <tr>
+      <td>Country
+      <td>Country code
+      <td>2- or 3-lettercode from ISO 3166-1
+      <td>0..1 (conditional)
+      <td>If geometry is provided then country, region and city are more or less obsolete
+     <tr>
+      <td><a href="http://purl.obolibrary.org/obo/ENVO_00000004">Region</a>
+      <td>Administrative region
+      <td><a href="geonames.org">Geonames.org</a>
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>City
+      <td>City or municipality
+      <td>rdfs:Literal (xsd:anyURI or xsd:string) where URI is from <a href="geonames.org">Geonames.org</a> (e.g https://www.geonames.org/2759794 is Amsterdam)
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Source
+      <td>Source of the location data (e.g. self-reported, registry, sensor).
+      <td>rdfs:Literal (xsd:anyURI or xsd:string)
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Valid From
+      <td>Temporal validity of location (when applicable)
+      <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
+      <td>0..1
+      <td>NA
+     <tr>
+      <td>Valid To
+      <td>Temporal validity of location (when applicable)
+      <td>DateTime (YYYY-MM-DD’T’HH:MM:SS), ISO 8601 format
+      <td>0..1
+      <td>NA
+   </table>
+   <h3 class="heading settled" data-level="2.8" id="data-provenance"><span class="secno">2.8. </span><span class="content">Data Provenance</span><a class="self-link" href="#data-provenance"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Item
+      <th>Definition
+      <th>Value
+      <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
-      <td>Other_Other Type of Exposure
-      <td>Provide the option to if "Other" option is choosen from List of other exposures, type a free text field.
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201979">Data Submitter</a>
+      <td>Full name of the person responsible for submitting the data into the dataset. A string with the name can be provided, but a ORCID can be submitted as well (as a string).
       <td>String
-      <td>1..1 (conditional)
-    <tbody>
+      <td>1..1
+      <td>NA
      <tr>
-      <td>Travel History
-      <td>Description of any travel within 4 weeks before the diagnosis.
+      <td>Data Submitter Email
+      <td>Email where the person responsible for the data submission can be reached at.
+      <td>String
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Data Submitter Role
+      <td>Role of the Submitter (e.g. oncologist in charge of the patient, research project PI)
       <td>String
       <td>0..n
-    <tbody>
+      <td>NA
      <tr>
-      <td>Travel History_start_date
-      <td>Start date of relevant travel history.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Travel History_end_date
-      <td>End date of relevant travel history.
-      <td>Date (YYYY-MM-DD), ISO 8601 format
-      <td>0..n
-    <tbody>
-     <tr>
-      <td>Residential area at risk
-      <td>Description of the area of ​​known environmental exposure conditions where the subject/patient resides.
+      <td>Department of data submitter
+      <td>Refers to the Department of the Submitter
       <td>String
       <td>0..n
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81294">Submitter Institution</a>
+      <td>Identifies the Institution of the data submitter. A string with the name can be provided, but a ROR can be submitted as well (as a string).
+      <td>String
+      <td>0..1
+      <td>NA
+     <tr>
+      <td><a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=223369002&amp;edition=MAIN&amp;release=&amp;languages=en">Country</a>
+      <td>Country of Submission.
+      <td>GeoLocation class (or if we cannot implement input of only country and filling the mandatory items then stick to 2- or 3-lettercode from ISO 3166-1)
+      <td>1..1
+      <td>NA
+     <tr>
+      <td><a href="https://w3id.org/gdmt/DataCollector">Data Collector</a>
+      <td>Identifies the person responsible for Data Collection
+      <td>String
+      <td>1..1
+      <td>NA
+     <tr>
+      <td>Data Production Department
+      <td>Refers to the Department in charge of Data Production
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td>Data Analysis Department
+      <td>Refers to the Department in charge of Data Analysis
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C47885">Projects/Trial/cohort/surveillance study</a>
+      <td>Identifies projects which data are part of
+      <td>String
+      <td>0..n
+      <td>NA
+     <tr>
+      <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C61538">Research Consortia</a>
+      <td>Identifies Research Consortia involved
+      <td>String
+      <td>0..n
+      <td>NA
    </table>
    <h2 class="heading settled" data-level="3" id="matches"><span class="secno">3. </span><span class="content">Matches</span><a class="self-link" href="#matches"></a></h2>
    <p>Different countries use different standards or vocabularies for their data. For example, in the harmonized minimal data model we mostly use terms from SNOMED CT and NCIT, but some countries only use ICD-10, and it’s difficult for them to convert everything to SNOMED.
@@ -3055,39 +3695,6 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
      <p>Support more countries and teams to join the GDI Catalogue without needing to change everything.</p>
    </ul>
   </main>
-  <div data-fill-with="conformance">
-   <h2 class="heading no-num no-ref settled" id="conformance"><span class="content">
-    Conformance</span><a class="self-link" href="#conformance"></a></h2>
-   <p>
-            Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
-            The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
-            in the normative parts of this document
-            are to be interpreted as described in RFC 2119.
-            However, for readability,
-            these words do not appear in all uppercase letters in this specification.
-
-        </p>
-   <p>
-            All of the text of this specification is normative
-            except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a>
-
-        </p>
-   <p>
-            Examples in this specification are introduced with the words “for example”
-            or are set apart from the normative text with <code>class="example"</code>, like this:
-
-        </p>
-   <div class="example" id="example-example"><a class="self-link" href="#example-example"></a>
-            This is an example of an informative example.
-        </div>
-   <p>
-            Informative notes begin with the word “Note”
-            and are set apart from the normative text with <code>class="note"</code>, like this:
-
-        </p>
-   <p class="note" role="note">
-            Note, this is an informative note.</p>
-  </div>
 <script>
 (function() {
   "use strict";
@@ -3217,9 +3824,3 @@ From now on, we decided to follow the <a href="https://mapping-commons.github.io
 
 })();
 </script>
-  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
-  <dl>
-   <dt id="biblio-rfc2119">[RFC2119]
-   <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
-  </dl>
