@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="eef416009550bd9d36ab0a95229eaaed6f510cbc" name="revision">
+  <meta content="39dee4e5cf9681500174b135bc8893600a4df890" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1903,7 +1903,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-08-28">28 August 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-09-08">8 September 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2307,7 +2307,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
       <td>Anatomic site from which the sample was taken.
       <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a>
       <td>1..1 (conditional)
-      <td>In use case cancer, the exact sample location is relevant; therefore the more detailed value list of ICD-O3 can be used (which is included in ICD-11)
+      <td>Mandatory for Cancer use case.
      <tr>
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19697">Pathological state</a>
       <td>The pathological condition of the sample.
@@ -2536,7 +2536,7 @@ In the Harmonized Minimal Datamodel, we defined separate classes.
     <tbody>
      <tr>
       <td>Test Start Date
-      <td>Defined the date of when the genotyping began.
+      <td>Defined the date of when the test began.
       <td>Date (YYYY-MM-DD), ISO 8601 format
       <td>0..1
     <tbody>
@@ -3057,22 +3057,26 @@ The Biomarker class is another subclass from the Test class. Any reference from 
       <th>Definition
       <th>Value
       <th>Cardinality
+      <th>Condition
     <tbody>
      <tr>
       <td>Description
       <td>Type of protocol
       <td>String (e.g.library preparation, Genome extraction protocol, Sequencing protocol)
       <td>1..1
+      <td>NA
      <tr>
       <td>Available at
       <td>Link to a protocol available at <a href="protocols.io">protocols.io</a>
       <td>URL to <a href="protocols.io">protocols.io</a>
-      <td>0..1
+      <td>1..1 (conditional)
+      <td>Mandatory to provide either "Available at" or "Kit number"
      <tr>
       <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87822">Kit number</a>
       <td>A number or sequence of characters that identifies a particular kit.
       <td>String
-      <td>0..n
+      <td>1..n (conditional)
+      <td>Mandatory to provide either "Available at" or "Kit number"
      <tr>
       <td>Participated in proficiency testing
       <td>Indication of what type of proficiency testing the laboratory had participated in.
@@ -3084,6 +3088,7 @@ The Biomarker class is another subclass from the Test class. Any reference from 
                 interlaboratory comparison, <br>
                 Include as well if PT is for a specific test or analysis)
       <td>0..n
+      <td>NA
    </table>
    <h3 class="heading settled" data-level="2.5" id="treatment"><span class="secno">2.5. </span><span class="content">Treatment</span><a class="self-link" href="#treatment"></a></h3>
    <table>
