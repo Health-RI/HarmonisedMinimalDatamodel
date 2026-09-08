@@ -16,7 +16,7 @@
             <td>Anatomic site from which the sample was taken.</td>
             <td>ICD-11 <a href="https://icd.who.int/browse/2024-01/mms/en#1154280071">Anatomy and topography</a></td>
             <td>1..1 (conditional)</td>
-            <td>In use case cancer, the exact sample location is relevant; therefore the more detailed value list of ICD-O3 can be used (which is included in ICD-11)</td>
+            <td>Mandatory for Cancer use case.</td>
         </tr>
         <tr>
             <td><a href="https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19697">Pathological state</a></td>

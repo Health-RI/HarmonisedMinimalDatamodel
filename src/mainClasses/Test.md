@@ -20,7 +20,7 @@
     <tbody>
         <tr>
             <td>Test Start Date</td>
-            <td>Defined the date of when the genotyping began.</td>
+            <td>Defined the date of when the test began.</td>
             <td>Date (YYYY-MM-DD), ISO 8601 format</td>
             <td>0..1</td>
         </tr>
