@@ -1,0 +1,345 @@
+<h1>GDI Harmonised Minimal Data Model v2.0 – Changelog</h1>
+
+<p>
+  This page describes the main model changes between version 1.1 and version 2.0.
+</p>
+
+<h2>Alignment with Minimal Dataset for Infectious Diseases (MDID)</h2>
+
+<p>
+  A substantial part of the work towards version 2.0 focused on aligning the
+  <strong>Minimal Dataset for Infectious Diseases (MDID)</strong> with the
+  <strong>GDI Harmonised Minimal Data Model</strong>. This work contributed to
+  the refinement and extension of several HMD concepts and properties to
+  support the requirements identified in the MDID.
+</p>
+
+<h2>Updated diagram</h2>
+
+<p>
+  The diagram has been updated to reflect the v2.0 model, including new
+  classes, properties, and connections.
+</p>
+
+<p>
+  In the diagram below, <strong>new properties are highlighted in orange</strong>
+  to make the changes to the existing model easier to identify.
+</p>
+
+<p>
+<a href="src/images/v2.0_CHANGELOG.png" target="_blank">
+  <img src="src/images/v2.0_CHANGELOG.png" alt="HMD Diagram" width=600 height=900 title="diagram">
+</a>
+
+</p>
+
+<h2>New classes</h2>
+
+<ul>
+  <li>
+    <strong>Test</strong>: introduces a general class for representing tests,
+    with properties such as Test Description, Test Start Date, ISO 15189
+    accreditation and ISO 17025 accreditation.
+  </li>
+  <li>
+    <strong>Protocol</strong>: introduces a structured concept for describing
+    protocols used in the data-generation process.
+  </li>
+  <li>
+    <strong>Consent</strong>: introduces an explicit representation of consent
+    information.
+  </li>
+  <li>
+    <strong>GeoLocation</strong>: provides structured geographical information,
+    including Location Name, Location Type, Geometry, Country, Region, City,
+    Source, Valid From and Valid To.
+  </li>
+  <li>
+    <strong>Data Provenance</strong>: provides structured information about
+    data submission, collection, production and analysis, including submitter,
+    collector, departments, institution, projects and research consortia.
+  </li>
+  <li>
+    <strong>Identifier</strong>: provides structured representation of
+    identifiers and their identifier schemes.
+  </li>
+  <li>
+    <strong>Variant Calling</strong>: introduces a dedicated class for
+    representing variant-calling information and its associated properties
+    within the genomic analysis model.
+  </li>
+</ul>
+
+<h2>Changes to existing classes</h2>
+
+<h3>Biomarker</h3>
+
+<ul>
+  <li>
+    Biomarker is explicitly modelled as a type of <strong>Test</strong>.
+  </li>
+  <li>
+    <strong>Measured value of biomarker</strong> is added.
+  </li>
+  <li>
+    Type, Name, Code and Code System are further specified, including
+    terminology bindings.
+  </li>
+</ul>
+
+<h3>Sample</h3>
+
+<ul>
+  <li>
+    <strong>Sampling place</strong> is represented through the new
+    <strong>GeoLocation</strong> class.
+  </li>
+  <li>
+    <strong>Sample diagnosis</strong> and provenance information are
+    explicitly represented.
+  </li>
+  <li>
+    Storage conditions, sampling information and biospecimen terminology
+    are further specified.
+  </li>
+  <li>
+    <strong>Extraction technique</strong> is linked to the
+    <strong>Protocol</strong> class.
+  </li>
+</ul>
+
+<h3>Subject</h3>
+
+<ul>
+  <li>
+    <strong>Socioeconomic status</strong> is added.
+  </li>
+  <li>
+    <strong>Consent</strong> is added and further specified.
+  </li>
+  <li>
+    Subject information is further connected to the existing clinical and
+    sample concepts.
+  </li>
+</ul>
+
+<h3>Diagnosis</h3>
+
+<ul>
+  <li>
+    Diagnosis information is further structured and specified for
+    infectious-disease use cases.
+  </li>
+  <li>
+    Additional representation of comorbidity is introduced.
+  </li>
+</ul>
+
+<h3>Treatment</h3>
+
+<ul>
+  <li>
+    Treatment coding and terminology are further specified.
+  </li>
+  <li>
+    <strong>Dose Units</strong> use UCUM.
+  </li>
+  <li>
+    <strong>Reason for incomplete Treatment</strong> and
+    <strong>Response to Treatment</strong> are further specified.
+  </li>
+  <li>
+    <strong>Fractions</strong> and <strong>Site</strong> are further
+    specified for radiation therapy.
+  </li>
+</ul>
+
+<h3>Genotyping</h3>
+
+<ul>
+  <li>
+    <strong>Genotyping</strong> is explicitly modelled as a subclass of
+    <strong>Test</strong>.
+  </li>
+  <li>
+    Genotyping-specific information includes Technology, IVDR status and
+    Sequencing Platform.
+  </li>
+  <li>
+    Genotyping is therefore represented within the general testing structure
+    rather than as a new top-level class.
+  </li>
+</ul>
+
+<h3>Variant</h3>
+
+<ul>
+  <li>
+    <strong>Variant Type</strong> is further specified and its cardinality
+    is changed.
+  </li>
+  <li>
+    Variant terminology and representation are further specified.
+  </li>
+  <li>
+    <strong>Variant Calling</strong> is further structured within the
+    genomic analysis model.
+  </li>
+</ul>
+
+<h3>Target Gene</h3>
+
+<ul>
+  <li>
+    <strong>Scheme URI</strong> is added.
+  </li>
+  <li>
+    The representation of a target gene by identifier or label is further
+    specified.
+  </li>
+</ul>
+
+<h3>Sample Relation</h3>
+
+<ul>
+  <li>
+    The cardinality of <strong>Related Sample</strong> is changed.
+  </li>
+  <li>
+    Relation information is further clarified and property names are
+    normalized.
+  </li>
+</ul>
+
+<h3>Digital Resource</h3>
+
+<ul>
+  <li>
+    <strong>Version</strong> changes from a numeric representation to a
+    string representation.
+  </li>
+  <li>
+    <strong>Date used</strong> is represented using ISO 8601.
+  </li>
+  <li>
+    <strong>Parameters</strong> are further specified for resources
+    associated with genotyping alignment software.
+  </li>
+</ul>
+
+<h3>Environmental Exposure</h3>
+
+<ul>
+  <li>
+    Representation is further structured, including more explicit exposure
+    information and expanded tobacco/nicotine and alcohol information.
+  </li>
+</ul>
+
+<h2>Changed cardinalities</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class – Property</th>
+      <th>Version 1.1</th>
+      <th>Version 2.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Biomarker – Type</strong></td>
+      <td>1..1</td>
+      <td>1..1 (conditional)</td>
+    </tr>
+    <tr>
+      <td><strong>Biomarker – Code System</strong></td>
+      <td>0..1</td>
+      <td>1..1 (conditional)</td>
+    </tr>
+    <tr>
+      <td><strong>Digital Resource – Parameters</strong></td>
+      <td>0..n</td>
+      <td>1..n (conditional)</td>
+    </tr>
+    <tr>
+      <td><strong>Sample Relation – Related Sample</strong></td>
+      <td>1..n</td>
+      <td>1..1</td>
+    </tr>
+    <tr>
+      <td><strong>Target Gene – Label</strong></td>
+      <td>0..1</td>
+      <td>1..1 (conditional)</td>
+    </tr>
+    <tr>
+      <td><strong>Treatment – Treatment Code</strong></td>
+      <td>1..n</td>
+      <td>1..n (conditional)</td>
+    </tr>
+    <tr>
+      <td><strong>Variant – Variant Type</strong></td>
+      <td>0..n</td>
+      <td>0..1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>New cardinalities introduced with new classes</h2>
+
+<p>
+  In addition to changes to existing cardinalities, v2.0 introduces new
+  model elements and associations with their own cardinalities.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class – Property – Class</th>
+      <th>Version 2.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Test – hasProtocol – Protocol</strong></td>
+      <td>0..n</td>
+    </tr>
+    <tr>
+      <td><strong>Sample – Extraction Technique – Protocol</strong></td>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <td><strong>Sample – Sampling Place – GeoLocation</strong></td>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <td><strong>Target Gene – Identifier – Identifier</strong></td>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <td><strong>Genotyping – Variant Calling – Variant Calling</strong></td>
+      <td>0..n</td>
+    </tr>
+    <tr>
+      <td><strong>Variant – Variant Calling – Variant Calling</strong></td>
+      <td>0..n</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  The cardinalities of the properties within the new classes are defined in
+  the v2.0 model tables. The updated UML diagram provides an overview of
+  these new classes, properties and associations.
+</p>
+
+<h2>Summary</h2>
+
+<p>
+  Version 2.0 extends and refines the
+  <strong>GDI Harmonised Minimal Data Model</strong> through new classes,
+  additional properties, clearer representation of testing and genomic
+  analysis, refined existing classes and updated cardinalities. A major
+  driver for the work was the alignment of the <strong>MDID</strong> with
+  the <strong>HMD</strong>.
+</p>

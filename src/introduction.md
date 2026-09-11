@@ -12,7 +12,7 @@ This page outlines the content of the Harmonized minimal data model for GDI.
 ## Goals and Scope of the Harmonized Minimal Data Model
 
 The **Harmonized Minimal Data Model (HMD)** has multiple purposes, some of these are:
-1. Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model
+1. Each dataset that is submitted to the catalogue should adhere (to a certain extent, still to be decided upon) to this model
 2. Within the catalogue based on our model search options can be made available (filters/facets)
 3. The HMD can/needs to be implemented in the Beacons (and/or other discovery tools).
 
@@ -25,4 +25,6 @@ For example, for data of healthy subjects, the diagnosis class will not be used,
 
 The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.
 
-<img src="src/images/GDI_diagram_v2.png" alt="UML diagram" width=1200>
+<a href="src/images/GDI_diagram_v2.png" target="_blank">
+  <img src="src/images/GDI_diagram_v2.png" alt="HMD Diagram" width=600 height=900 title="diagram">
+</a>
