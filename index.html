@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://health-ri.github.io/HarmonisedMinimalDatamodel/" rel="canonical">
-  <meta content="39dee4e5cf9681500174b135bc8893600a4df890" name="revision">
+  <meta content="97fef32aed2c4f706878965368e4c50e6c5eccba" name="revision">
   <meta content="dark light" name="color-scheme">
 <style> /* ===== Global table style (unchanged) ===== */ table { border-collapse: collapse; font-family: sans-serif; font-size: 13px; line-height: 1.2; } th, td { border: 1px solid #ccc; padding: 2px 4px; text-align: left; vertical-align: top; } th { background: #d9edf7; font-weight: bold; } tr:nth-child(even) { background: #f9f9f9; } tr:hover { background: #e6f2ff; } /* Dark mode */ @media (prefers-color-scheme: dark) { table { background-color: #111; color: #eee; } th { background-color: #004466; color: #fff; } td { border: 1px solid #444; } tr:nth-child(even) { background-color: #1a1a1a; } tr:hover { background-color: #333366; } } /* ===== OVERRIDE ONLY THIS TABLE ===== */ table.no-style, table.no-style th, table.no-style td { border: none !important; background: none !important; font-size: 12.5px !important; /* larger text */ line-height: 1.4 !important; /* better readability */ margin-bottom: 1.5em; /* space after table */ } table.no-style th, table.no-style td { padding: 0.2em 0.8em 0.4em 0 !important; /* extra padding for spacing */ } /* Top line for header */ table.no-style thead th { border-bottom: 1px solid #aaaaaa00 !important; } /* Bottom line under last row */ table.no-style tr:last-child td { border-bottom: 1px solid #aaaaaa00 !important; } </style>
 <style>/* Boilerplate: style-autolinks */
@@ -1903,7 +1903,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">GDI Harmonised Minimal Data Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-09-08">8 September 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-09-16">16 September 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1926,7 +1926,7 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p><img alt="GDI-logo" src="src/images/gdi-logo.svg" title="GDI-logo" width="300"> <br> Some context about the GDI HMD.</p>
+   <p><img alt="GDI-logo" src="src/images/gdi-logo.svg" title="GDI-logo" width="300"></p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -1984,6 +1984,9 @@ dfn > a.self-link::before      { content: "#"; }
    </ol>
   </nav>
   <main>
+   <h3 class="heading settled" id="status"><span class="content">Status</span></h3>
+   <p>The changes made to this specification are documented in the
+<a href="changelog.html">Changelog</a>.</p>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <h3 class="heading settled" data-level="1.1" id="about-gdi"><span class="secno">1.1. </span><span class="content">About GDI</span><a class="self-link" href="#about-gdi"></a></h3>
    <p>The Genomic Data Infrastructure (GDI) is a European project, co-funded under the Digital Europe Programme, designed to realize the ambition of the 1+ Million Genomes (1+MG) initiative.
@@ -1999,7 +2002,7 @@ This page outlines the content of the Harmonized minimal data model for GDI.
    <p>The <strong>Harmonized Minimal Data Model (HMD)</strong> has multiple purposes, some of these are:</p>
    <ol>
     <li data-md>
-     <p>Each dataset that is submitted to the catalogue should adhere (to a certain extend, still to be decided upon) to this model</p>
+     <p>Each dataset that is submitted to the catalogue should adhere (to a certain extent, still to be decided upon) to this model</p>
     <li data-md>
      <p>Within the catalogue based on our model search options can be made available (filters/facets)</p>
     <li data-md>
@@ -2011,7 +2014,9 @@ Each box within the diagram comprises one of the classes of the model. Within ea
 Red boxes represent mandatory classes. The remaining classes (green boxes) are optional and usage of these classes depends on each case.
 For example, for data of healthy subjects, the diagnosis class will not be used, but there always needs to be information about the Subject, Sample, Genotyping and Consent.</p>
    <p>The connections between the classes indicate the relations between classes. For example, Subject is connected to the Sample class via the hasSample concept.</p>
-   <p><img alt="UML diagram" src="src/images/GDI_diagram_v2.png" width="1200"></p>
+   <p><a href="src/images/GDI_diagram_v2.png" target="_blank">
+  <img alt="HMD Diagram" height="900" src="src/images/GDI_diagram_v2.png" title="diagram" width="600">
+</a></p>
    <h2 class="heading settled" data-level="2" id="main-classes"><span class="secno">2. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
    
 In the Harmonized Minimal Datamodel, we defined separate classes.
