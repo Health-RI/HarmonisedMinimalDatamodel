@@ -12,9 +12,11 @@ Editor: Jeroen Beliën
 Editor: Joeri van der Velde
 Editor: Abhishek Nayak
 Editor: Aedin Culhane
+Editor: 1+MG and GDI working groups and EU-funded project contributors (see Contributors and acknowledgements)
 Boilerplate: copyright no, conformance off, references off
 
-Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300">
+Abstract: <img src="src/images/gdi-logo.svg" alt="GDI-logo" title="GDI-logo" width="300"> <br><br>The GDI Harmonised Minimal Data Model (HMD) defines a common structure for describing genomic datasets and related information within the Genomic Data Infrastructure (GDI). It specifies the main entities and their relationships, supporting consistent representation, exchange, integration, and discovery of genomic data across infrastructures.
+
 Markup Shorthands: markdown yes, css no
 </pre>
 
@@ -113,4 +115,8 @@ path: src/mainClasses/DataProvenance.md
 
 <pre class=include>
 path: src/matches.md
+</pre>
+
+<pre class=include>
+path: src/contributors.md
 </pre>
